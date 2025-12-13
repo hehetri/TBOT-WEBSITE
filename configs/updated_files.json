@@ -1,0 +1,9 @@
+[
+  {
+    "Name": "T-BOT backend",
+    "Path": "web/",
+    "Description": "Backend configured to use the T-BOT database schema.",
+    "Link": "",
+    "FileName": ""
+  }
+]
