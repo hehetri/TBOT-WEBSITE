@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bawoo City Online</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700&family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-stars"></div>
+  <header class="topbar">
+    <div class="topbar__logo">Bawoo City</div>
+    <div class="topbar__links">
+      <a href="#" class="topbar__link" data-i18n="nav.blog">Blog</a>
+      <a href="#" class="topbar__link" data-i18n="nav.help">Help</a>
+      <button class="lang-toggle" id="langToggle">EN / PT</button>
+    </div>
+  </header>
+
+  <main class="shell">
+    <nav class="nav">
+      <div class="nav__logo">지오레이서</div>
+      <ul class="nav__list">
+        <li><a href="index.html" class="nav__item nav__item--active" data-i18n="nav.home"></a></li>
+        <li><a href="game-guide.html" class="nav__item" data-i18n="nav.guide"></a></li>
+        <li><a href="fun-zone.html" class="nav__item" data-i18n="nav.fun"></a></li>
+        <li><a href="bawoo-zone.html" class="nav__item" data-i18n="nav.bawoo"></a></li>
+        <li><a href="character.html" class="nav__item" data-i18n="nav.character"></a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <div class="hero__left">
+        <button class="download" data-i18n="cta.download"></button>
+        <div class="panel release">
+          <div class="panel__header" data-i18n="panels.junior.title"></div>
+          <p class="panel__desc" data-i18n="panels.junior.subtitle"></p>
+          <div class="panel__dates">
+            <span data-i18n="panels.junior.open"></span>
+            <span data-i18n="panels.junior.time"></span>
+          </div>
+          <a href="#" class="btn" data-i18n="panels.junior.play"></a>
+        </div>
+        <div class="panel news">
+          <div class="panel__header" data-i18n="panels.news.title"></div>
+          <ul class="panel__list">
+            <li><span class="tag" data-i18n="panels.news.update"></span><span data-i18n="panels.news.item1"></span><span class="date">2024-12-07</span></li>
+            <li><span class="tag" data-i18n="panels.news.notice"></span><span data-i18n="panels.news.item2"></span><span class="date">2024-11-29</span></li>
+            <li><span class="tag" data-i18n="panels.news.notice"></span><span data-i18n="panels.news.item3"></span><span class="date">2024-11-14</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hero__main">
+        <div class="hero__city">
+          <div class="city__glow"></div>
+          <div class="city__moon"></div>
+          <div class="city__stars"></div>
+          <div class="city__buildings"></div>
+          <div class="city__robot"></div>
+        </div>
+        <div class="hero__widgets">
+          <div class="widget" data-i18n="widgets.play.title">
+            <span class="widget__label" data-i18n="widgets.play.cta"></span>
+          </div>
+          <div class="widget" data-i18n="widgets.update.title">
+            <span class="widget__label" data-i18n="widgets.update.cta"></span>
+          </div>
+          <div class="widget" data-i18n="widgets.signup.title">
+            <span class="widget__label" data-i18n="widgets.signup.cta"></span>
+          </div>
+          <div class="widget" data-i18n="widgets.channel.title">
+            <span class="widget__label" data-i18n="widgets.channel.cta"></span>
+          </div>
+          <div class="widget" data-i18n="widgets.inquiry.title">
+            <span class="widget__label" data-i18n="widgets.inquiry.cta"></span>
+          </div>
+        </div>
+      </div>
+      <aside class="hero__side">
+        <div class="promo" data-i18n="promo.title"></div>
+        <div class="promo__card" data-i18n="promo.slot1"></div>
+        <div class="promo__card" data-i18n="promo.slot2"></div>
+        <div class="promo__card" data-i18n="promo.slot3"></div>
+        <div class="promo__card" data-i18n="promo.slot4"></div>
+      </aside>
+    </section>
+  </main>
+  <script src="scripts.js"></script>
+</body>
+</html>

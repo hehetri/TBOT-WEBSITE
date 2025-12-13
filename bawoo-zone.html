@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bawoo City | Bawoo Zone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700&family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="inner">
+  <div class="bg-stars"></div>
+  <header class="topbar">
+    <div class="topbar__logo">Bawoo City</div>
+    <div class="topbar__links">
+      <a href="#" class="topbar__link" data-i18n="nav.blog">Blog</a>
+      <a href="#" class="topbar__link" data-i18n="nav.help">Help</a>
+      <button class="lang-toggle" id="langToggle">EN / PT</button>
+    </div>
+  </header>
+  <main class="shell">
+    <nav class="nav">
+      <div class="nav__logo">지오레이서</div>
+      <ul class="nav__list">
+        <li><a href="index.html" class="nav__item" data-i18n="nav.home"></a></li>
+        <li><a href="game-guide.html" class="nav__item" data-i18n="nav.guide"></a></li>
+        <li><a href="fun-zone.html" class="nav__item" data-i18n="nav.fun"></a></li>
+        <li><a href="bawoo-zone.html" class="nav__item nav__item--active" data-i18n="nav.bawoo"></a></li>
+        <li><a href="character.html" class="nav__item" data-i18n="nav.character"></a></li>
+      </ul>
+    </nav>
+
+    <section class="content">
+      <div class="content__header">
+        <h1 data-i18n="bawoo.title"></h1>
+        <p data-i18n="bawoo.subtitle"></p>
+      </div>
+      <div class="grid grid--bawoo">
+        <article class="card card--wide">
+          <h2 data-i18n="bawoo.club.title"></h2>
+          <p data-i18n="bawoo.club.copy"></p>
+        </article>
+        <article class="card">
+          <h2 data-i18n="bawoo.combat.title"></h2>
+          <p data-i18n="bawoo.combat.copy"></p>
+        </article>
+        <article class="card">
+          <h2 data-i18n="bawoo.coop.title"></h2>
+          <p data-i18n="bawoo.coop.copy"></p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <script src="scripts.js"></script>
+</body>
+</html>
