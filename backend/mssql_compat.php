@@ -1,49 +1,47 @@
 <?php
 /**
- * Polyfill the deprecated mssql_* API using MySQLi so legacy QueryBuilder code
- * can operate against the T-BOT MySQL database without requiring the mssql
- * extension.
+ * Stub replacements for deprecated mssql_* functions.
+ * These no-op implementations avoid opening any SQL connections while keeping
+ * legacy includes from failing in view-only mode.
  */
 if (!function_exists('mssql_connect')) {
-    function mssql_connect($server, $user, $password)
+    function mssql_connect($server = null, $user = null, $password = null)
     {
-        return mysqli_connect($server, $user, $password);
+        return false;
     }
 }
 
 if (!function_exists('mssql_select_db')) {
-    function mssql_select_db($database, $link)
+    function mssql_select_db($database = null, $link = null)
     {
-        return mysqli_select_db($link, $database);
+        return false;
     }
 }
 
 if (!function_exists('mssql_query')) {
-    function mssql_query($query, $link)
+    function mssql_query($query = null, $link = null)
     {
-        return mysqli_query($link, $query);
+        return false;
     }
 }
 
 if (!function_exists('mssql_fetch_assoc')) {
-    function mssql_fetch_assoc($result)
+    function mssql_fetch_assoc($result = null)
     {
-        return mysqli_fetch_assoc($result);
+        return null;
     }
 }
 
 if (!function_exists('mssql_num_rows')) {
-    function mssql_num_rows($result)
+    function mssql_num_rows($result = null)
     {
-        return mysqli_num_rows($result);
+        return 0;
     }
 }
 
 if (!function_exists('mssql_free_result')) {
-    function mssql_free_result($result)
+    function mssql_free_result($result = null)
     {
-        if ($result instanceof mysqli_result) {
-            mysqli_free_result($result);
-        }
+        return true;
     }
 }
