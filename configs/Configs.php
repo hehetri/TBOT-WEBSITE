@@ -1,4 +1,9 @@
 <?php
+// Ensure legacy MSSQL helper functions exist even when the mssql extension is
+// unavailable. QueryBuilder relies on these names; we bridge them to MySQLi
+// so the site can run against the T-BOT MySQL database without altering the
+// front-end.
+require_once __DIR__ . '/../backend/mssql_compat.php';
 /*
 Obfuscation provided by FOPO - Free Online PHP Obfuscator: http://www.fopo.com.ar/
 This code was created on Monday, August 1st, 2016 at 21:15 UTC from IP 46.201.197.23
