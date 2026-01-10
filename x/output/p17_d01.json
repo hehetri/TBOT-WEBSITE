@@ -1,0 +1,291 @@
+{
+  "spawns": [
+    213,
+    215,
+    215,
+    216,
+    216,
+    209,
+    209,
+    209,
+    209,
+    209,
+    213,
+    216,
+    216,
+    216,
+    215,
+    215,
+    217,
+    209,
+    216,
+    82,
+    83,
+    211,
+    209,
+    209,
+    -1,
+    -1,
+    -1,
+    -1,
+    215,
+    215,
+    215,
+    217,
+    217,
+    220,
+    -1,
+    -1,
+    209,
+    -1,
+    209,
+    209,
+    213,
+    216,
+    216,
+    209,
+    200,
+    200,
+    216,
+    216,
+    217,
+    85,
+    84,
+    82,
+    82,
+    208,
+    217,
+    216,
+    213,
+    216,
+    216,
+    220,
+    -1,
+    -1,
+    -1,
+    -1,
+    208,
+    209,
+    209,
+    216,
+    216,
+    210,
+    210,
+    217,
+    217,
+    216,
+    216,
+    82,
+    83,
+    -1,
+    213,
+    213,
+    212,
+    83,
+    209,
+    82,
+    218,
+    219,
+    215,
+    215,
+    215,
+    215,
+    216,
+    216,
+    216,
+    220,
+    216,
+    216,
+    82,
+    82,
+    85,
+    82,
+    -1,
+    -1,
+    221,
+    28
+  ],
+  "blocks": [
+    {
+      "rect": [
+        8,
+        80,
+        40,
+        12
+      ],
+      "enemies": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "respawn": [],
+      "clear": [
+        5
+      ],
+      "vip": [],
+      "exceptional": [],
+      "text": "A virus fleet, headed towards the biggest readings we've seen since the infection began, sucked up the smaller escape ship. Pick their fleet apart.",
+      "countdown": 0
+    },
+    {
+      "rect": [
+        8,
+        80,
+        71,
+        12
+      ],
+      "enemies": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "respawn": [],
+      "clear": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "vip": [],
+      "exceptional": [
+        19,
+        20
+      ],
+      "text": "Destroy the defenses on the fleet, and be careful of the trap holes the viruses have set up.",
+      "countdown": 0
+    },
+    {
+      "rect": [
+        8,
+        80,
+        101,
+        12
+      ],
+      "enemies": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "respawn": [],
+      "clear": [
+        21,
+        22
+      ],
+      "vip": [],
+      "exceptional": [],
+      "text": "You may be able to sink the fleet if you destroy its control system on the far right side.",
+      "countdown": 0
+    },
+    {
+      "rect": [
+        8,
+        80,
+        127,
+        12
+      ],
+      "enemies": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52
+      ],
+      "respawn": [],
+      "clear": [
+        45
+      ],
+      "vip": [],
+      "exceptional": [
+        49,
+        50,
+        51,
+        52
+      ],
+      "text": "0",
+      "countdown": 8
+    },
+    {
+      "rect": [
+        7,
+        53,
+        54,
+        55
+      ],
+      "enemies": [],
+      "respawn": [
+        53,
+        54,
+        55
+      ],
+      "clear": [],
+      "vip": [],
+      "exceptional": [],
+      "text": "8\t80\t167\t12",
+      "countdown": 16
+    },
+    {
+      "rect": [
+        0,
+        3,
+        64,
+        65
+      ],
+      "enemies": [],
+      "respawn": [
+        75,
+        76
+      ],
+      "clear": [],
+      "vip": [
+        80,
+        187,
+        12,
+        22,
+        80,
+        81,
+        82,
+        83
+      ],
+      "exceptional": [],
+      "text": "1\t80",
+      "countdown": 1
+    }
+  ]
+}

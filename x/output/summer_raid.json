@@ -1,0 +1,186 @@
+{
+  "spawns": [
+    82,
+    615,
+    616,
+    616,
+    617,
+    618,
+    619,
+    82,
+    623,
+    624,
+    624,
+    -1,
+    82,
+    133,
+    129,
+    151,
+    151,
+    82,
+    83,
+    83,
+    -1,
+    127,
+    141,
+    141,
+    310,
+    135,
+    -1,
+    -1,
+    -1,
+    -1,
+    82,
+    83,
+    84,
+    83,
+    85,
+    82,
+    83,
+    133,
+    133,
+    129,
+    137,
+    148,
+    134,
+    141,
+    137,
+    75,
+    -1,
+    -1,
+    127,
+    82,
+    85,
+    75,
+    143,
+    141,
+    84,
+    148,
+    129,
+    137,
+    133,
+    133,
+    311,
+    137,
+    134,
+    94,
+    -1,
+    -1,
+    622,
+    620,
+    621
+  ],
+  "blocks": [
+    {
+      "rect": [
+        98,
+        66,
+        121,
+        3
+      ],
+      "enemies": [
+        0
+      ],
+      "respawn": [],
+      "clear": [
+        0
+      ],
+      "vip": [],
+      "exceptional": [],
+      "text": "Destroy the barrel to begin the Bubbleboy fight.",
+      "countdown": 0
+    },
+    {
+      "rect": [
+        98,
+        66,
+        121,
+        3
+      ],
+      "enemies": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "respawn": [
+        4,
+        5,
+        6
+      ],
+      "clear": [
+        1
+      ],
+      "vip": [],
+      "exceptional": [],
+      "text": "Bubbleboy gets stronger throughout the fight! Taking out the EliteGandas will give you a very powerful buff!",
+      "countdown": 0
+    },
+    {
+      "rect": [
+        98,
+        66,
+        121,
+        3
+      ],
+      "enemies": [
+        7
+      ],
+      "respawn": [],
+      "clear": [
+        7
+      ],
+      "vip": [],
+      "exceptional": [],
+      "text": "Destroy the barrel to begin the UltraShamoon fight.",
+      "countdown": 0
+    },
+    {
+      "rect": [
+        98,
+        66,
+        121,
+        3
+      ],
+      "enemies": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "respawn": [
+        9,
+        10,
+        11
+      ],
+      "clear": [
+        8
+      ],
+      "vip": [],
+      "exceptional": [],
+      "text": "UltraShamoon Raid!",
+      "countdown": 0
+    },
+    {
+      "rect": [
+        98,
+        66,
+        121,
+        3
+      ],
+      "enemies": [
+        12
+      ],
+      "respawn": [],
+      "clear": [
+        12
+      ],
+      "vip": [],
+      "exceptional": [],
+      "text": "Destroy the barrel to begin the TwinKowbats fight.[coming soon]",
+      "countdown": 0
+    }
+  ]
+}

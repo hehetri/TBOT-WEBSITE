@@ -1,0 +1,133 @@
+{
+  "spawns": [
+    51,
+    42,
+    50,
+    33,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    42,
+    33,
+    55,
+    44,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    35,
+    45,
+    44,
+    62,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    82,
+    83,
+    85,
+    83,
+    40,
+    55,
+    65,
+    33,
+    35,
+    32,
+    35,
+    66,
+    -1,
+    -1,
+    -1,
+    28
+  ],
+  "blocks": [
+    {
+      "rect": [
+        151,
+        66,
+        219,
+        0
+      ],
+      "enemies": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "respawn": [],
+      "clear": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "vip": [],
+      "exceptional": [],
+      "text": "The viruses have you completely surrounded and are sending reinforcements. You must survive this assault and reach the docks.",
+      "countdown": 0
+    },
+    {
+      "rect": [
+        151,
+        66,
+        219,
+        0
+      ],
+      "enemies": [
+        12,
+        13,
+        14,
+        15,
+        10,
+        11
+      ],
+      "respawn": [],
+      "clear": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "vip": [],
+      "exceptional": [
+        10,
+        11
+      ],
+      "text": "0",
+      "countdown": 151
+    },
+    {
+      "rect": [
+        4,
+        24,
+        25,
+        26
+      ],
+      "enemies": [],
+      "respawn": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "clear": [],
+      "vip": [],
+      "exceptional": [],
+      "text": "151\t66\t219\t0",
+      "countdown": 8
+    }
+  ]
+}
