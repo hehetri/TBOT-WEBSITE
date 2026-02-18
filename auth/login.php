@@ -22,13 +22,25 @@ if ($username === '' || $password === '') {
 }
 
 // Database uses plain-text password (no hashing) per project requirement.
-$stmt = $conn->prepare("SELECT id, username, `Position` AS position, banned FROM {$userTable} WHERE username = ? AND password = ? LIMIT 1");
-$stmt->bind_param('ss', $username, $password);
-$stmt->execute();
-$user = $stmt->get_result()->fetch_assoc();
-$stmt->close();
+if (should_hash_password_for_table($userTable)) {
+    $stmt = $conn->prepare("SELECT id, username, password, 0 AS position, suspended AS banned FROM {$userTable} WHERE username = ? LIMIT 1");
+    $stmt->bind_param('s', $username);
+    $stmt->execute();
+    $user = $stmt->get_result()->fetch_assoc();
+    $stmt->close();
 
-if (!$user || (int)($user['banned'] ?? 0) === 1) {
+    $validPassword = $user && password_verify($password, (string)$user['password']);
+} else {
+    $stmt = $conn->prepare("SELECT id, username, `Position` AS position, banned FROM {$userTable} WHERE username = ? AND password = ? LIMIT 1");
+    $stmt->bind_param('ss', $username, $password);
+    $stmt->execute();
+    $user = $stmt->get_result()->fetch_assoc();
+    $stmt->close();
+
+    $validPassword = (bool)$user;
+}
+
+if (!$validPassword || !$user || (int)($user['banned'] ?? 0) === 1) {
     header('Location: ../index.php?login_error=1#account-panel');
     exit;
 }

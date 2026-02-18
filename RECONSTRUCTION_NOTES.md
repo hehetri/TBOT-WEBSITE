@@ -28,7 +28,6 @@ Na box esquerda, após login, exibe:
 
 Também inclui ações:
 - Botão de troca de senha (abre painel central)
-- Troca de email
 - Logout
 
 ## Arquivos principais
@@ -78,3 +77,14 @@ php -S 0.0.0.0:8000 -t .
   - logged out: registration form
   - logged in + Change Password: password update form
 - Password updates still submit to `auth/update_account.php` using `action=password`.
+
+
+## Login/account panel corrections
+- Removed the email-change button from the left account panel.
+- Styled the logout action as a clear primary red button in the account panel.
+- Account panel fields now use DB-aware table/column resolution:
+  - user table: `bout_users` fallback to `users`
+  - character table: `bout_characters` fallback to `characters`
+  - cash column: `coins` fallback to `cash`
+  - gigas column: `gigas` fallback to `currency_gigas`
+- Character data query now joins characters by `user_id` to correctly display Character Name, Level, and Gigas.

@@ -45,9 +45,9 @@ if ($exists) {
     exit;
 }
 
-// Database uses plain-text password.
+$passwordToStore = should_hash_password_for_table($userTable) ? password_hash($password, PASSWORD_ARGON2ID) : $password;
 $stmt = $conn->prepare("INSERT INTO {$userTable} (username, password, email, last_ip, current_ip) VALUES (?, ?, ?, ?, ?)");
-$stmt->bind_param('sssss', $username, $password, $email, $last_ip, $last_ip);
+$stmt->bind_param('sssss', $username, $passwordToStore, $email, $last_ip, $last_ip);
 $stmt->execute();
 $stmt->close();
 

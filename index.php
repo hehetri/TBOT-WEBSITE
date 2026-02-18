@@ -5,11 +5,14 @@ require_once __DIR__ . '/config.php';
 $accountInfo = null;
 if (isset($_SESSION['user_id']) && $conn instanceof mysqli) {
     $userTable = resolve_user_table($conn);
+    $characterTable = resolve_character_table($conn);
+    $cashColumn = resolve_user_cash_column($conn, $userTable);
+    $gigasColumn = table_has_column($conn, $characterTable, 'gigas') ? 'gigas' : 'currency_gigas';
     $uid = (int)$_SESSION['user_id'];
 
     $queries = [
-        "SELECT u.username, u.email, u.coins, c.name AS character_name, c.level, c.gigas AS currency_gigas FROM {$userTable} u LEFT JOIN bout_characters c ON c.name = u.username WHERE u.id = ? ORDER BY c.level DESC LIMIT 1",
-        "SELECT u.username, u.email, u.coins, NULL AS character_name, NULL AS level, 0 AS currency_gigas FROM {$userTable} u WHERE u.id = ? LIMIT 1"
+        "SELECT u.username, u.email, u.{$cashColumn} AS cash, c.name AS character_name, c.level, c.{$gigasColumn} AS currency_gigas FROM {$userTable} u LEFT JOIN {$characterTable} c ON c.user_id = u.id WHERE u.id = ? ORDER BY c.level DESC LIMIT 1",
+        "SELECT u.username, u.email, u.{$cashColumn} AS cash, NULL AS character_name, NULL AS level, 0 AS currency_gigas FROM {$userTable} u WHERE u.id = ? LIMIT 1"
     ];
 
     foreach ($queries as $sql) {
@@ -210,20 +213,15 @@ jQuery(window).load(function() {
 		<div style="font-size:15px;font-weight:bold;color:#ffd35a;margin-bottom:4px;">MY ACCOUNT</div>
 		<div><b>Character Name:</b> <?= htmlspecialchars((string)($accountInfo['character_name'] ?? '-')) ?></div>
 		<div><b>Level:</b> <?= htmlspecialchars((string)($accountInfo['level'] ?? '0')) ?></div>
-		<div><b>Cash:</b> <?= htmlspecialchars((string)($accountInfo['coins'] ?? '0')) ?></div>
+		<div><b>Cash:</b> <?= htmlspecialchars((string)($accountInfo['cash'] ?? '0')) ?></div>
 		<div><b>Gigas:</b> <?= htmlspecialchars((string)($accountInfo['currency_gigas'] ?? '0')) ?></div>
 
 		<div style="margin-top:8px;">
 			<button type="button" onclick="openCenterPanel('password')" style="height:22px;cursor:pointer;">Change Password</button>
 		</div>
 
-		<form method="post" action="auth/update_account.php" style="margin-top:6px;">
-			<input type="hidden" name="action" value="email">
-			<input type="email" name="new_email" placeholder="New email" style="width:190px;height:20px;border:1px solid #666;background:#fff;padding-left:5px;">
-			<button type="submit" style="height:22px;cursor:pointer;">Change Email</button>
-		</form>
 
-		<div style="margin-top:8px;"><a href="auth/logout.php" style="color:#ffd35a;text-decoration:none;font-weight:bold;">Logout</a></div>
+		<div style="margin-top:10px;"><a href="auth/logout.php" style="display:inline-block;background:#b42822;color:#fff;text-decoration:none;font-weight:bold;padding:5px 10px;border-radius:3px;">Logout</a></div>
 	</div>
 <?php else: ?>
 	<form id="frm_login_tbot" name="frm_login_tbot" method="post" action="auth/login.php" autocomplete="off">
