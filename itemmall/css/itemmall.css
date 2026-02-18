@@ -332,3 +332,8 @@ a.im_cat_link:hover, a.im_cat_link:active {
 	height: 10px;
 	cursor: pointer;
 }
+/* Hide itemmall submenus */
+.submenu_outer,
+.im_submenu_item {
+  display: none !important;
+}

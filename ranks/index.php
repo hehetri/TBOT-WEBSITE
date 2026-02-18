@@ -100,7 +100,7 @@ function renderRows(array $rows, array $cols): void {
 </head>
 <body class="tundra" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <div style="background-image: url(../images/cbt/header_back.jpg); background-repeat: no-repeat; background-position: center top; width: 100%; min-height:100vh; position:relative;display: table;">
-  <div style="width:960px;margin:20px auto 0 auto; font-family:Arial; font-size:12px;"><a href="../index.php">&larr; Back to Home</a></div>
+  <div style="width:960px;margin:20px auto 0 auto; font-family:Arial; font-size:12px;"><a href="../index.php" style="display:inline-block;background:#b42822;color:#fff;text-decoration:none;padding:8px 12px;border-radius:4px;font-weight:bold;">&larr; BACK HOME</a></div>
   <div class="rank-container" id="rank-legacy-panel">
     <div class="rank-title">TBOT Rankings</div>
     <div class="rank-grid">
