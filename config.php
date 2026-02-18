@@ -9,6 +9,29 @@ $db   = 'bout_evolution';
 $conn = null;
 $db_error = null;
 
+function resolve_user_table(mysqli $conn): string {
+    $preferred = 'boot_users';
+    $fallback = 'users';
+
+    $stmt = $conn->prepare('SHOW TABLES LIKE ?');
+    $stmt->bind_param('s', $preferred);
+    $stmt->execute();
+    $hasPreferred = (bool)$stmt->get_result()->fetch_row();
+    $stmt->close();
+
+    if ($hasPreferred) {
+        return $preferred;
+    }
+
+    $stmt = $conn->prepare('SHOW TABLES LIKE ?');
+    $stmt->bind_param('s', $fallback);
+    $stmt->execute();
+    $hasFallback = (bool)$stmt->get_result()->fetch_row();
+    $stmt->close();
+
+    return $hasFallback ? $fallback : $preferred;
+}
+
 try {
     $conn = new mysqli($host, $user, $pass, $db);
     $conn->set_charset('utf8mb4');

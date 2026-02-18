@@ -4,11 +4,12 @@ require_once __DIR__ . '/config.php';
 
 $accountInfo = null;
 if (isset($_SESSION['user_id']) && $conn instanceof mysqli) {
+    $userTable = resolve_user_table($conn);
     $uid = (int)$_SESSION['user_id'];
     $stmt = $conn->prepare("
         SELECT u.username, u.email, u.cash,
                c.name AS character_name, c.level, c.currency_gigas
-        FROM users u
+        FROM {$userTable} u
         LEFT JOIN characters c ON c.user_id = u.id
         WHERE u.id = ?
         ORDER BY c.level DESC
@@ -85,10 +86,10 @@ function moToggler(bid,cls,cannotChange) {
 </head> 
 <body class="tundra" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"> 
 <?php if (isset($_GET['login_error'])): ?>
-<div style="position:fixed;top:10px;right:10px;z-index:9999;background:#7f1d1d;color:#fff;padding:10px 14px;font-family:Arial;border-radius:4px;">Login inválido.</div>
+<div style="position:fixed;top:10px;right:10px;z-index:9999;background:#7f1d1d;color:#fff;padding:10px 14px;font-family:Arial;border-radius:4px;">Invalid login credentials.</div>
 <?php endif; ?>
 <?php if (isset($_GET['login_success'])): ?>
-<div style="position:fixed;top:10px;right:10px;z-index:9999;background:#166534;color:#fff;padding:10px 14px;font-family:Arial;border-radius:4px;">Login realizado com sucesso.</div>
+<div style="position:fixed;top:10px;right:10px;z-index:9999;background:#166534;color:#fff;padding:10px 14px;font-family:Arial;border-radius:4px;">Login successful.</div>
 <?php endif; ?>
 <div style="background-image: url(images/cbt/header_back.jpg); background-repeat: no-repeat; background-position: center top; width: 100%; position:relative;display: table;">
 	
@@ -164,9 +165,9 @@ dojo.addOnLoad(function() {
 	</div>
 	<div class="pnlLoginHere"></div>
     <div class="pnlForgetPass" tabindex="0" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)">
-		<a href="index.php" onclick="jsRedirectTo(&quot;http://www.orangegame.co.id/forgetpass&quot;)">Lupa Password?</a>
+		<a href="index.php" onclick="jsRedirectTo(&quot;http://www.orangegame.co.id/forgetpass&quot;)">Forgot Password?</a>
 	</div>
-    <div class="pnlRegister" onclick="jsRedirectTo(&quot;register.php&quot;)" tabindex="0" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)"></div>
+    <div class="pnlRegister" onclick="document.getElementById('register-center').style.display='block';window.location.hash='register-center';" tabindex="0" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)"></div>
 	
 	<div class="pnlSocial">
 		<div class="title">
@@ -216,25 +217,25 @@ jQuery(window).load(function() {
 						<div class="o_login" id="account-panel">
 <?php if (isset($_SESSION['user_id']) && $accountInfo): ?>
 	<div style="position:absolute;top:18px;left:10px;width:238px;color:#fff;font-family:Arial;font-size:11px;line-height:1.6;">
-		<div style="font-size:15px;font-weight:bold;color:#ffd35a;margin-bottom:4px;">MINHA CONTA</div>
-		<div><b>Nome do Character:</b> <?= htmlspecialchars((string)($accountInfo['character_name'] ?? '-')) ?></div>
+		<div style="font-size:15px;font-weight:bold;color:#ffd35a;margin-bottom:4px;">MY ACCOUNT</div>
+		<div><b>Character Name:</b> <?= htmlspecialchars((string)($accountInfo['character_name'] ?? '-')) ?></div>
 		<div><b>Level:</b> <?= htmlspecialchars((string)($accountInfo['level'] ?? '0')) ?></div>
 		<div><b>Cash:</b> <?= htmlspecialchars((string)($accountInfo['cash'] ?? '0')) ?></div>
 		<div><b>Gigas:</b> <?= htmlspecialchars((string)($accountInfo['currency_gigas'] ?? '0')) ?></div>
 
 		<form method="post" action="auth/update_account.php" style="margin-top:8px;">
 			<input type="hidden" name="action" value="password">
-			<input type="password" name="new_password" placeholder="Nova senha" style="width:190px;height:20px;border:1px solid #666;background:#fff;padding-left:5px;">
-			<button type="submit" style="height:22px;cursor:pointer;">Trocar Senha</button>
+			<input type="password" name="new_password" placeholder="New password" style="width:190px;height:20px;border:1px solid #666;background:#fff;padding-left:5px;">
+			<button type="submit" style="height:22px;cursor:pointer;">Change Password</button>
 		</form>
 
 		<form method="post" action="auth/update_account.php" style="margin-top:6px;">
 			<input type="hidden" name="action" value="email">
-			<input type="email" name="new_email" placeholder="Novo email" style="width:190px;height:20px;border:1px solid #666;background:#fff;padding-left:5px;">
-			<button type="submit" style="height:22px;cursor:pointer;">Trocar Email</button>
+			<input type="email" name="new_email" placeholder="New email" style="width:190px;height:20px;border:1px solid #666;background:#fff;padding-left:5px;">
+			<button type="submit" style="height:22px;cursor:pointer;">Change Email</button>
 		</form>
 
-		<div style="margin-top:8px;"><a href="auth/logout.php" style="color:#ffd35a;text-decoration:none;font-weight:bold;">Sair</a></div>
+		<div style="margin-top:8px;"><a href="auth/logout.php" style="color:#ffd35a;text-decoration:none;font-weight:bold;">Logout</a></div>
 	</div>
 <?php else: ?>
 	<form id="frm_login_tbot" name="frm_login_tbot" method="post" action="auth/login.php" onsubmit="return(js2test(this.id))" autocomplete="off">
@@ -247,8 +248,8 @@ jQuery(window).load(function() {
 			<input type="password" name="passw" id="passw" class="o_txt_passwd" value="">
 		</div>
 		<input type="image" class="o_btn_login" src="images/obt/button/btn_login.png">
-		<div id="o_forget_pass" onclick="jsRedirectTo(&quot;http://www.orangegame.co.id/forgetpass&quot;)" tabindex="0">Lupa Password?</div>
-		<div id="o_btn_register" onclick="jsRedirectTo(&quot;#register-center&quot;)" tabindex="0"></div>
+		<div id="o_forget_pass" onclick="jsRedirectTo(&quot;http://www.orangegame.co.id/forgetpass&quot;)" tabindex="0">Forgot Password?</div>
+		<div id="o_btn_register" onclick="document.getElementById('register-center').style.display='block';window.location.hash='register-center';" tabindex="0"></div>
 		<div id="o_btn_my_info" onclick="jsRedirectTo(&quot;#account-panel&quot;)" tabindex="0"></div>
 	</form>
 <?php endif; ?>
@@ -285,20 +286,20 @@ jQuery(window).load(function() {
 					</a>
 														</div>
 			</div>
-			<div id="register-center" style="margin-top:8px; background:#242424; border:2px solid #b42822; border-radius:6px; padding:10px; color:#fff; font-family:Arial;">
-				<div style="font-size:16px; font-weight:bold; color:#ffd35a; margin-bottom:6px;">Registro de Conta</div>
+			<div id="register-center" style="display:none; margin-top:8px; background:#242424; border:2px solid #b42822; border-radius:6px; padding:10px; color:#fff; font-family:Arial;">
+				<div style="font-size:16px; font-weight:bold; color:#ffd35a; margin-bottom:6px;">Account Registration</div>
 				<?php if (isset($_GET['register_error'])): ?><div style="color:#ffb3b3; margin-bottom:6px;"><?= htmlspecialchars((string)$_GET['register_error']) ?></div><?php endif; ?>
-				<?php if (isset($_GET['register_success'])): ?><div style="color:#9cffb0; margin-bottom:6px;">Registro realizado com sucesso!</div><?php endif; ?>
+				<?php if (isset($_GET['register_success'])): ?><div style="color:#9cffb0; margin-bottom:6px;">Registration completed successfully!</div><?php endif; ?>
 				<form method="post" action="auth/register_inline.php" autocomplete="off">
 					<div style="display:flex;gap:6px;flex-wrap:wrap;">
 						<input type="text" name="username" placeholder="Username" required style="flex:1;min-width:130px;height:24px;padding-left:6px;">
 						<input type="email" name="email" placeholder="Email" required style="flex:1;min-width:130px;height:24px;padding-left:6px;">
 					</div>
 					<div style="display:flex;gap:6px;margin-top:6px;flex-wrap:wrap;">
-						<input type="password" name="password" placeholder="Senha" required style="flex:1;min-width:130px;height:24px;padding-left:6px;">
-						<input type="password" name="re_password" placeholder="Repita a senha" required style="flex:1;min-width:130px;height:24px;padding-left:6px;">
+						<input type="password" name="password" placeholder="Password" required style="flex:1;min-width:130px;height:24px;padding-left:6px;">
+						<input type="password" name="re_password" placeholder="Repeat password" required style="flex:1;min-width:130px;height:24px;padding-left:6px;">
 					</div>
-					<div style="margin-top:8px;"><button type="submit" style="background:#b42822;color:#fff;border:0;padding:7px 12px;cursor:pointer;font-weight:bold;">REGISTRAR</button></div>
+					<div style="margin-top:8px;"><button type="submit" style="background:#b42822;color:#fff;border:0;padding:7px 12px;cursor:pointer;font-weight:bold;">REGISTER</button></div>
 				</form>
 			</div>
 			<div class="o_box_l_outer">
@@ -579,4 +580,13 @@ jQuery(window).load(function() {
 </div>
  
 
+
+<script>
+(function(){
+  var b = document.getElementById('register-center');
+  if(!b) return;
+  var shouldShow = window.location.hash === '#register-center' || (new URLSearchParams(window.location.search).has('register_error')) || (new URLSearchParams(window.location.search).has('register_success'));
+  if(shouldShow){ b.style.display = 'block'; }
+})();
+</script>
 </body></html>

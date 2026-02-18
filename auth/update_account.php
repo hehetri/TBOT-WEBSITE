@@ -12,6 +12,7 @@ if (!$conn instanceof mysqli) {
     exit;
 }
 
+$userTable = resolve_user_table($conn);
 $userId = (int)$_SESSION['user_id'];
 $action = $_POST['action'] ?? '';
 
@@ -22,7 +23,7 @@ if ($action === 'password') {
         exit;
     }
     $hash = password_hash($newPassword, PASSWORD_ARGON2I);
-    $stmt = $conn->prepare('UPDATE users SET password = ? WHERE id = ?');
+    $stmt = $conn->prepare("UPDATE {$userTable} SET password = ? WHERE id = ?");
     $stmt->bind_param('si', $hash, $userId);
     $stmt->execute();
     $stmt->close();
@@ -34,7 +35,7 @@ if ($action === 'email') {
         header('Location: ../index.php?login_error=1#account-panel');
         exit;
     }
-    $stmt = $conn->prepare('UPDATE users SET email = ? WHERE id = ?');
+    $stmt = $conn->prepare("UPDATE {$userTable} SET email = ? WHERE id = ?");
     $stmt->bind_param('si', $newEmail, $userId);
     $stmt->execute();
     $stmt->close();
