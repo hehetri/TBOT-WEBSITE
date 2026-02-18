@@ -6,5 +6,12 @@ $user = 'bout';
 $pass = '202040pp';
 $db   = 'bout_evolution';
 
-$conn = new mysqli($host, $user, $pass, $db);
-$conn->set_charset('utf8mb4');
+$conn = null;
+$db_error = null;
+
+try {
+    $conn = new mysqli($host, $user, $pass, $db);
+    $conn->set_charset('utf8mb4');
+} catch (Throwable $e) {
+    $db_error = $e->getMessage();
+}

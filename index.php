@@ -1,3 +1,25 @@
+<?php
+session_start();
+require_once __DIR__ . '/config.php';
+
+$accountInfo = null;
+if (isset($_SESSION['user_id']) && $conn instanceof mysqli) {
+    $uid = (int)$_SESSION['user_id'];
+    $stmt = $conn->prepare("
+        SELECT u.username, u.email, u.cash,
+               c.name AS character_name, c.level, c.currency_gigas
+        FROM users u
+        LEFT JOIN characters c ON c.user_id = u.id
+        WHERE u.id = ?
+        ORDER BY c.level DESC
+        LIMIT 1
+    ");
+    $stmt->bind_param('i', $uid);
+    $stmt->execute();
+    $accountInfo = $stmt->get_result()->fetch_assoc() ?: null;
+    $stmt->close();
+}
+?>
 <!DOCTYPE html><html><head> 
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
 <title>T-Bot Online</title> 
@@ -191,22 +213,46 @@ jQuery(window).load(function() {
 	<div class="o_main_container_row">
 		<div class="o_main_sep_left"></div><!-- 35 -->
 		<div class="o_main_container_column_1"><!-- 258 -->
-						<div class="o_login">
-				<form id="frm_login_tbot" name="frm_login_tbot" method="post" action="auth/login.php" onsubmit="return(js2test(this.id))" autocomplete="off">
-				<input type="hidden" name="passx" id="passx" value="">
-				<input type="hidden" name="service" id="service" value="tbot">
-					<div style="position: absolute; top: 43px; left: 11px;">
-						<input type="text" name="user_id" id="user_id" class="o_txt_user_id" value="">
-					</div>
-					<div style="position: absolute; top: 73px; left: 11px;">
-						<input type="password" name="passw" id="passw" class="o_txt_passwd" value="">
-					</div>
-					<input type="image" class="o_btn_login" src="images/obt/button/btn_login.png">
-					<div id="o_forget_pass" onclick="jsRedirectTo(&quot;http://www.orangegame.co.id/forgetpass&quot;)" tabindex="0">Lupa Password?</div>
-					<div id="o_btn_register" onclick="jsRedirectTo(&quot;register.php&quot;)" tabindex="0"></div>
-					<div id="o_btn_my_info" onclick="jsRedirectTo(&quot;http://www.orangegame.co.id/user&quot;)" tabindex="0"></div>
-				</form>
-			</div>
+						<div class="o_login" id="account-panel">
+<?php if (isset($_SESSION['user_id']) && $accountInfo): ?>
+	<div style="position:absolute;top:18px;left:10px;width:238px;color:#fff;font-family:Arial;font-size:11px;line-height:1.6;">
+		<div style="font-size:15px;font-weight:bold;color:#ffd35a;margin-bottom:4px;">MINHA CONTA</div>
+		<div><b>Nome do Character:</b> <?= htmlspecialchars((string)($accountInfo['character_name'] ?? '-')) ?></div>
+		<div><b>Level:</b> <?= htmlspecialchars((string)($accountInfo['level'] ?? '0')) ?></div>
+		<div><b>Cash:</b> <?= htmlspecialchars((string)($accountInfo['cash'] ?? '0')) ?></div>
+		<div><b>Gigas:</b> <?= htmlspecialchars((string)($accountInfo['currency_gigas'] ?? '0')) ?></div>
+
+		<form method="post" action="auth/update_account.php" style="margin-top:8px;">
+			<input type="hidden" name="action" value="password">
+			<input type="password" name="new_password" placeholder="Nova senha" style="width:190px;height:20px;border:1px solid #666;background:#fff;padding-left:5px;">
+			<button type="submit" style="height:22px;cursor:pointer;">Trocar Senha</button>
+		</form>
+
+		<form method="post" action="auth/update_account.php" style="margin-top:6px;">
+			<input type="hidden" name="action" value="email">
+			<input type="email" name="new_email" placeholder="Novo email" style="width:190px;height:20px;border:1px solid #666;background:#fff;padding-left:5px;">
+			<button type="submit" style="height:22px;cursor:pointer;">Trocar Email</button>
+		</form>
+
+		<div style="margin-top:8px;"><a href="auth/logout.php" style="color:#ffd35a;text-decoration:none;font-weight:bold;">Sair</a></div>
+	</div>
+<?php else: ?>
+	<form id="frm_login_tbot" name="frm_login_tbot" method="post" action="auth/login.php" onsubmit="return(js2test(this.id))" autocomplete="off">
+	<input type="hidden" name="passx" id="passx" value="">
+	<input type="hidden" name="service" id="service" value="tbot">
+		<div style="position: absolute; top: 43px; left: 11px;">
+			<input type="text" name="user_id" id="user_id" class="o_txt_user_id" value="">
+		</div>
+		<div style="position: absolute; top: 73px; left: 11px;">
+			<input type="password" name="passw" id="passw" class="o_txt_passwd" value="">
+		</div>
+		<input type="image" class="o_btn_login" src="images/obt/button/btn_login.png">
+		<div id="o_forget_pass" onclick="jsRedirectTo(&quot;http://www.orangegame.co.id/forgetpass&quot;)" tabindex="0">Lupa Password?</div>
+		<div id="o_btn_register" onclick="jsRedirectTo(&quot;#register-center&quot;)" tabindex="0"></div>
+		<div id="o_btn_my_info" onclick="jsRedirectTo(&quot;#account-panel&quot;)" tabindex="0"></div>
+	</form>
+<?php endif; ?>
+</div>
 						<div>
 				<div class="o_btn_cash" onclick="jsOpenWin('http://orangegame.co.id/cash')">
 				</div>
@@ -238,6 +284,22 @@ jQuery(window).load(function() {
 						<img src="images/banner/web/banner_12.jpg" alt="Premium Warnet">
 					</a>
 														</div>
+			</div>
+			<div id="register-center" style="margin-top:8px; background:#242424; border:2px solid #b42822; border-radius:6px; padding:10px; color:#fff; font-family:Arial;">
+				<div style="font-size:16px; font-weight:bold; color:#ffd35a; margin-bottom:6px;">Registro de Conta</div>
+				<?php if (isset($_GET['register_error'])): ?><div style="color:#ffb3b3; margin-bottom:6px;"><?= htmlspecialchars((string)$_GET['register_error']) ?></div><?php endif; ?>
+				<?php if (isset($_GET['register_success'])): ?><div style="color:#9cffb0; margin-bottom:6px;">Registro realizado com sucesso!</div><?php endif; ?>
+				<form method="post" action="auth/register_inline.php" autocomplete="off">
+					<div style="display:flex;gap:6px;flex-wrap:wrap;">
+						<input type="text" name="username" placeholder="Username" required style="flex:1;min-width:130px;height:24px;padding-left:6px;">
+						<input type="email" name="email" placeholder="Email" required style="flex:1;min-width:130px;height:24px;padding-left:6px;">
+					</div>
+					<div style="display:flex;gap:6px;margin-top:6px;flex-wrap:wrap;">
+						<input type="password" name="password" placeholder="Senha" required style="flex:1;min-width:130px;height:24px;padding-left:6px;">
+						<input type="password" name="re_password" placeholder="Repita a senha" required style="flex:1;min-width:130px;height:24px;padding-left:6px;">
+					</div>
+					<div style="margin-top:8px;"><button type="submit" style="background:#b42822;color:#fff;border:0;padding:7px 12px;cursor:pointer;font-weight:bold;">REGISTRAR</button></div>
+				</form>
 			</div>
 			<div class="o_box_l_outer">
 				<div class="o_box_l_header">
