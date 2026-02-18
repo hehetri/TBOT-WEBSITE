@@ -145,14 +145,14 @@ dojo.addOnLoad(function() {
 		<div style="padding: 0 0 0 0;">
 			<div style="width: 100%; height: 220px; padding: 1px 0 0 0; position:relative; margin-bottom:10px;">
 				<div style="width: 943px; height: 61px; position:absolute; top: 161px; left: 31px;">
-					<div id="b_home" class="btn_home" onclick="jsRedirectTo('..')" onmouseover="moToggler(&quot;b_home&quot;, &quot;btn_home_over&quot;)" onmouseout="moToggler(&quot;b_home&quot;, &quot;btn_home_over&quot;)"></div>
+					<div id="b_home" class="btn_home" onclick="jsRedirectTo('../index.php')" onmouseover="moToggler(&quot;b_home&quot;, &quot;btn_home_over&quot;)" onmouseout="moToggler(&quot;b_home&quot;, &quot;btn_home_over&quot;)"></div>
 					<div id="b_news" class="btn_news" onclick="jsOpenWin('http://forum.orangegame.co.id/viewforum.php?f=10')" onmouseover="moToggler(&quot;b_news&quot;, &quot;btn_news_over&quot;)" onmouseout="moToggler(&quot;b_news&quot;, &quot;btn_news_over&quot;)"></div>
-					<div id="b_gameinfo" class="btn_gameinfo" onclick="jsRedirectTo('../gameinfo')" onmouseover="moToggler(&quot;b_gameinfo&quot;, &quot;btn_gameinfo_over&quot;)" onmouseout="moToggler(&quot;b_gameinfo&quot;, &quot;btn_gameinfo_over&quot;)"></div>
+					<div id="b_gameinfo" class="btn_gameinfo" onclick="jsRedirectTo('../gameinfo/index.php')" onmouseover="moToggler(&quot;b_gameinfo&quot;, &quot;btn_gameinfo_over&quot;)" onmouseout="moToggler(&quot;b_gameinfo&quot;, &quot;btn_gameinfo_over&quot;)"></div>
 					<div id="b_forum" class="btn_forum" onclick="jsOpenWin('http://forum.orangegame.co.id')" onmouseover="moToggler(&quot;b_forum&quot;, &quot;btn_forum_over&quot;)" onmouseout="moToggler(&quot;b_forum&quot;, &quot;btn_forum_over&quot;)"></div>
-					<div id="b_download" class="btn_download" onclick="jsRedirectTo('../downloads')" onmouseover="moToggler(&quot;b_download&quot;, &quot;btn_download_over&quot;)" onmouseout="moToggler(&quot;b_download&quot;, &quot;btn_download_over&quot;)"></div>
+					<div id="b_download" class="btn_download" onclick="jsRedirectTo('../downloads/index.php')" onmouseover="moToggler(&quot;b_download&quot;, &quot;btn_download_over&quot;)" onmouseout="moToggler(&quot;b_download&quot;, &quot;btn_download_over&quot;)"></div>
 					<div id="b_support" class="btn_support btn_support_over" onmouseover="moToggler(&quot;b_support&quot;, &quot;btn_support_over&quot;, true)" onmouseout="moToggler(&quot;b_support&quot;, &quot;btn_support_over&quot;, true)"></div>
-					<div id="b_rank" class="btn_rank" onclick="jsRedirectTo('../ranks')" onmouseover="moToggler(&quot;b_rank&quot;, &quot;btn_rank_over&quot;)" onmouseout="moToggler(&quot;b_rank&quot;, &quot;btn_rank_over&quot;)"></div>
-					<div id="b_itemmall" class="btn_itemmall" onclick="jsRedirectTo('../itemmall')" onmouseover="moToggler(&quot;b_itemmall&quot;, &quot;btn_itemmall_over&quot;)" onmouseout="moToggler(&quot;b_itemmall&quot;, &quot;btn_itemmall_over&quot;)"></div>
+					<div id="b_rank" class="btn_rank" onclick="jsRedirectTo('../ranks/index.php')" onmouseover="moToggler(&quot;b_rank&quot;, &quot;btn_rank_over&quot;)" onmouseout="moToggler(&quot;b_rank&quot;, &quot;btn_rank_over&quot;)"></div>
+					<div id="b_itemmall" class="btn_itemmall" onclick="jsRedirectTo('../itemmall/index.php')" onmouseover="moToggler(&quot;b_itemmall&quot;, &quot;btn_itemmall_over&quot;)" onmouseout="moToggler(&quot;b_itemmall&quot;, &quot;btn_itemmall_over&quot;)"></div>
 				</div>
 			</div>
 						<div style="width: 100%; display: table; border-collapse:collapse; ">
@@ -163,11 +163,11 @@ dojo.addOnLoad(function() {
 	</div>
 	<div class="btn_cash" onclick="jsRedirectTo('http://orangegame.co.id/cash')">
 	</div>
-	<div class="btn_download_game" onclick="jsRedirectTo('../downloads')">
+	<div class="btn_download_game" onclick="jsRedirectTo('../downloads/index.php')">
 	</div>
 	<div class="btn_voucher_new" onclick="jsOpenWin('http://www.unopay.co.id/')">
 	</div>
-	<div class="btn_itemmall_new" onclick="jsRedirectTo('../itemmall')">
+	<div class="btn_itemmall_new" onclick="jsRedirectTo('../itemmall/index.php')">
 	</div>
 </div>
 <div>
@@ -186,29 +186,24 @@ dojo.addOnLoad(function() {
 			<div class="c_box_big_left"></div>
 			<div class="c_box_big_content_wrapper">
 				<!-- content here -->
-				<div style="background-image: url(../images/cbt/ym_icon.png); background-repeat: no-repeat; width: 110px; height: 102px; margin: 10px auto 10px auto;">
-				</div>
-				<div style="margin: 0px auto 3px auto; text-align: center; font-face: Arial; font-size: 9pt; font-weight: bold; color: #32424b;">
-					CS Orange1&nbsp;<a href="ymsgr:sendIM?cs.orange01"><img src="../online/index.php" border="0" height="16" width="64" align="ABSMIDDLE"></a>
-				</div>
-				<div style="margin: 0px auto 0px auto; text-align: center; font-face: Arial; font-size: 9pt; font-weight: bold; color: #32424b;">
-					CS Orange2&nbsp;<a href="ymsgr:sendIM?cs.orange02"><img src="../online/index.php" border="0" height="16" width="64" align="ABSMIDDLE"></a>
-				</div>
-				<div style="margin-top: 15px;margin-bottom: 10px; text-align: center; font-face: Arial; font-size: 9pt; color: #32424b;">
-					<b>Jam kerja(WIB)</b>:<br>
-					Senin - Jumat, 09:00 - 21:00<br>
-					Sabut - Minggu, 12:00 - 21:00
-				</div>
-				<div style="text-align: center; padding: 15px; font-size: 9pt;">
-					<b>Telpon:</b> <br>
-					021-45878710
-				</div>
-				<div style="text-align: center; padding: 15px; font-size: 9pt;">
-					<b>E-Mail:</b> <br>
-					<a href="mailto: tbotsupport@orangegame.co.id">tbotsupport@orangegame.co.id</a>
-				</div>
-				<div style="background-image: url(../images/obt/button/btn_q_a.png); background-repeat: no-repeat; width: 123px; height: 35px; margin: 10px auto 10px auto;cursor: pointer;" onclick="jsOpenWin(&quot;http://forum.orangegame.co.id/viewforum.php?f=15&quot;)">
-				</div>
+									<div style="max-width: 520px; margin: 16px auto; background:#f8f8f8; border:1px solid #d3d3d3; border-radius:8px; padding:14px; box-shadow:0 2px 10px rgba(0,0,0,.12); font-family:Arial;">
+						<div style="font-size:18px; font-weight:bold; color:#8a0e0e; margin-bottom:10px; text-align:center;">Support Form</div>
+						<form method="post" action="#" onsubmit="alert('Support request sent successfully.'); return false;">
+							<div style="margin-bottom:8px;">
+								<label style="display:block; font-size:12px; color:#333; margin-bottom:4px;">Name</label>
+								<input type="text" name="support_name" required style="width:100%;height:30px;border:1px solid #c7c7c7;border-radius:4px;padding:4px 8px;box-sizing:border-box;">
+							</div>
+							<div style="margin-bottom:8px;">
+								<label style="display:block; font-size:12px; color:#333; margin-bottom:4px;">Email</label>
+								<input type="email" name="support_email" required style="width:100%;height:30px;border:1px solid #c7c7c7;border-radius:4px;padding:4px 8px;box-sizing:border-box;">
+							</div>
+							<div style="margin-bottom:10px;">
+								<label style="display:block; font-size:12px; color:#333; margin-bottom:4px;">Message</label>
+								<textarea name="support_message" rows="6" required style="width:100%;border:1px solid #c7c7c7;border-radius:4px;padding:6px 8px;box-sizing:border-box;resize:vertical;"></textarea>
+							</div>
+							<button type="submit" style="background:#b42822;color:#fff;border:0;border-radius:4px;padding:8px 14px;font-weight:bold;cursor:pointer;">Send</button>
+						</form>
+					</div>
 			</div>
 			<div class="c_box_big_right"></div>
 		</div>

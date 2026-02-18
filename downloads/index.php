@@ -148,14 +148,14 @@ dojo.addOnLoad(function() {
 		<div style="padding: 0 0 0 0;">
 			<div style="width: 100%; height: 220px; padding: 1px 0 0 0; position:relative; margin-bottom:10px;">
 				<div style="width: 943px; height: 61px; position:absolute; top: 161px; left: 31px;">
-					<div id="b_home" class="btn_home" onclick="jsRedirectTo('..')" onmouseover="moToggler(&quot;b_home&quot;, &quot;btn_home_over&quot;)" onmouseout="moToggler(&quot;b_home&quot;, &quot;btn_home_over&quot;)"></div>
+					<div id="b_home" class="btn_home" onclick="jsRedirectTo('../index.php')" onmouseover="moToggler(&quot;b_home&quot;, &quot;btn_home_over&quot;)" onmouseout="moToggler(&quot;b_home&quot;, &quot;btn_home_over&quot;)"></div>
 					<div id="b_news" class="btn_news" onclick="jsOpenWin('http://forum.orangegame.co.id/viewforum.php?f=10')" onmouseover="moToggler(&quot;b_news&quot;, &quot;btn_news_over&quot;)" onmouseout="moToggler(&quot;b_news&quot;, &quot;btn_news_over&quot;)"></div>
-					<div id="b_gameinfo" class="btn_gameinfo" onclick="jsRedirectTo('../gameinfo')" onmouseover="moToggler(&quot;b_gameinfo&quot;, &quot;btn_gameinfo_over&quot;)" onmouseout="moToggler(&quot;b_gameinfo&quot;, &quot;btn_gameinfo_over&quot;)"></div>
+					<div id="b_gameinfo" class="btn_gameinfo" onclick="jsRedirectTo('../gameinfo/index.php')" onmouseover="moToggler(&quot;b_gameinfo&quot;, &quot;btn_gameinfo_over&quot;)" onmouseout="moToggler(&quot;b_gameinfo&quot;, &quot;btn_gameinfo_over&quot;)"></div>
 					<div id="b_forum" class="btn_forum" onclick="jsOpenWin('http://forum.orangegame.co.id')" onmouseover="moToggler(&quot;b_forum&quot;, &quot;btn_forum_over&quot;)" onmouseout="moToggler(&quot;b_forum&quot;, &quot;btn_forum_over&quot;)"></div>
 					<div id="b_download" class="btn_download btn_download_over" onmouseover="moToggler(&quot;b_download&quot;, &quot;btn_download_over&quot;, true)" onmouseout="moToggler(&quot;b_download&quot;, &quot;btn_download_over&quot;, true)"></div>
-					<div id="b_support" class="btn_support" onclick="jsRedirectTo('../contact')" onmouseover="moToggler(&quot;b_support&quot;, &quot;btn_support_over&quot;)" onmouseout="moToggler(&quot;b_support&quot;, &quot;btn_support_over&quot;)"></div>
-					<div id="b_rank" class="btn_rank" onclick="jsRedirectTo('../ranks')" onmouseover="moToggler(&quot;b_rank&quot;, &quot;btn_rank_over&quot;)" onmouseout="moToggler(&quot;b_rank&quot;, &quot;btn_rank_over&quot;)"></div>
-					<div id="b_itemmall" class="btn_itemmall" onclick="jsRedirectTo('../itemmall')" onmouseover="moToggler(&quot;b_itemmall&quot;, &quot;btn_itemmall_over&quot;)" onmouseout="moToggler(&quot;b_itemmall&quot;, &quot;btn_itemmall_over&quot;)"></div>
+					<div id="b_support" class="btn_support" onclick="jsRedirectTo('../contact/index.php')" onmouseover="moToggler(&quot;b_support&quot;, &quot;btn_support_over&quot;)" onmouseout="moToggler(&quot;b_support&quot;, &quot;btn_support_over&quot;)"></div>
+					<div id="b_rank" class="btn_rank" onclick="jsRedirectTo('../ranks/index.php')" onmouseover="moToggler(&quot;b_rank&quot;, &quot;btn_rank_over&quot;)" onmouseout="moToggler(&quot;b_rank&quot;, &quot;btn_rank_over&quot;)"></div>
+					<div id="b_itemmall" class="btn_itemmall" onclick="jsRedirectTo('../itemmall/index.php')" onmouseover="moToggler(&quot;b_itemmall&quot;, &quot;btn_itemmall_over&quot;)" onmouseout="moToggler(&quot;b_itemmall&quot;, &quot;btn_itemmall_over&quot;)"></div>
 				</div>
 			</div>
 						<div style="width: 100%; display: table; border-collapse:collapse; ">
@@ -164,9 +164,9 @@ dojo.addOnLoad(function() {
 						<div class="submenu_outer">
 	<div class="submenu_inner">
 		<div id="submenu_item_client_patch" class="submenu_item submenu_item_client_patch  submenu_item_client_patch_over" onmouseover="jsOverToggler(&quot;submenu_item_client_patch&quot;, &quot;submenu_item_client_patch_over&quot;, true)" onmouseout="jsOverToggler(&quot;submenu_item_client_patch&quot;, &quot;submenu_item_client_patch_over&quot;, true)"></div>
-		<div id="submenu_item_ss" class="submenu_item submenu_item_ss " onclick="jsRedirectTo('ss')" onmouseover="jsOverToggler(&quot;submenu_item_ss&quot;, &quot;submenu_item_ss_over&quot;)" onmouseout="jsOverToggler(&quot;submenu_item_ss&quot;, &quot;submenu_item_ss_over&quot;)"></div>
-		<div id="submenu_item_video" class="submenu_item submenu_item_video " onclick="jsRedirectTo('video')" onmouseover="jsOverToggler(&quot;submenu_item_video&quot;, &quot;submenu_item_video_over&quot;)" onmouseout="jsOverToggler(&quot;submenu_item_video&quot;, &quot;submenu_item_video_over&quot;)"></div>
-		<div id="submenu_item_wp" class="submenu_item submenu_item_wp " onclick="jsRedirectTo('wp')" onmouseover="jsOverToggler(&quot;submenu_item_wp&quot;, &quot;submenu_item_wp_over&quot;)" onmouseout="jsOverToggler(&quot;submenu_item_wp&quot;, &quot;submenu_item_wp_over&quot;)"></div>
+		<div id="submenu_item_ss" class="submenu_item submenu_item_ss " onclick="jsRedirectTo('ss/index.php')" onmouseover="jsOverToggler(&quot;submenu_item_ss&quot;, &quot;submenu_item_ss_over&quot;)" onmouseout="jsOverToggler(&quot;submenu_item_ss&quot;, &quot;submenu_item_ss_over&quot;)"></div>
+		<div id="submenu_item_video" class="submenu_item submenu_item_video " onclick="jsRedirectTo('video/index.php')" onmouseover="jsOverToggler(&quot;submenu_item_video&quot;, &quot;submenu_item_video_over&quot;)" onmouseout="jsOverToggler(&quot;submenu_item_video&quot;, &quot;submenu_item_video_over&quot;)"></div>
+		<div id="submenu_item_wp" class="submenu_item submenu_item_wp " onclick="jsRedirectTo('wp/index.php')" onmouseover="jsOverToggler(&quot;submenu_item_wp&quot;, &quot;submenu_item_wp_over&quot;)" onmouseout="jsOverToggler(&quot;submenu_item_wp&quot;, &quot;submenu_item_wp_over&quot;)"></div>
 	</div>
 </div>
 						<div>
@@ -178,7 +178,7 @@ dojo.addOnLoad(function() {
 	</div>
 	<div class="btn_voucher_new" onclick="jsOpenWin('http://www.unopay.co.id/')">
 	</div>
-	<div class="btn_itemmall_new" onclick="jsRedirectTo('../itemmall')">
+	<div class="btn_itemmall_new" onclick="jsRedirectTo('../itemmall/index.php')">
 	</div>
 </div>
 <div>

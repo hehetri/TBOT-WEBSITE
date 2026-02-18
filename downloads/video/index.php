@@ -127,7 +127,7 @@ function aniStopScroll(st) {
 					<div style="width: 258px; float:left; position:relative; display: table-cell; margin: 0 0 0 42px;">
 						<div class="submenu_outer">
 	<div class="submenu_inner">
-		<div id="submenu_item_client_patch" class="submenu_item submenu_item_client_patch " onclick="jsRedirectTo('..')" onmouseover="jsOverToggler(&quot;submenu_item_client_patch&quot;, &quot;submenu_item_client_patch_over&quot;)" onmouseout="jsOverToggler(&quot;submenu_item_client_patch&quot;, &quot;submenu_item_client_patch_over&quot;)"></div>
+		<div id="submenu_item_client_patch" class="submenu_item submenu_item_client_patch " onclick="jsRedirectTo('../index.php')" onmouseover="jsOverToggler(&quot;submenu_item_client_patch&quot;, &quot;submenu_item_client_patch_over&quot;)" onmouseout="jsOverToggler(&quot;submenu_item_client_patch&quot;, &quot;submenu_item_client_patch_over&quot;)"></div>
 		<div id="submenu_item_ss" class="submenu_item submenu_item_ss " onclick="jsRedirectTo('../ss')" onmouseover="jsOverToggler(&quot;submenu_item_ss&quot;, &quot;submenu_item_ss_over&quot;)" onmouseout="jsOverToggler(&quot;submenu_item_ss&quot;, &quot;submenu_item_ss_over&quot;)"></div>
 		<div id="submenu_item_video" class="submenu_item submenu_item_video  submenu_item_video_over" onmouseover="jsOverToggler(&quot;submenu_item_video&quot;, &quot;submenu_item_video_over&quot;, true)" onmouseout="jsOverToggler(&quot;submenu_item_video&quot;, &quot;submenu_item_video_over&quot;, true)"></div>
 		<div id="submenu_item_wp" class="submenu_item submenu_item_wp " onclick="jsRedirectTo('../wp')" onmouseover="jsOverToggler(&quot;submenu_item_wp&quot;, &quot;submenu_item_wp_over&quot;)" onmouseout="jsOverToggler(&quot;submenu_item_wp&quot;, &quot;submenu_item_wp_over&quot;)"></div>
@@ -138,7 +138,7 @@ function aniStopScroll(st) {
 	</div>
 	<div class="btn_cash" onclick="jsRedirectTo('http://orangegame.co.id/cash')">
 	</div>
-	<div class="btn_download_game" onclick="jsRedirectTo('..')">
+	<div class="btn_download_game" onclick="jsRedirectTo('../index.php')">
 	</div>
 	<div class="btn_voucher_new" onclick="jsOpenWin('http://www.unopay.co.id/')">
 	</div>
