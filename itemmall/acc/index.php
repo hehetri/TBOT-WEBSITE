@@ -1,0 +1,452 @@
+<!DOCTYPE html><html><head> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+<title>Item Mall - Accesories - T-Bot Online</title> 
+<link href="../../images/favicon.ico" rel="shortcut icon">
+<link href="../../css/main.css" media="screen" rel="stylesheet" type="text/css">
+<link href="../../css/itemmall.css" media="screen" rel="stylesheet" type="text/css">
+<link href="../../css/cbt2.css" media="screen" rel="stylesheet" type="text/css"><script type="text/javascript" src="../../lib/OG/OG.js"></script> 
+<style type="text/css">
+<!--
+    @import "../../lib/dojo/dojo-release-1.5.0/dijit/themes/tundra/tundra.css";
+-->
+</style>
+<script type="text/javascript">
+//<![CDATA[
+    var djConfig = {"parseOnLoad":"true"};
+//]]>
+</script>
+<script type="text/javascript" src="../../lib/dojo/dojo-release-1.5.0/dojo/dojo.js"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+dojo.require("dijit.Tooltip");
+    dojo.require("dojo.fx");
+    dojo.require("dojo.NodeList-fx");
+//]]>
+
+</script> 
+<script type="text/javascript" src="../../lib/md5/md5.js"></script>
+<script type="text/javascript">
+ var _gaq = _gaq || [];
+ _gaq.push(['_setAccount', 'UA-20407076-2']);
+ _gaq.push(['_trackPageview']);
+
+ (function() {
+   var ga = document.createElement('script'); ga.type =
+'text/javascript'; ga.async = true;
+   ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+'http://www') + '.google-analytics.com/ga.js';
+   var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(ga, s);
+ })();
+</script>
+		<script lang="JavaScript">
+		function gotoTbot() {
+			jsOpenWin('../..');
+		}
+		function moToggler(bid,cls,cannotChange) {
+			if(cannotChange!=true) dojo.toggleClass(bid, cls);
+		}
+		</script>
+</head> 
+<body class="tundra" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"> 
+<div style="background-image: url(../../images/cbt/header_back.jpg); background-repeat: no-repeat; background-position: center top; width: 100%; position:relative;display: table;">
+	<div style="width: 100%;height: 34px;background-image: url(../../images/back.jpg);background-repeat: repeat-x;position: fixed; top: 0px; z-index:9999;">
+		<div style="background-image: url(../../images/back.jpg); background-repeat: no-repeat; width: 1005px; height: 34px; z-index:1; left: 0px;margin: 0 auto 0 auto ; position:relative ">
+			<div style="background-image: url(../../images/orange_logo.png); background-repeat: no-repeat; width: 160px; height: 26px; position: absolute; top: 3px; left: 5px;cursor: pointer;" onclick="jsRedirectTo(&quot;http://www.orangegame.co.id&quot;)"></div>
+			<div style="background-image: url(../../images/forum_icon.png); background-repeat: no-repeat; width: 26px; height: 26px; position: absolute; top: 3px; left: 175px;cursor: pointer;" onclick="jsOpenWin(&quot;http://forum.orangegame.co.id&quot;)"></div>
+			<div style="background-image: url(../../images/tbot_logo.png); background-repeat: no-repeat; width: 26px; height: 26px; position: absolute; top: 3px; left: 205px;cursor: pointer;" onclick="jsOpenWin(&quot;http://tbot.orangegame.co.id&quot;)"></div>
+			<div style="background-image: url(../../images/mahadewa_icon.png); background-repeat: no-repeat; width: 26px; height: 26px; position: absolute; top: 3px; left: 235px;cursor: pointer;" onclick="jsOpenWin(&quot;http://mahadewa.orangegame.co.id&quot;)"></div>
+			<div style="background-image: url(../../images/81keyslogo.png); background-repeat: no-repeat; width: 26px; height: 26px; position: absolute; top: 3px; left: 265px;cursor: pointer;" onclick="jsOpenWin(&quot;http://81keys.orangegame.co.id&quot;)"></div>
+			<div style="background-image: url(../../images/dklogo.png); background-repeat: no-repeat; width: 26px; height: 26px; position: absolute; top: 3px; left: 295px;cursor: pointer;" onclick="jsOpenWin(&quot;http://dk.orangegame.co.id&quot;)"></div>
+			<div style="background-image: url(../../images/youtube_logo.png); background-repeat: no-repeat; width: 26px; height: 26px; position: absolute; top: 3px; left: 570px;cursor: pointer;" onclick="jsOpenWin(&quot;http://www.youtube.com/user/OGInteractive&quot;)"></div>
+			<div style="background-image: url(../../images/fb_logo.png); background-repeat: no-repeat; width: 26px; height: 26px; position: absolute; top: 3px; left: 600px;cursor: pointer;" onclick="jsOpenWin(&quot;http://www.facebook.com/pages/T-Bot-Online-Indonesia/116263148440202&quot;)"></div>
+			<div style="background-image: url(../../images/twitter_logo.png); background-repeat: no-repeat; width: 26px; height: 26px; position: absolute; top: 3px; left: 630px;cursor: pointer;" onclick="jsOpenWin(&quot;http://twitter.com/tbotonline&quot;)"></div>
+			<div style="background-image: url(../../images/messege_icon.png); background-repeat: no-repeat; width: 26px; height: 26px; position: absolute; top: 3px; left: 660px;;cursor: pointer;" onclick="jsRedirectTo(&quot;mailto:community@orangegame.co.id&quot;)"></div>
+			<script>
+/*<![CDATA[*/
+var stopScrollUp=false;
+var curHidden=true;
+function doani(out) {
+	if(out) {
+		var anim1 = dojo.fx.slideTo({ node: "login_panel" ,left:"695px",top:"0",unit:"px" });
+		dojo.fx.chain([anim1]).play();
+		curHidden=false;
+	} else {
+		if(! stopScrollUp) {
+			var anim1 = dojo.fx.slideTo({ node: "login_panel" ,left:"695px",top:"-90",unit:"px" });
+			dojo.fx.chain([anim1]).play();
+			curHidden=true;
+		}
+	}
+}
+function aniStopScroll(st) {
+	stopScrollUp=st;
+	if(! st) {
+		if(! curHidden) doani(false);
+	} else {
+		if(curHidden) doani(true);
+	}
+}
+/*]]>*/
+</script>
+<div id="login_panel" style="background-image: url(../../images/back_signup.png); background-repeat: no-repeat; width: 292px; height: 138px; position: absolute; top: -90px; left: 695px; z-index:2;" onmouseover="doani(true)" onmouseout="doani(false)" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)" tabindex="0">
+	<div style="background-image: url(../../images/idlogin.png); background-repeat: no-repeat; width: 105px; height: 13px; position: absolute; top: 8px; left: 13px;"></div>
+	<div style="background-image: url(../../images/password.png); background-repeat: no-repeat; width: 50px; height: 11px; position: absolute; top: 56px; left: 13px;"></div>
+	<form id="frm_login" name="frm_login" method="post" action="../../auth/login.php" onsubmit="return(js2test(this.id))" autocomplete="off">
+		<input type="hidden" name="passx" id="passx" value="">
+		<input type="hidden" name="service" id="service" value="tbot">
+		<div style="position: absolute; top: 22px; left: 13px;">
+			<input type="text" name="user_id" id="user_id" class="txt_user_id" value="" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)">
+		</div>
+		<div style="position: absolute; top: 68px; left: 13px;">
+			<input type="password" name="passw" id="passw" class="txt_passwd" value="" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)">
+		</div>
+		<input type="image" style="position: absolute; top: 65px; left: 163px;" src="../../images/loginaccount_button.png" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)">
+	</form>
+	<div style="background-image: url(../../images/forget-password.png); background-repeat: no-repeat; width: 67px; height: 27px; position: absolute; top: 65px; left: 212px;cursor: pointer;" onclick="jsRedirectTo(&quot;http://orangegame.co.id/forgetpass&quot;)" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)" tabindex="0"></div>
+	<div style="background-image: url(../../images/myinfo_button.png); background-repeat: no-repeat; width: 95px; height: 51px; position: absolute; top: 7px; left: 180px;cursor: pointer;" onclick="jsRedirectTo(&quot;http://orangegame.co.id/user&quot;)" tabindex="0" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)"></div>
+	<div style="background-image: url(../../images/registration_button.png); background-repeat: no-repeat; width: 132px; height: 24px; position: absolute; top: 102px; left: 140px;cursor: pointer;" onclick="jsRedirectTo(&quot;../../register.php&quot;)" tabindex="0" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)"></div>
+</div>		</div>
+	</div>
+	<div id="pageWrapper" style="background-image: url(../../images/cbt/header_back.jpg); background-repeat: no-repeat; background-position: center top;">
+		<div style="padding: 0 0 0 0;">
+			<div style="width: 100%; height: 220px; padding: 1px 0 0 0; position:relative; margin-bottom:10px;">
+				<div style="width: 943px; height: 61px; position:absolute; top: 161px; left: 31px;">
+					<div id="b_home" class="btn_home" onclick="jsRedirectTo('../..')" onmouseover="moToggler(&quot;b_home&quot;, &quot;btn_home_over&quot;)" onmouseout="moToggler(&quot;b_home&quot;, &quot;btn_home_over&quot;)"></div>
+					<div id="b_news" class="btn_news" onclick="jsOpenWin('http://forum.orangegame.co.id/viewforum.php?f=10')" onmouseover="moToggler(&quot;b_news&quot;, &quot;btn_news_over&quot;)" onmouseout="moToggler(&quot;b_news&quot;, &quot;btn_news_over&quot;)"></div>
+					<div id="b_gameinfo" class="btn_gameinfo" onclick="jsRedirectTo('../../gameinfo')" onmouseover="moToggler(&quot;b_gameinfo&quot;, &quot;btn_gameinfo_over&quot;)" onmouseout="moToggler(&quot;b_gameinfo&quot;, &quot;btn_gameinfo_over&quot;)"></div>
+					<div id="b_forum" class="btn_forum" onclick="jsOpenWin('http://forum.orangegame.co.id')" onmouseover="moToggler(&quot;b_forum&quot;, &quot;btn_forum_over&quot;)" onmouseout="moToggler(&quot;b_forum&quot;, &quot;btn_forum_over&quot;)"></div>
+					<div id="b_download" class="btn_download" onclick="jsRedirectTo('../../downloads')" onmouseover="moToggler(&quot;b_download&quot;, &quot;btn_download_over&quot;)" onmouseout="moToggler(&quot;b_download&quot;, &quot;btn_download_over&quot;)"></div>
+					<div id="b_support" class="btn_support" onclick="jsRedirectTo('../../contact')" onmouseover="moToggler(&quot;b_support&quot;, &quot;btn_support_over&quot;)" onmouseout="moToggler(&quot;b_support&quot;, &quot;btn_support_over&quot;)"></div>
+					<div id="b_rank" class="btn_rank" onclick="jsRedirectTo('../../ranks')" onmouseover="moToggler(&quot;b_rank&quot;, &quot;btn_rank_over&quot;)" onmouseout="moToggler(&quot;b_rank&quot;, &quot;btn_rank_over&quot;)"></div>
+					<div id="b_itemmall" class="btn_itemmall btn_itemmall_over" onmouseover="moToggler(&quot;b_itemmall&quot;, &quot;btn_itemmall_over&quot;, true)" onmouseout="moToggler(&quot;b_itemmall&quot;, &quot;btn_itemmall_over&quot;, true)"></div>
+				</div>
+			</div>
+						<div style="width: 100%; display: table; border-collapse:collapse; ">
+				<div style="width: 1006px;display: table-row;">
+					<div style="width: 258px; float:left; position:relative; display: table-cell; margin: 0 0 0 42px;">
+						<div class="submenu_outer">
+	<div class="submenu_inner">
+		<div id="im_submenu_cat_new" class="im_submenu_item im_submenu_cat_new " onclick="jsRedirectTo('..')" onmouseover="jsOverToggler(&quot;im_submenu_cat_new&quot;, &quot;im_submenu_cat_new_over&quot;)" onmouseout="jsOverToggler(&quot;im_submenu_cat_new&quot;, &quot;im_submenu_cat_new_over&quot;)"></div>
+		<div id="im_submenu_cat_parts" class="im_submenu_item im_submenu_cat_parts " onclick="jsRedirectTo('../part')" onmouseover="jsOverToggler(&quot;im_submenu_cat_parts&quot;, &quot;im_submenu_cat_parts_over&quot;)" onmouseout="jsOverToggler(&quot;im_submenu_cat_parts&quot;, &quot;im_submenu_cat_parts_over&quot;)"></div>
+		<div id="im_submenu_cat_acc" class="im_submenu_item im_submenu_cat_acc  im_submenu_cat_acc_over" onmouseover="jsOverToggler(&quot;im_submenu_cat_acc&quot;, &quot;im_submenu_cat_acc_over&quot;, true)" onmouseout="jsOverToggler(&quot;im_submenu_cat_acc&quot;, &quot;im_submenu_cat_acc_over&quot;, true)"></div>
+		<div id="im_submenu_cat_skill" class="im_submenu_item im_submenu_cat_skill " onclick="jsRedirectTo('../skill')" onmouseover="jsOverToggler(&quot;im_submenu_cat_skill&quot;, &quot;im_submenu_cat_skill_over&quot;)" onmouseout="jsOverToggler(&quot;im_submenu_cat_skill&quot;, &quot;im_submenu_cat_skill_over&quot;)"></div>
+		<div id="im_submenu_cat_special" class="im_submenu_item im_submenu_cat_special " onclick="jsRedirectTo('../spec')" onmouseover="jsOverToggler(&quot;im_submenu_cat_special&quot;, &quot;im_submenu_cat_special_over&quot;)" onmouseout="jsOverToggler(&quot;im_submenu_cat_special&quot;, &quot;im_submenu_cat_special_over&quot;)"></div>
+	</div>
+</div>
+						<div>
+	<div class="btn_newbie_guide" onclick="jsRedirectTo('../../gameinfo/newbie')">
+	</div>
+	<div class="btn_cash" onclick="jsRedirectTo('http://orangegame.co.id/cash')">
+	</div>
+	<div class="btn_download_game" onclick="jsRedirectTo('../../downloads')">
+	</div>
+	<div class="btn_voucher_new" onclick="jsOpenWin('http://www.unopay.co.id/')">
+	</div>
+	<div class="btn_itemmall_new" onclick="jsRedirectTo('..')">
+	</div>
+</div>
+<div>
+	<div class="bnr_banner_obt">
+	</div>
+</div>					</div>
+					<div style="width: 664px; float:left; position:relative; display: table-cell;">
+						<div style="vertical-align: top; ">
+							<style type="text/css">
+.tundra .dijitTooltipContainer {
+	border: solid #86150F 1px;
+	color: white;
+	font-size: small;
+	width: 170px;
+	background: rgb(196, 12, 18) transparent;
+	background: rgba(196, 12, 18, .9);
+}
+.tundra .dijitTooltipBelow .dijitTooltipConnector {
+    background: none;
+}
+</style>
+<div class="c_box_big_outer">
+	<div class="c_box_big_header">
+		<div class="c_title im_title_accesories">
+		</div>
+		<div style="float:right; margin-top: 29px; margin-right: 12px; font-size: 9pt; color: #8C0E0E;">unit: <b>Cash</b></div>
+	</div>
+	<div class="c_box_big_content_outer">
+		<div class="c_box_big_content_inner">
+			<div class="c_box_big_left"></div>
+			<div class="c_box_big_content_wrapper">
+				<!-- content here -->
+				<!--div class='img_gi_story'></div-->
+
+				<div>
+				<a class="im_cat_link" href="category/8/index.php">
+				M-Bot				</a>
+&nbsp;<span class="im_cat_link_seperator">|</span>&nbsp;				<a class="im_cat_link" href="category/9/index.php">
+				Aura				</a>
+&nbsp;<span class="im_cat_link_seperator">|</span>&nbsp;				<a class="im_cat_link" href="category/10/index.php">
+				FloatGun				</a>
+&nbsp;<span class="im_cat_link_seperator">|</span>&nbsp;				<a class="im_cat_link" href="category/11/index.php">
+				Wing				</a>
+&nbsp;<span class="im_cat_link_seperator">|</span>&nbsp;				<a class="im_cat_link" href="category/12/index.php">
+				Shield				</a>
+&nbsp;<span class="im_cat_link_seperator">|</span>&nbsp;				<a class="im_cat_link" href="category/13/index.php">
+				Shoulder				</a>
+				</div>
+
+				<table width="640px" border="0" cellspacing="0px" cellpadding="0px">
+				<tbody><tr>
+<td>
+	<table id="im_item_11" class="im_item_panel im_item_panel_border_1" border="0" cellspacing="0px" cellpadding="0px">
+	<tbody><tr>
+		<td width="80px" style="vertical-align: top;">
+			<div id="im_item_panel_image_11" class="im_item_panel_image" style="background-image: url(../../images/itemmall/WING_DKnightWing.jpg);">
+				<div class="im_img_ef"></div>
+						<div class="im_img_hotitem"></div>
+					</div>
+		</td>
+		<td width="113px" style="vertical-align: top;">
+			<div class="im_item_panel_item_name">DKnightWing</div>
+					1 Hari : <span class="im_item_panel_use_time">565</span><br>
+					7 Hari : <span class="im_item_panel_use_time">1695</span><br>
+					30 Hari : <span class="im_item_panel_use_time">3390</span><br>
+					<br>
+			Type: Wing		</td>
+	</tr>
+	</tbody></table>
+	<div dojotype="dijit.Tooltip" connectid="im_item_panel_image_11" position="below" style="display: none;">
+		DragonKnightWing memiliki kekuatan api yang sangat dahsyat.	</div>
+</td><td>
+	<table id="im_item_38" class="im_item_panel im_item_panel_border_2" border="0" cellspacing="0px" cellpadding="0px">
+	<tbody><tr>
+		<td width="80px" style="vertical-align: top;">
+			<div id="im_item_panel_image_38" class="im_item_panel_image" style="background-image: url(../../images/itemmall/MBOT_GoldJr.jpg);">
+				<div class="im_img_ef"></div>
+						<div class="im_img_newitem"></div>
+					</div>
+		</td>
+		<td width="113px" style="vertical-align: top;">
+			<div class="im_item_panel_item_name">GoldJr.</div>
+					1 Hari : <span class="im_item_panel_use_time">289</span><br>
+					7 Hari : <span class="im_item_panel_use_time">867</span><br>
+					30 Hari : <span class="im_item_panel_use_time">1734</span><br>
+					<br>
+			Type: M-Bot		</td>
+	</tr>
+	</tbody></table>
+	<div dojotype="dijit.Tooltip" connectid="im_item_panel_image_38" position="below" style="display: none;">
+		Mau terlihat seperti kesatria yang kuat? Dapatkan M-Bot ini.	</div>
+</td><td>
+	<table id="im_item_37" class="im_item_panel im_item_panel_border_0" border="0" cellspacing="0px" cellpadding="0px">
+	<tbody><tr>
+		<td width="80px" style="vertical-align: top;">
+			<div id="im_item_panel_image_37" class="im_item_panel_image" style="background-image: url(../../images/itemmall/WING_Goldwing.jpg);">
+				<div class="im_img_ef"></div>
+						<div class="im_img_newitem"></div>
+					</div>
+		</td>
+		<td width="113px" style="vertical-align: top;">
+			<div class="im_item_panel_item_name">Goldwing</div>
+					1 Hari : <span class="im_item_panel_use_time">565</span><br>
+					7 Hari : <span class="im_item_panel_use_time">1695</span><br>
+					30 Hari : <span class="im_item_panel_use_time">3390</span><br>
+					<br>
+			Type: Wing		</td>
+	</tr>
+	</tbody></table>
+	<div dojotype="dijit.Tooltip" connectid="im_item_panel_image_37" position="below" style="display: none;">
+		Designnya yang melambangkan kecepatan telah dijadikan artikel yang terkenal. Buruan beli!	</div>
+</td></tr><tr><td>
+	<table id="im_item_39" class="im_item_panel im_item_panel_border_1" border="0" cellspacing="0px" cellpadding="0px">
+	<tbody><tr>
+		<td width="80px" style="vertical-align: top;">
+			<div id="im_item_panel_image_39" class="im_item_panel_image" style="background-image: url(../../images/itemmall/MBOT_LittleSatan.jpg);">
+				<div class="im_img_ef"></div>
+						<div class="im_img_newitem"></div>
+					</div>
+		</td>
+		<td width="113px" style="vertical-align: top;">
+			<div class="im_item_panel_item_name">LittleSatan</div>
+					1 Hari : <span class="im_item_panel_use_time">210</span><br>
+					7 Hari : <span class="im_item_panel_use_time">630</span><br>
+					30 Hari : <span class="im_item_panel_use_time">1260</span><br>
+					<br>
+			Type: M-Bot		</td>
+	</tr>
+	</tbody></table>
+	<div dojotype="dijit.Tooltip" connectid="im_item_panel_image_39" position="below" style="display: none;">
+		M-Bot yang jahat ini akan menjadi hambamu! Jangan lewatkan kesempatan ini.	</div>
+</td><td>
+	<table id="im_item_10" class="im_item_panel im_item_panel_border_2" border="0" cellspacing="0px" cellpadding="0px">
+	<tbody><tr>
+		<td width="80px" style="vertical-align: top;">
+			<div id="im_item_panel_image_10" class="im_item_panel_image" style="background-image: url(../../images/itemmall/WING_Batwing.jpg);">
+				<div class="im_img_ef"></div>
+					</div>
+		</td>
+		<td width="113px" style="vertical-align: top;">
+			<div class="im_item_panel_item_name">Batwing</div>
+					1 Hari : <span class="im_item_panel_use_time">565</span><br>
+					7 Hari : <span class="im_item_panel_use_time">1695</span><br>
+					30 Hari : <span class="im_item_panel_use_time">3390</span><br>
+					<br>
+			Type: Wing		</td>
+	</tr>
+	</tbody></table>
+	<div dojotype="dijit.Tooltip" connectid="im_item_panel_image_10" position="below" style="display: none;">
+		Wing milik Sang Penguasa Malam, BatKing.	</div>
+</td><td>
+	<table id="im_item_15" class="im_item_panel im_item_panel_border_0" border="0" cellspacing="0px" cellpadding="0px">
+	<tbody><tr>
+		<td width="80px" style="vertical-align: top;">
+			<div id="im_item_panel_image_15" class="im_item_panel_image" style="background-image: url(../../images/itemmall/MBOT_DarkUrchin.jpg);">
+				<div class="im_img_ef"></div>
+					</div>
+		</td>
+		<td width="113px" style="vertical-align: top;">
+			<div class="im_item_panel_item_name">DarkUrchin</div>
+					1 Hari : <span class="im_item_panel_use_time">289</span><br>
+					7 Hari : <span class="im_item_panel_use_time">867</span><br>
+					30 Hari : <span class="im_item_panel_use_time">1734</span><br>
+					<br>
+			Type: M-Bot		</td>
+	</tr>
+	</tbody></table>
+	<div dojotype="dijit.Tooltip" connectid="im_item_panel_image_15" position="below" style="display: none;">
+		Wah! Duri tajam! Tidak perlu kawatir, T-Bot dan DarkUrchin mempunyai hubungan baik.	</div>
+</td></tr><tr><td>
+	<table id="im_item_20" class="im_item_panel im_item_panel_border_1" border="0" cellspacing="0px" cellpadding="0px">
+	<tbody><tr>
+		<td width="80px" style="vertical-align: top;">
+			<div id="im_item_panel_image_20" class="im_item_panel_image" style="background-image: url(../../images/itemmall/MBOT_Doodyboy.jpg);">
+				<div class="im_img_ef"></div>
+					</div>
+		</td>
+		<td width="113px" style="vertical-align: top;">
+			<div class="im_item_panel_item_name">Doodyboy</div>
+					1 Hari : <span class="im_item_panel_use_time">210</span><br>
+					7 Hari : <span class="im_item_panel_use_time">630</span><br>
+					30 Hari : <span class="im_item_panel_use_time">1260</span><br>
+					<br>
+			Type: M-Bot		</td>
+	</tr>
+	</tbody></table>
+	<div dojotype="dijit.Tooltip" connectid="im_item_panel_image_20" position="below" style="display: none;">
+		Doodyboy akan selalu menolong dan berada disampingmu.	</div>
+</td><td>
+	<table id="im_item_13" class="im_item_panel im_item_panel_border_2" border="0" cellspacing="0px" cellpadding="0px">
+	<tbody><tr>
+		<td width="80px" style="vertical-align: top;">
+			<div id="im_item_panel_image_13" class="im_item_panel_image" style="background-image: url(../../images/itemmall/WING_JawsGear.jpg);">
+				<div class="im_img_ef"></div>
+					</div>
+		</td>
+		<td width="113px" style="vertical-align: top;">
+			<div class="im_item_panel_item_name">JawsGear</div>
+					1 Hari : <span class="im_item_panel_use_time">500</span><br>
+					7 Hari : <span class="im_item_panel_use_time">1500</span><br>
+					30 Hari : <span class="im_item_panel_use_time">3000</span><br>
+					<br>
+			Type: Wing		</td>
+	</tr>
+	</tbody></table>
+	<div dojotype="dijit.Tooltip" connectid="im_item_panel_image_13" position="below" style="display: none;">
+		Jaws telah kembali! Hiu bertenaga seperti mesin yang sangat kuat.	</div>
+</td><td>
+	<table id="im_item_17" class="im_item_panel im_item_panel_border_0" border="0" cellspacing="0px" cellpadding="0px">
+	<tbody><tr>
+		<td width="80px" style="vertical-align: top;">
+			<div id="im_item_panel_image_17" class="im_item_panel_image" style="background-image: url(../../images/itemmall/MBOT_JawsJr.jpg);">
+				<div class="im_img_ef"></div>
+					</div>
+		</td>
+		<td width="113px" style="vertical-align: top;">
+			<div class="im_item_panel_item_name">JawsJr</div>
+					1 Hari : <span class="im_item_panel_use_time">250</span><br>
+					7 Hari : <span class="im_item_panel_use_time">750</span><br>
+					30 Hari : <span class="im_item_panel_use_time">1500</span><br>
+					<br>
+			Type: M-Bot		</td>
+	</tr>
+	</tbody></table>
+	<div dojotype="dijit.Tooltip" connectid="im_item_panel_image_17" position="below" style="display: none;">
+		Hiu-Hiu kecil yang sangat lucu.	</div>
+</td></tr><tr>	</tr><tr>
+	<td colspan="3" style="text-align: center;">
+	<div class="im_list_page_control">
+	<table class="im_paging_panel" border="0" cellpadding="2px" cellspacing="2px">
+<tbody><tr>
+	<td width="25px">
+	<!-- First page link -->
+			<div class="im_nav_left_ff" onclick="jsRedirectTo(&quot;/itemmall/acc/category/0/page/1&quot;)"></div>
+		</td>
+	<td width="25px">
+	<!-- Previous page link -->
+		</td>
+	<td>
+	<!-- Numbered page links -->
+	<div class="im_pn_panel">
+	1/2	</div>
+	</td>
+	<td width="25px"> 
+	<!-- Next page link -->
+			<div class="im_nav_right" onclick="jsRedirectTo(&quot;/itemmall/acc/category/0/page/2&quot;)"></div>
+		</td>
+	<td width="25px"> 
+	<!-- Last page link -->
+			<div class="im_nav_right_ff" onclick="jsRedirectTo(&quot;/itemmall/acc/category/0/page/2&quot;)"></div>
+		</td>
+</tr>
+</tbody></table>
+	</div>
+	</td>
+	
+				</tr>
+				</tbody></table>
+			</div>
+			<div class="c_box_big_right"></div>
+		</div>
+	</div>
+	<div class="c_box_big_bottom">
+	</div>
+</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--div style='width: 100%; margin: 20px 0 10px 0;'>
+				<div style='background-image: url(/images/cbt/robot_fother.png); background-repeat: no-repeat; width: 914px; height: 161px;margin-left: auto; margin-right: auto;'>
+				</div>
+			</div-->
+		</div>
+		<!--div style="display: table; height: 90px; position: absolute; overflow: hidden; width: 100%;bottom: 0;">
+			<div style=" #position: absolute; #top: 50%;display: table-cell; vertical-align: middle;width: 100%;">
+				<div style=" #position: relative; #top: -50%; text-align: center;width: 100%; height: 90px; ">
+					<div style='background-image: url(/images/orange_logo.png); background-repeat: no-repeat; width: 160px; height: 26px; top: 3px; left: 660px; margin: 0 auto 5px auto;'></div>
+					<span style="font-family: Arial; font-size: 9pt; color: #f68122;">T-Bot Online Indonesia &copy; 2010 Orange Game Fun Factory. All Rights Reserved. </span>      
+				</div>
+			</div>
+		</div-->
+	</div>
+</div>
+<div style="position: relative;width:100%;height:65px;left: 0;bottom: 0;background-image: url(../../images/cbt2/image/footer_spacer.gif); background-repeat: repeat-x;">
+	<div style="width: 990px; padding-top: 10px;margin-left: auto; margin-right: auto;">
+		<div style="display: table; border-collapse:collapse; width: 100%;padding-left: 5px;">
+			<div style="width: 450px;height: 100%; display: table-cell;">
+				<div style="float: left;">
+					<div style="background-image: url(../../images/orange_logo.png); background-repeat: no-repeat; width: 160px; height: 26px;vertical-align: middle; margin-bottom: 5px;"></div>
+					<div style="font-family: Arial; font-size: 9pt; color: #000000;">T-Bot Online Indonesia © 2010 Orange Game Fun Factory. All Rights Reserved. </div>
+				</div>
+			</div>
+			<div style="height: 100%; display: table-cell;">
+				<div style="float: right; text-align: right; vertical-align: middle;">
+					<a href="http://forum.orangegame.co.id/viewforum.php?f=15" target="_blank">FaQ</a> - <a href="../../gameinfo/index.php">Game Info</a> - <a href="../../contact/index.php">Support</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+ 
+
+</body></html>
