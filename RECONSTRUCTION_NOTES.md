@@ -27,7 +27,7 @@ Na box esquerda, após login, exibe:
 - Gigas
 
 Também inclui ações:
-- Troca de senha
+- Botão de troca de senha (abre painel central)
 - Troca de email
 - Logout
 
@@ -69,3 +69,12 @@ php -S 0.0.0.0:8000 -t .
 ## Rank area updates
 - Restored an old-style visual fallback for ranks.
 - Rankings are now rendered inside one dedicated wrapper div (`#rank-legacy-panel`) instead of free-floating layout.
+
+
+## Account panel refresh
+- Character data on the home account panel now prioritizes `bout_characters` (`name`, `level`, `gigas`).
+- Password form was removed from the left account panel.
+- The center panel `#register-center` is now shared:
+  - logged out: registration form
+  - logged in + Change Password: password update form
+- Password updates still submit to `auth/update_account.php` using `action=password`.

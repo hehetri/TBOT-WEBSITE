@@ -8,7 +8,6 @@ if (isset($_SESSION['user_id']) && $conn instanceof mysqli) {
     $uid = (int)$_SESSION['user_id'];
 
     $queries = [
-        "SELECT u.username, u.email, u.coins, c.name AS character_name, c.level, c.currency_gigas FROM {$userTable} u LEFT JOIN characters c ON c.user_id = u.id WHERE u.id = ? ORDER BY c.level DESC LIMIT 1",
         "SELECT u.username, u.email, u.coins, c.name AS character_name, c.level, c.gigas AS currency_gigas FROM {$userTable} u LEFT JOIN bout_characters c ON c.name = u.username WHERE u.id = ? ORDER BY c.level DESC LIMIT 1",
         "SELECT u.username, u.email, u.coins, NULL AS character_name, NULL AS level, 0 AS currency_gigas FROM {$userTable} u WHERE u.id = ? LIMIT 1"
     ];
@@ -158,7 +157,7 @@ function aniStopScroll(st) {
     <div class="pnlForgetPass" tabindex="0" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)">
 		<a href="index.php" onclick="jsRedirectTo(&quot;http://www.orangegame.co.id/forgetpass&quot;)">Forgot Password?</a>
 	</div>
-    <div class="pnlRegister" onclick="document.getElementById('register-center').style.display='block';window.location.hash='register-center';" tabindex="0" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)"></div>
+    <div class="pnlRegister" onclick="openCenterPanel('register')" tabindex="0" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)"></div>
 	
 	<div class="pnlSocial">
 		<div class="title">
@@ -214,11 +213,9 @@ jQuery(window).load(function() {
 		<div><b>Cash:</b> <?= htmlspecialchars((string)($accountInfo['coins'] ?? '0')) ?></div>
 		<div><b>Gigas:</b> <?= htmlspecialchars((string)($accountInfo['currency_gigas'] ?? '0')) ?></div>
 
-		<form method="post" action="auth/update_account.php" style="margin-top:8px;">
-			<input type="hidden" name="action" value="password">
-			<input type="password" name="new_password" placeholder="New password" style="width:190px;height:20px;border:1px solid #666;background:#fff;padding-left:5px;">
-			<button type="submit" style="height:22px;cursor:pointer;">Change Password</button>
-		</form>
+		<div style="margin-top:8px;">
+			<button type="button" onclick="openCenterPanel('password')" style="height:22px;cursor:pointer;">Change Password</button>
+		</div>
 
 		<form method="post" action="auth/update_account.php" style="margin-top:6px;">
 			<input type="hidden" name="action" value="email">
@@ -239,7 +236,7 @@ jQuery(window).load(function() {
 		</div>
 		<input type="image" class="o_btn_login" src="images/obt/button/btn_login.png">
 		<div id="o_forget_pass" onclick="jsRedirectTo(&quot;http://www.orangegame.co.id/forgetpass&quot;)" tabindex="0">Forgot Password?</div>
-		<div id="o_btn_register" onclick="document.getElementById('register-center').style.display='block';window.location.hash='register-center';" tabindex="0"></div>
+		<div id="o_btn_register" onclick="openCenterPanel('register')" tabindex="0"></div>
 		<div id="o_btn_my_info" onclick="jsRedirectTo(&quot;#account-panel&quot;)" tabindex="0"></div>
 	</form>
 <?php endif; ?>
@@ -277,20 +274,37 @@ jQuery(window).load(function() {
 														</div>
 			</div>
 			<div id="register-center" style="display:none; margin-top:8px; background:#242424; border:2px solid #b42822; border-radius:6px; padding:10px; color:#fff; font-family:Arial;">
-				<div style="font-size:16px; font-weight:bold; color:#ffd35a; margin-bottom:6px;">Account Registration</div>
-				<?php if (isset($_GET['register_error'])): ?><div style="color:#ffb3b3; margin-bottom:6px;"><?= htmlspecialchars((string)$_GET['register_error']) ?></div><?php endif; ?>
-				<?php if (isset($_GET['register_success'])): ?><div style="color:#9cffb0; margin-bottom:6px;">Registration completed successfully!</div><?php endif; ?>
-				<form method="post" action="auth/register_inline.php" autocomplete="off">
-					<div style="display:flex;gap:6px;flex-wrap:wrap;">
-						<input type="text" name="username" placeholder="Username" required style="flex:1;min-width:130px;height:24px;padding-left:6px;">
-						<input type="email" name="email" placeholder="Email" required style="flex:1;min-width:130px;height:24px;padding-left:6px;">
-					</div>
-					<div style="display:flex;gap:6px;margin-top:6px;flex-wrap:wrap;">
-						<input type="password" name="password" placeholder="Password" required style="flex:1;min-width:130px;height:24px;padding-left:6px;">
-						<input type="password" name="re_password" placeholder="Repeat password" required style="flex:1;min-width:130px;height:24px;padding-left:6px;">
-					</div>
-					<div style="margin-top:8px;"><button type="submit" style="background:#b42822;color:#fff;border:0;padding:7px 12px;cursor:pointer;font-weight:bold;">REGISTER</button></div>
-				</form>
+				<?php $centerMode = (isset($_SESSION['user_id']) && $accountInfo && isset($_GET['center']) && $_GET['center'] === 'password') ? 'password' : 'register'; ?>
+				<div style="font-size:16px; font-weight:bold; color:#ffd35a; margin-bottom:6px;"><?= $centerMode === 'password' ? 'Change Password' : 'Account Registration' ?></div>
+				<?php if ($centerMode === 'password'): ?>
+					<?php if (isset($_GET['login_error'])): ?><div style="color:#ffb3b3; margin-bottom:6px;">Password update failed. Please use at least 4 characters.</div><?php endif; ?>
+					<?php if (isset($_GET['login_success'])): ?><div style="color:#9cffb0; margin-bottom:6px;">Password updated successfully!</div><?php endif; ?>
+					<form method="post" action="auth/update_account.php" autocomplete="off">
+						<input type="hidden" name="action" value="password">
+						<input type="hidden" name="center" value="password">
+						<div style="display:flex;gap:6px;flex-wrap:wrap;">
+							<input type="password" name="new_password" placeholder="New password" required style="flex:1;min-width:160px;height:24px;padding-left:6px;">
+						</div>
+						<div style="margin-top:8px; display:flex; gap:8px; align-items:center;">
+							<button type="submit" style="background:#b42822;color:#fff;border:0;padding:7px 12px;cursor:pointer;font-weight:bold;">UPDATE PASSWORD</button>
+							<button type="button" onclick="openCenterPanel('register')" style="background:#555;color:#fff;border:0;padding:7px 12px;cursor:pointer;">Open Registration</button>
+						</div>
+					</form>
+				<?php else: ?>
+					<?php if (isset($_GET['register_error'])): ?><div style="color:#ffb3b3; margin-bottom:6px;"><?= htmlspecialchars((string)$_GET['register_error']) ?></div><?php endif; ?>
+					<?php if (isset($_GET['register_success'])): ?><div style="color:#9cffb0; margin-bottom:6px;">Registration completed successfully!</div><?php endif; ?>
+					<form method="post" action="auth/register_inline.php" autocomplete="off">
+						<div style="display:flex;gap:6px;flex-wrap:wrap;">
+							<input type="text" name="username" placeholder="Username" required style="flex:1;min-width:130px;height:24px;padding-left:6px;">
+							<input type="email" name="email" placeholder="Email" required style="flex:1;min-width:130px;height:24px;padding-left:6px;">
+						</div>
+						<div style="display:flex;gap:6px;margin-top:6px;flex-wrap:wrap;">
+							<input type="password" name="password" placeholder="Password" required style="flex:1;min-width:130px;height:24px;padding-left:6px;">
+							<input type="password" name="re_password" placeholder="Repeat password" required style="flex:1;min-width:130px;height:24px;padding-left:6px;">
+						</div>
+						<div style="margin-top:8px;"><button type="submit" style="background:#b42822;color:#fff;border:0;padding:7px 12px;cursor:pointer;font-weight:bold;">REGISTER</button></div>
+					</form>
+				<?php endif; ?>
 			</div>
 			<div class="o_box_l_outer">
 				<div class="o_box_l_header">
@@ -572,10 +586,24 @@ jQuery(window).load(function() {
 
 
 <script>
+function openCenterPanel(mode) {
+  var b = document.getElementById('register-center');
+  if (!b) return;
+  var url = new URL(window.location.href);
+  if (mode === 'password') {
+    url.searchParams.set('center', 'password');
+  } else {
+    url.searchParams.delete('center');
+  }
+  url.hash = 'register-center';
+  window.location.href = url.toString();
+}
+
 (function(){
   var b = document.getElementById('register-center');
   if(!b) return;
-  var shouldShow = window.location.hash === '#register-center' || (new URLSearchParams(window.location.search).has('register_error')) || (new URLSearchParams(window.location.search).has('register_success'));
+  var params = new URLSearchParams(window.location.search);
+  var shouldShow = window.location.hash === '#register-center' || params.has('register_error') || params.has('register_success') || params.get('center') === 'password';
   if(shouldShow){ b.style.display = 'block'; }
 })();
 </script>

@@ -7,8 +7,11 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !isset($_SESSION['user_id'])) {
     exit;
 }
 
+$center = ($_POST['center'] ?? '') === 'password' ? 'password' : '';
+$centerSuffix = $center !== '' ? '&center=password#register-center' : '#account-panel';
+
 if (!$conn instanceof mysqli) {
-    header('Location: ../index.php?login_error=1#account-panel');
+    header('Location: ../index.php?login_error=1' . $centerSuffix);
     exit;
 }
 
@@ -19,7 +22,7 @@ $action = $_POST['action'] ?? '';
 if ($action === 'password') {
     $newPassword = $_POST['new_password'] ?? '';
     if (strlen($newPassword) < 4) {
-        header('Location: ../index.php?login_error=1#account-panel');
+        header('Location: ../index.php?login_error=1' . $centerSuffix);
         exit;
     }
     $stmt = $conn->prepare("UPDATE {$userTable} SET password = ? WHERE id = ?");
@@ -31,7 +34,7 @@ if ($action === 'password') {
 if ($action === 'email') {
     $newEmail = trim($_POST['new_email'] ?? '');
     if (!filter_var($newEmail, FILTER_VALIDATE_EMAIL)) {
-        header('Location: ../index.php?login_error=1#account-panel');
+        header('Location: ../index.php?login_error=1' . $centerSuffix);
         exit;
     }
     $stmt = $conn->prepare("UPDATE {$userTable} SET email = ? WHERE id = ?");
@@ -40,5 +43,5 @@ if ($action === 'email') {
     $stmt->close();
 }
 
-header('Location: ../index.php?login_success=1#account-panel');
+header('Location: ../index.php?login_success=1' . $centerSuffix);
 exit;
