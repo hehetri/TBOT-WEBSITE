@@ -10,26 +10,21 @@ $conn = null;
 $db_error = null;
 
 function resolve_user_table(mysqli $conn): string {
-    $preferred = 'boot_users';
-    $fallback = 'users';
+    $candidates = ['bout_users', 'boot_users', 'users'];
 
-    $stmt = $conn->prepare('SHOW TABLES LIKE ?');
-    $stmt->bind_param('s', $preferred);
-    $stmt->execute();
-    $hasPreferred = (bool)$stmt->get_result()->fetch_row();
-    $stmt->close();
+    foreach ($candidates as $table) {
+        $stmt = $conn->prepare('SHOW TABLES LIKE ?');
+        $stmt->bind_param('s', $table);
+        $stmt->execute();
+        $exists = (bool)$stmt->get_result()->fetch_row();
+        $stmt->close();
 
-    if ($hasPreferred) {
-        return $preferred;
+        if ($exists) {
+            return $table;
+        }
     }
 
-    $stmt = $conn->prepare('SHOW TABLES LIKE ?');
-    $stmt->bind_param('s', $fallback);
-    $stmt->execute();
-    $hasFallback = (bool)$stmt->get_result()->fetch_row();
-    $stmt->close();
-
-    return $hasFallback ? $fallback : $preferred;
+    return 'bout_users';
 }
 
 try {

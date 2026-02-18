@@ -1,6 +1,7 @@
 # TBOT 2011 Reconstruction (PHP edition)
 
 ## Conversão e backend
+- User table resolution updated to prioritize `bout_users` (with compatibility fallback).
 - Site convertido para `.php` mantendo a estrutura histórica.
 - Banco configurado em `config.php`:
   - host: `127.0.0.1`
