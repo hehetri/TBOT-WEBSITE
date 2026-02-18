@@ -1,0 +1,334 @@
+
+.im_title_accesories {
+	background-image: url(itemmall/image/accecories.png); 
+	background-repeat: no-repeat;
+	width: 146px;
+	height: 21px; 
+}
+
+.im_title_new {
+	background-image: url(itemmall/image/new.png); 
+	background-repeat: no-repeat;
+	width: 53px;
+	height: 21px; 
+}
+
+.im_title_parts {
+	background-image: url(itemmall/image/parts.png); 
+	background-repeat: no-repeat;
+	width: 83px;
+	height: 21px; 
+}
+
+.im_title_skill {
+	background-image: url(itemmall/image/skill.png); 
+	background-repeat: no-repeat;
+	width: 67px;
+	height: 21px; 
+}
+
+.im_title_special {
+	background-image: url(itemmall/image/special.png); 
+	background-repeat: no-repeat;
+	width: 99px;
+	height: 21px; 
+}
+
+.im_nav_left {
+	background-image: url(itemmall/image/btn_left.png); 
+	background-repeat: no-repeat;
+	width: 25px;
+	height: 21px; 
+	cursor: pointer;
+}
+
+.im_nav_right {
+	background-image: url(itemmall/image/btn_right.png); 
+	background-repeat: no-repeat;
+	width: 25px;
+	height: 21px; 
+	cursor: pointer;
+}
+
+.im_nav_left_ff {
+	background-image: url(itemmall/image/btn_leftff.png); 
+	background-repeat: no-repeat;
+	width: 25px;
+	height: 21px; 
+	cursor: pointer;
+}
+
+.im_nav_right_ff {
+	background-image: url(itemmall/image/btn_rightff.png); 
+	background-repeat: no-repeat;
+	width: 25px;
+	height: 21px; 
+	cursor: pointer;
+}
+
+.im_img_ef {
+	background-image: url(itemmall/image/ef.png); 
+	background-repeat: no-repeat;
+	width: 64px;
+	height: 64px; 
+}
+
+.im_img_newitem {
+	background-image: url(itemmall/image/newitem.png); 
+	background-repeat: no-repeat;
+	width: 59px;
+	height: 29px; 
+	position: relative;
+	top: -25%; 
+	left: 2px;
+}
+
+.im_img_hotitem {
+	background-image: url(itemmall/image/hotitem.png); 
+	background-repeat: no-repeat;
+	width: 50px;
+	height: 29px;
+	position: relative;
+	top: -25%; 
+	left: 6px;
+}
+
+.im_paging_panel {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.im_pn_panel {
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: #000;
+	color: #fff;
+	font-size: 10pt;
+	padding: 3px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.im_item_panel {
+	width: 213px; 
+	height: 121px;
+	vertical-align: top;
+	font-size: 8pt;
+}
+
+.im_item_panel_border_1, .im_item_panel_border_0 {
+	border-top: 1px solid #e0e3e8;
+	border-bottom: 1px solid #e0e3e8;
+}
+
+.im_item_panel_border_2 {
+	border: 1px solid #e0e3e8;
+}
+
+.im_item_panel_image {
+	width: 64px; 
+	height:64px; 
+	margin-left:auto; 
+	margin-right:auto; 
+	margin-top: 10px;
+}
+
+.im_item_panel_detail {
+	width: 133px; 
+	height: 142px;
+	vertical-align: top;
+	font-size: 8pt;
+}
+
+.im_item_panel_item_name {
+	color: #86150f;
+	font-weight: bold;
+	font-size: 9pt; 
+	margin-bottom: 7px;
+	margin-top: 10px;
+}
+
+.im_item_panel_use_time {
+	color: #86150f;
+}
+
+.im_submenu_item {
+	margin-top: 3px;
+}
+
+.im_submenu_cat_new {
+	background-image: url(itemmall/submenu/new_out.png); 
+	background-repeat: no-repeat;
+	width: 240px;
+	height: 29px;
+	cursor: pointer;
+}
+
+.im_submenu_cat_new_over {
+	background-image: url(itemmall/submenu/new_over.jpg); 
+	background-repeat: no-repeat;
+}
+
+.im_submenu_cat_acc {
+	background-image: url(itemmall/submenu/acc_out.png); 
+	background-repeat: no-repeat;
+	width: 240px;
+	height: 29px;
+	cursor: pointer;
+}
+
+.im_submenu_cat_acc_over {
+	background-image: url(itemmall/submenu/acc_over.jpg); 
+	background-repeat: no-repeat;
+}
+
+.im_submenu_cat_parts {
+	background-image: url(itemmall/submenu/parts_out.png); 
+	background-repeat: no-repeat;
+	width: 240px;
+	height: 29px;
+	cursor: pointer;
+}
+
+.im_submenu_cat_parts_over {
+	background-image: url(itemmall/submenu/parts_over.jpg); 
+	background-repeat: no-repeat;
+}
+
+.im_submenu_cat_skill {
+	background-image: url(itemmall/submenu/skill_out.png); 
+	background-repeat: no-repeat;
+	width: 240px;
+	height: 29px;
+	cursor: pointer;
+}
+
+.im_submenu_cat_skill_over {
+	background-image: url(itemmall/submenu/skill_over.jpg); 
+	background-repeat: no-repeat;
+}
+
+.im_submenu_cat_special {
+	background-image: url(itemmall/submenu/special_out.png); 
+	background-repeat: no-repeat;
+	width: 240px;
+	height: 29px;
+	cursor: pointer;
+}
+
+.im_submenu_cat_special_over {
+	background-image: url(itemmall/submenu/special_over.jpg); 
+	background-repeat: no-repeat;
+}
+
+.im_title_new {
+	background-image: url(itemmall/title/new.png); 
+	background-repeat: no-repeat; 
+	width: 53px; 
+	height: 21px; 
+}
+
+.im_title_accesories {
+	background-image: url(itemmall/title/accecories.png); 
+	background-repeat: no-repeat; 
+	width: 146px; 
+	height: 21px; 
+}
+
+.im_title_parts {
+	background-image: url(itemmall/title/parts.png); 
+	background-repeat: no-repeat; 
+	width: 83px; 
+	height: 21px; 
+}
+
+.im_title_skill {
+	background-image: url(itemmall/title/skill.png); 
+	background-repeat: no-repeat; 
+	width: 67px; 
+	height: 21px; 
+}
+
+.im_title_special {
+	background-image: url(itemmall/title/special.png); 
+	background-repeat: no-repeat; 
+	width: 99px; 
+	height: 21px; 
+}
+
+a.im_cat_link:link, a.im_cat_link:visited  {
+	font-family: Arial;
+	font-size: 10pt;
+	color: #34404c;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.im_cat_link:hover, a.im_cat_link:active {
+	font-family: Arial;
+	font-size: 10pt;
+	color: #34404c;
+	font-weight: bold;
+	text-decoration: underline; 
+}
+
+.im_cat_link_seperator {
+	font-family: Arial;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #34404c;
+}
+
+.im_cat_link_disabled {
+	font-family: Arial;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #8C0E0E;
+}
+
+.im_list_item_not_found {
+	font-family: Arial;
+	font-size: 10pt;
+	color: #000;
+	text-align: center;
+}
+
+.im_list_page_control {
+	margin-top: 10px;
+}
+
+.im_index_item_panel {
+	width: 190px; 
+	height: 100px;
+	vertical-align: top;
+	font-size: 8pt;
+}
+
+.im_index_item_panel_border_1 {
+	border-right: 1px solid #e0e3e8;
+	border-bottom: 1px solid #e0e3e8;
+}
+
+.im_index_item_panel_border_2 {
+	border-left: 1px solid #e0e3e8;
+	border-bottom: 1px solid #e0e3e8;
+}
+
+.im_index_item_panel_border_3 {
+	border-right: 1px solid #e0e3e8;
+	border-top: 1px solid #e0e3e8;
+}
+
+.im_index_item_panel_border_4 {
+	border-left: 1px solid #e0e3e8;
+	border-top: 1px solid #e0e3e8;
+}
+
+.im_index_item_more {
+	background-image: url(itemmall/image/more.png); 
+	background-repeat: no-repeat;
+	width: 42px;
+	height: 10px;
+	cursor: pointer;
+}

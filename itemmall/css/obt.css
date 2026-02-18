@@ -1,0 +1,481 @@
+/*
+warna orange ff9600
+warna item 171717
+*/
+
+.o_box_l_outer {
+	text-align: left; 
+	vertical-align: top;
+	margin-top: 5px;
+}
+
+.o_box_l_header {
+	background-image: url(../images/obt/box/l/header.png); 
+	background-repeat: no-repeat; 
+	width: 425px; 
+	height: 50px; 
+	position: relative;
+}
+
+.o_box_l_header_no_title {
+	background-image: url(../images/obt/box/l/header.png); 
+	background-repeat: no-repeat; 
+	width: 425px; 
+	height: 30px; 
+	position: relative;
+}
+
+.o_box_l_content_outer {
+	display: table; 
+	border-collapse:collapse; 
+	width: 425px;
+}
+
+.o_box_l_content_inner {
+	display: table-row;
+}
+
+.o_box_l_left {
+	background-image: url(../images/obt/box/l/left.png); 
+	background-repeat: repeat-y;
+	width: 5px;
+	height: 100%;
+	display:table-cell;
+}
+
+.o_box_l_right {
+	background-image: url(../images/obt/box/l/right.png); 
+	background-repeat: repeat-y; 
+	width: 5px; 
+	height: 100%;
+	display:table-cell;
+}
+
+.o_box_l_bottom {
+	background-image: url(../images/obt/box/l/footer.png); 
+	background-repeat: no-repeat; 
+	width: 425px; 
+	height: 20px;
+}
+
+.o_box_l_content_wrapper {
+	width: 415px; 
+	display:table-cell; 
+	vertical-align: top; 
+	background-color: #f0f3f8;
+}
+
+.o_box_l_content {
+	width: 100%; 
+	height: 255px; 
+	overflow: auto; 
+	line-height: 20pt;
+	position: relative;
+}
+
+/* box small */
+
+.o_box_s_outer {
+	text-align: left; 
+	vertical-align: top;
+	margin-top: 5px;
+}
+
+.o_box_s_header {
+	background-image: url(../images/obt/box/s/header.png); 
+	background-repeat: no-repeat; 
+	width: 210px; 
+	height: 50px; 
+	position: relative;
+}
+
+.o_box_s_header_no_title {
+	background-image: url(../images/obt/box/s/header.png); 
+	background-repeat: no-repeat; 
+	width: 210px; 
+	height: 30px; 
+	position: relative;
+}
+
+.o_box_s_content_outer {
+	display: table; 
+	border-collapse:collapse; 
+	width: 210px;
+}
+
+.o_box_s_content_inner {
+	display: table-row;
+}
+
+.o_box_s_left {
+	background-image: url(../images/obt/box/s/left.png); 
+	background-repeat: repeat-y;
+	width: 5px;
+	height: 100%;
+	display:table-cell;
+}
+
+.o_box_s_right {
+	background-image: url(../images/obt/box/s/right.png); 
+	background-repeat: repeat-y; 
+	width: 5px; 
+	height: 100%;
+	display:table-cell;
+}
+
+.o_box_s_bottom {
+	background-image: url(../images/obt/box/s/footer.png); 
+	background-repeat: no-repeat; 
+	width: 210px; 
+	height: 20px;
+}
+
+.o_box_s_content_wrapper {
+	width: 200px; 
+	display:table-cell; 
+	vertical-align: top; 
+	background-color: #f0f3f8;
+}
+
+.o_box_s_content {
+	width: 100%; 
+	height: 255px; 
+	overflow: auto; 
+	line-height: 20pt;
+	position: relative;
+}
+
+/* other */
+.o_main_container {
+	width: 100%; 
+	display: table; 
+	border-collapse:collapse; 
+	margin-bottom: 20px;
+}
+
+.o_main_container_row {
+	width: 1006px;
+	display: table-row;
+}
+
+.o_main_container_column_1 {
+	width: 258px; 
+	position:relative; 
+	display: table-cell;
+	vertical-align: top;
+}
+
+.o_main_container_column_2 {
+	width: 425px; 
+	position:relative; 
+	display: table-cell;
+	vertical-align: top;
+}
+
+.o_main_container_column_3 {
+	width: 240px; 
+	position:relative; 
+	display: table-cell;
+	vertical-align: top;
+}
+
+.o_main_sep_left {
+	width: 35px; 
+	display: table-cell;
+	position:relative; 
+}
+
+.o_main_sep_between {
+	width: 5px; 
+	display: table-cell;
+	position:relative; 
+}
+
+.o_main_sep_right {
+	width: 38px; 
+	display: table-cell;
+	position:relative; 
+}
+
+.o_login {
+	background-image: url(../images/obt/images/login_register_bg.png); 
+	background-repeat: no-repeat; 
+	width: 258px; 
+	height: 228px;
+	position: relative;
+}
+
+.o_info {
+	background-image: url(../images/obt/images/info_bg.png); 
+	background-repeat: no-repeat; 
+	width: 258px; 
+	height: 228px;
+	position: relative;
+}
+
+.o_banner_main {
+	background-image: url(../images/obt/images/banner.jpg); 
+	background-repeat: no-repeat; 
+	width: 425px; 
+	height: 221px;
+}
+
+.o_right {
+	background-image: url(../images/obt/images/back_right.png); 
+	background-repeat: no-repeat; 
+	width: 240px; 
+	height: 220px;
+}
+
+.o_rank1 {
+	background-image: url(../images/obt/images/rank1.png); 
+	background-repeat: no-repeat; 
+	width: 240px; 
+	height: 220px;
+	margin-bottom: 5px;
+}
+
+.o_rank2 {
+	background-image: url(../images/obt/images/rank2.png); 
+	background-repeat: no-repeat; 
+	width: 240px; 
+	height: 220px;
+	margin-bottom: 5px;
+}
+
+.o_txt_user_id, .o_txt_passwd {
+	border-width: 0px; 
+	width: 228px;
+	font-size: 20px;
+}
+
+.o_btn_login {
+	position: absolute; 
+	top: 103px; 
+	left: 168px;
+}
+
+#o_btn_register {
+	background-image: url(../images/obt/button/btn_register.png); 
+	background-repeat: no-repeat; 
+	width: 132px; 
+	height: 50px;
+	position: absolute; 
+	top: 155px; 
+	left: 22px;
+	cursor: pointer;
+}
+
+#o_btn_my_info {
+	background-image: url(../images/obt/button/btn_myinfo.png); 
+	background-repeat: no-repeat; 
+	width: 72px; 
+	height: 48px; 
+	position: absolute; 
+	top: 155px; 
+	left: 160px;
+	cursor: pointer;
+}
+
+#o_forget_pass {
+	position: absolute; 
+	color: #fff;
+	font-size: 8pt;
+	font-weight: bold;
+	font-family: Arial;
+	top: 103px;
+	left: 11px;
+	cursor: pointer;
+}
+
+.o_img_front_itemmall {
+	background-image: url(../images/obt/images/itemmall.jpg); 
+	background-repeat: no-repeat;
+	width: 350px;
+	height: 157px; 
+}
+
+.o_title {
+	position: absolute; 
+	top: 20px; 
+	left: 12px;
+}
+
+.o_itemmall_title {
+	background-image: url(../images/obt/images/itemmall.png); 
+	background-repeat: no-repeat; 
+	width: 107px; 
+	height: 17px; 
+}
+
+.o_notice_title {
+	background-image: url(../images/obt/images/notice.png); 
+	background-repeat: no-repeat; 
+	width: 68px; 
+	height: 17px; 
+}
+
+.o_update_title {
+	background-image: url(../images/obt/images/updates.png); 
+	background-repeat: no-repeat; 
+	width: 91px; 
+	height: 17px; 
+}
+
+.o_box_small_outer {
+	text-align: left; 
+	margin-bottom: 5px;
+	width: 220px; 
+	vertical-align:top;
+}
+
+ul li {
+ list-style-image: url(../images/obt/images/bullet.png);
+}
+
+ul {
+ margin-left: 2em;
+ padding: 0;
+ color: #000;
+}
+
+ol {
+ margin-left: 2em;
+ padding: 0;
+ color: #000;
+}
+
+A:link {color:#000; font-size: 9pt;text-decoration: none;}
+A:visited {color: #000; font-size: 9pt;text-decoration: none;}
+A:active {color: #000; font-size: 9pt;text-decoration: none;}
+A:hover {color: #000; font-size: 9pt;text-decoration: underline;}
+
+.o_btn_newbie_guide {
+	background-image: url(../images/cbt2/button/btn_newbieguide.png); 
+	background-repeat: no-repeat;
+	width: 252px;
+	height: 51px; 
+	margin: 5px;
+	cursor: pointer;
+}
+
+.o_btn_cash {
+	background-image: url(../images/cbt2/button/btn_cash.png); 
+	background-repeat: no-repeat;
+	width: 252px;
+	height: 51px; 
+	margin: 5px;
+	cursor: pointer;
+}
+
+.o_btn_download_game {
+	background-image: url(../images/obt/button/button_downloadgame.png); 
+	background-repeat: no-repeat;
+	width: 252px;
+	height: 51px; 
+	margin: 5px;
+	cursor: pointer;
+}
+
+.o_btn_itemmall {
+	background-image: url(../images/obt/button/button_itemmall.png); 
+	background-repeat: no-repeat;
+	width: 252px;
+	height: 51px; 
+	margin: 5px;
+	cursor: pointer;
+}
+
+.o_btn_voucher {
+	background-image: url(../images/obt/button/button_pesanvoucher.png); 
+	background-repeat: no-repeat;
+	width: 252px;
+	height: 51px; 
+	margin: 5px;
+	cursor: pointer;
+}
+
+.o_bnr_banner_obt {
+	background-image: url(../images/cbt2/image/bannerobt.jpg); 
+	background-repeat: no-repeat;
+	width: 252px;
+	height: 374px; 
+	margin: 5px;
+	cursor: pointer;
+}
+
+#o_btn_profile {
+	background-image: url(../images/obt/button/btn_profile.png); 
+	background-repeat: no-repeat; 
+	width: 74px; 
+	height: 31px; 
+	position: absolute; 
+	top: 135px; 
+	left: 15px;
+	cursor: pointer;
+}
+
+#o_btn_ganti_pass {
+	background-image: url(../images/obt/button/btn_gntipass.png); 
+	background-repeat: no-repeat; 
+	width: 142px; 
+	height: 31px; 
+	position: absolute; 
+	top: 135px; 
+	left: 95px;
+	cursor: pointer;
+}
+
+#o_btn_isi_cash {
+	background-image: url(../images/obt/button/btn_isicash.png); 
+	background-repeat: no-repeat; 
+	width: 74px; 
+	height: 31px; 
+	position: absolute; 
+	top: 170px; 
+	left: 15px;
+	cursor: pointer;
+}
+
+#o_btn_ocash {
+	background-image: url(../images/obt/button/btn_ocash.png); 
+	background-repeat: no-repeat; 
+	width: 142px; 
+	height: 31px; 
+	position: absolute; 
+	top: 170px; 
+	left: 95px;
+	cursor: pointer;
+}
+
+.o_info_separator {
+	position: absolute;
+	left: 15px;
+	top: 93px;
+	width: 227px;
+	height: 1px;
+	background-color: #ffffff;
+}
+
+.o_cash_label {
+	position: absolute;
+	left: 25px;
+	top: 110px;
+	color: #ffffff;
+	font-size: 11pt;
+	font-family: Arial;
+}
+
+.o_cash_current {
+	position: absolute;
+	left: 93px;
+	top: 110px;
+	background-color: #ffffff;
+	color: #000000;
+	width: 71px;
+	height: 18px;
+	font-size: 11pt;
+	font-family: Arial;
+	text-align: right;
+	font-weight: bold;
+}

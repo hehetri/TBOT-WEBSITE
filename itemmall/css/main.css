@@ -1,0 +1,441 @@
+@CHARSET "ISO-8859-1"; 
+ 
+html, body { 
+    font-family: Verdana, Helvetica, Arial, sans-serif; 
+    font-size: 9px; 
+	background-image: url(../images/cbt/bg_fill.jpg); 
+	background-repeat: repeat-both; 
+	background-color: #ffffff;
+	height: 100%;
+} 
+ 
+* { 
+    margin: 0; 
+    padding: 0; 
+} 
+ 
+p { 
+    padding: .5em; 
+    font-size: 1.2em; 
+} 
+
+h2 {
+	font-size: 1.5em;
+	color: #000;
+}
+ 
+#pageWrapper { 
+	position: relative; 
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    width: 1005px;
+    min-height: 100%;
+    padding: 0;
+	background-color: rgba(255, 255, 255, 0);
+} 
+
+#pageWrapperSingle { 
+	position: relative; 
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    width: 1005px;
+    padding: 0;
+} 
+
+#header { 
+    background: #fff; 
+    height: 7.5em; 
+    margin: 0 0 .5em 0; 
+} 
+
+#nav { 
+    background: #fff; 
+    height: 2.5em; 
+    margin: 0 0 .5em 0; 
+} 
+ 
+#sidebar { 
+    background: #ccc; 
+    float: right; 
+    width: 17em; 
+	height: 100%;
+    margin: 0 0 .5em .5em; 
+    padding: .5em; 
+} 
+ 
+#main { 
+    background: #fff; 
+    /* height: 41em; */
+    margin: 0 0 .5em 0; 
+} 
+ 
+#subNav,#adminMenu,#userForm { 
+    background: #fff; 
+    width: 17em; 
+    height: 10em; 
+    margin: 0 0 .5em 0; 
+} 
+ 
+#footer { 
+    clear: both; 
+    background: #fff; 
+    height: 2.5em; 
+    margin: 0; 
+}
+
+.next, .next2, .prev, .prev2 {
+	cursor: pointer;
+}
+
+/* @CHARSET "ISO-8859-1"; */
+ 
+.err, #general_error,#general_error_2  { 
+    color: #ff0000; 
+	font-size: 11px;
+	font-weight: bold;
+} 
+
+.reg_form {
+	width: 100%;
+	font-size: 14px;
+	color: #636363;
+}
+
+.main_table {
+	width: 100%;
+	font-size: 14px;
+	color: #636363;
+}
+
+.txt_user_id, .txt_passwd {
+	width: 140px;
+}
+
+.page_txt_user_id, .page_txt_passwd {
+	border-width: 0; 
+	width: 100%;
+	font-size: 20px;
+}
+
+.required_field{ 
+    color: #ff0000; 
+} 
+
+.eula_agree, .join_nl {
+	font-size: 14px;
+}
+
+#uid {
+	border-width: 0; 
+	width: 240px;
+	font-size: 20px;
+}
+
+.og_input , #nickname, #pass0, #pass1, #pass2, #email, #phone, #sec_answer {
+	border-width: 0; 
+	width: 100%;
+	font-size: 20px;
+}
+
+.og_input_border{
+	border-width: 1; 
+	width: 100%;
+	font-size: 20px;
+}
+
+
+.og_select, #sec_question {
+	border-width: 0; 
+	width: 100%;
+	font-size: 14px;
+	color: #636363;
+}
+
+.box_wrapper{
+	height: 42px; 
+	position:relative;
+	display:table;
+	border-collapse:collapse;
+}
+
+.box_hb_wrapper_cnt{
+	display: table-row;
+	height: 8px;
+}
+
+.box_m_wrapper_cnt{
+	display: table-row;
+	height:26px;
+}
+
+.box_tl {
+	background-image: url(../images/box/tl.png); 
+	background-repeat: no-repeat; 
+	width: 8px; 
+	height: 8px;
+	display:table-cell;
+}
+
+.box_t {
+	background-image: url(../images/box/t.png); 
+	background-repeat: repeat-x; 
+	width: 1px; 
+	height: 8px;
+	display:table-cell;
+}
+
+.box_tr {
+	background-image: url(../images/box/tr.png); 
+	background-repeat: no-repeat; 
+	width: 8px; 
+	height: 8px;
+	display:table-cell;
+}
+
+.box_l {
+	background-image: url(../images/box/l.png); 
+	background-repeat: repeat-y; 
+	width: 8px; 
+	height: 1px;
+	display:table-cell;
+}
+
+.box_m {
+	vertical-align: middle;
+	display:table-cell;
+}
+
+.box_r {
+	background-image: url(../images/box/r.png); 
+	background-repeat: repeat-y; 
+	width: 8px; 
+	height: 1px;
+	display:table-cell;
+}
+
+.box_bl {
+	background-image: url(../images/box/bl.png); 
+	background-repeat: no-repeat; 
+	width: 8px; 
+	height: 8px;
+	display:table-cell;
+}
+
+.box_b {
+	background-image: url(../images/box/b.png); 
+	background-repeat: repeat-x; 
+	width: 1px; 
+	height: 8px;
+	display:table-cell;
+}
+
+.box_br {
+	background-image: url(../images/box/br.png); 
+	background-repeat: no-repeat; 
+	width: 8px; 
+	height: 8px;
+	display:table-cell;
+}
+
+.box_remark {
+	font-size: 9px;
+}
+
+.box_left {
+	background-image:url('../images/teaser/box_left.jpg');
+	background-repeat:repeat-y;
+	width:10px;
+}
+.box_right {
+	background-image:url('../images/teaser/box_right.jpg');
+	background-repeat:repeat-y;
+	width:10px;
+}
+li.li1 {
+	overflow: hidden; 
+	float: left; 
+	width: 95px; 
+	height: 64px;
+	cursor: pointer;
+}
+li.li2 {
+	overflow: hidden; 
+	float: left; 
+	width: 95px; 
+	height: 64px;
+	cursor: pointer;
+}
+
+#page_upper_toolbar {
+}
+
+#tsr2_bg {
+	background-image: url(../images/teaser2/main_bg.jpg); 
+	background-repeat: no-repeat; 
+	width: 1005px; 
+	height: 718px; 
+	position: relative;
+}
+
+.btn_start {
+	background-image: url(../images/cbt/start_button.png); 
+	background-repeat: no-repeat; 
+	width: 321px; 
+	height: 176px; 
+	position: absolute; 
+	top: 25px; 
+	left: 240px;
+	cursor: pointer;
+}
+
+.btn_start_over {
+	background-image: url(../images/cbt/start_buttonover.png); 
+	background-repeat: no-repeat; 
+}
+
+.btn_home {
+	background-image: url(../images/cbt/menu/home.png); 
+	background-repeat: no-repeat; 
+	width: 74px; 
+	height: 54px; 
+	position:absolute; 
+	top: 2px; 
+	left: 37px;
+	cursor: pointer;
+}
+
+.btn_home_over {
+	background-image: url(../images/cbt/menu/home_over.png); 
+	background-repeat: no-repeat; 
+}
+
+.btn_news {
+	background-image: url(../images/cbt/menu/news.png); 
+	background-repeat: no-repeat; 
+	width: 88px; 
+	height: 57px; 
+	position:absolute; 
+	top: 2px; 
+	left: 117px;
+	cursor: pointer;
+}
+
+.btn_news_over {
+	background-image: url(../images/cbt/menu/news_over.png); 
+	background-repeat: no-repeat; 
+}
+
+.btn_gameinfo {
+	background-image: url(../images/cbt/menu/game_info.png); 
+	background-repeat: no-repeat; 
+	width: 125px; 
+	height: 57px; 
+	position:absolute; 
+	top: 2px; 
+	left: 210px;
+	cursor: pointer;
+}
+
+.btn_gameinfo_over {
+	background-image: url(../images/cbt/menu/game_info_over.png); 
+	background-repeat: no-repeat; 
+}
+
+.btn_forum {
+	background-image: url(../images/cbt/menu/forum.png); 
+	background-repeat: no-repeat; 
+	width: 98px; 
+	height: 57px; 
+	position:absolute; 
+	top: 2px; 
+	left: 340px;
+	cursor: pointer;
+}
+
+.btn_forum_over {
+	background-image: url(../images/cbt/menu/forum_over.png); 
+	background-repeat: no-repeat; 
+}
+
+.btn_download {
+	background-image: url(../images/cbt/menu/download.png); 
+	background-repeat: no-repeat; 
+	width: 130px; 
+	height: 57px; 
+	position:absolute; 
+	top: 2px; 
+	left: 443px;
+	cursor: pointer;
+}
+
+.btn_download_over {
+	background-image: url(../images/cbt/menu/download_over.png); 
+	background-repeat: no-repeat; 
+}
+
+.btn_support {
+	background-image: url(../images/cbt/menu/support.png); 
+	background-repeat: no-repeat; 
+	width: 117px; 
+	height: 57px; 
+	position:absolute; 
+	top: 2px; 
+	left: 575px;
+	cursor: pointer;
+}
+
+.btn_support_over {
+	background-image: url(../images/cbt/menu/support_over.png); 
+	background-repeat: no-repeat; 
+}
+
+.btn_rank {
+	background-image: url(../images/cbt/menu/rank.png); 
+	background-repeat: no-repeat; 
+	width: 82px; 
+	height: 57px; 
+	position:absolute; 
+	top: 2px; 
+	left: 697px;
+	cursor: pointer;
+}
+
+.btn_rank_over {
+	background-image: url(../images/cbt/menu/rank_over.png); 
+	background-repeat: no-repeat; 
+}
+
+.btn_itemmall {
+	background-image: url(../images/cbt/menu/itemmall.png); 
+	background-repeat: no-repeat; 
+	width: 125px; 
+	height: 57px; 
+	position:absolute; 
+	top: 2px; 
+	left: 784px;
+	cursor: pointer;
+}
+
+.btn_itemmall_over {
+	background-image: url(../images/cbt/menu/itemmall_over.png); 
+	background-repeat: no-repeat; 
+}
+
+a:link,a:visited  {
+	font-family: Arial;
+	font-size: 10pt;
+	color: #18507f;
+	text-decoration: none;
+}
+
+a:hover,a:active {
+	font-family: Arial;
+	font-size: 10pt;
+	color: #18507f;
+	text-decoration: underline; 
+}
+

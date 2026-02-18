@@ -1,0 +1,482 @@
+#oToolbarContainer {
+    width: 100%;
+    height: 34px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+    background-image: url(toolbar/back.jpg);
+    background-repeat: repeat-x;
+    position: fixed; 
+    top: 0px; 
+    z-index:9999;
+}
+
+#oToolbarMainContainer {
+    background-image: url(toolbar/back.jpg); 
+    background-repeat: no-repeat; 
+    margin: 0 auto;
+    width: 1005px; 
+    height: 34px; 
+    position: relative; 
+}
+
+#oToolbarBtnOrange {
+    background-image: url(toolbar/orange_logo.png); 
+    background-repeat: no-repeat; 
+    width: 160px; 
+    height: 26px; 
+    position: absolute; 
+    top: 3px; 
+    left: 5px;
+    cursor: pointer;
+}
+
+#oToolbarBtnForum {
+    background-image: url(toolbar/forum_icon.png); 
+    background-repeat: no-repeat; 
+    width: 26px; 
+    height: 26px; 
+    position: absolute; 
+    top: 3px; 
+    left: 175px;
+    cursor: pointer;
+}
+
+#oToolbarBtnTbot {
+    background-image: url(toolbar/tbot_logo.png); 
+    background-repeat: no-repeat; 
+    width: 26px; 
+    height: 26px; 
+    position: absolute; 
+    top: 3px; 
+    left: 205px;
+    cursor: pointer;
+}
+
+#oToolbarBtnMdo {
+    background-image: url(toolbar/mdo_icon.png); 
+    background-repeat: no-repeat; 
+    width: 26px; 
+    height: 26px; 
+    position: absolute; 
+    top: 3px; 
+    left: 235px;
+    cursor: pointer;
+}
+
+#oToolbarBtn81 {
+    background-image: url(toolbar/81keyslogo.png); 
+    background-repeat: no-repeat; 
+    width: 26px; 
+    height: 26px; 
+    position: absolute; 
+    top: 3px; 
+    left: 265px;
+    cursor: pointer;
+	display: none;
+}
+
+#oToolbarBtnDK {
+    background-image: url(toolbar/dklogo.png); 
+    background-repeat: no-repeat; 
+    width: 26px; 
+    height: 26px; 
+    position: absolute; 
+    top: 3px; 
+    left: 265px;
+    cursor: pointer;
+}
+
+#oToolbarBtnCE {
+    background-image: url(toolbar/ce_icon.png); 
+    background-repeat: no-repeat; 
+    width: 26px; 
+    height: 26px; 
+    position: absolute; 
+    top: 3px; 
+    left: 295px;
+    cursor: pointer;
+}
+
+#oToolbarBtnDS {
+    background-image: url(toolbar/ds_icon.png); 
+    background-repeat: no-repeat; 
+    width: 26px; 
+    height: 26px; 
+    position: absolute; 
+    top: 3px; 
+    left: 325px;
+    cursor: pointer;
+}
+
+#oToolbarBtnRS {
+    background-image: url(toolbar/rs_icon.png); 
+    background-repeat: no-repeat; 
+    width: 26px; 
+    height: 26px; 
+    position: absolute; 
+    top: 3px; 
+    left: 355px;
+    cursor: pointer;
+}
+
+#oToolbarBtnWOT {
+    background-image: url(toolbar/wot_icon.png); 
+    background-repeat: no-repeat; 
+    width: 26px; 
+    height: 26px; 
+    position: absolute; 
+    top: 3px; 
+    left: 385px;
+    cursor: pointer;
+}
+
+#oToolbarBtnPoker {
+    background-image: url(toolbar/poker_icon.png); 
+    background-repeat: no-repeat; 
+    width: 25px; 
+    height: 25px; 
+    position: absolute; 
+    top: 3px; 
+    left: 415px;
+    cursor: pointer;
+}
+
+#oToolbarBtnYouTube {
+    background-image: url(toolbar/youtube_logo.png); 
+    background-repeat: no-repeat; 
+    width: 26px; 
+    height: 26px; 
+    position: absolute; 
+    top: 3px; 
+    left: 570px;
+    cursor: pointer;
+}
+
+#oToolbarBtnFB {
+    background-image: url(toolbar/fb_logo.png); 
+    background-repeat: no-repeat; 
+    width: 26px; 
+    height: 26px; 
+    position: absolute; 
+    top: 3px; 
+    left: 600px;
+    cursor: pointer;
+}
+
+#oToolbarBtnTwitter {
+    background-image: url(toolbar/twitter_logo.png); 
+    background-repeat: no-repeat; 
+    width: 26px; 
+    height: 26px; 
+    position: absolute; 
+    top: 3px; 
+    left: 630px;
+    cursor: pointer;
+}
+
+#oToolbarBtnEMail {
+    background-image: url(toolbar/messege_icon.png); 
+    background-repeat: no-repeat; 
+    width: 26px; 
+    height: 26px; 
+    position: absolute; 
+    top: 3px; 
+    left: 660px;
+    cursor: pointer;
+}
+
+/*
+#login_panel {
+    background-image: url(toolbar/back_signup.png); 
+    background-repeat: no-repeat; 
+    width: 292px; 
+    height: 138px; 
+    position: absolute; 
+    top: -100px; 
+    left: 695px; 
+    z-index:2;
+}
+*/
+
+.txtIdLogin {
+    background-image: url(toolbar/idlogin.png); 
+    background-repeat: no-repeat; 
+    width: 105px; 
+    height: 13px; 
+    position: absolute; 
+    top: 8px; 
+    left: 13px;
+}
+
+.txtPassword {
+    background-image: url(toolbar/password.png); 
+    background-repeat: no-repeat; 
+    width: 50px; 
+    height: 11px; 
+    position: absolute; 
+    top: 56px; 
+    left: 13px;
+}
+
+#frmLoginInput {
+}
+
+/*
+#frmLoginInput .pnltxt_user_id {
+    border: solid 1px black;
+    position: absolute; 
+    top: 22px; 
+    left: 13px;
+	
+	background-color: #fff;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px;
+    color: #000;
+    height: 16px;
+    margin-top: 2px;
+    padding: 1px;
+    width: 135px;
+}
+
+#frmLoginInput .pnltxt_passwd {
+    border: solid 1px black;
+    position: absolute; 
+    top: 68px; 
+    left: 13px;
+	
+	background-color: #fff;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px;
+    color: #000;
+    height: 16px;
+    margin-top: 2px;
+    padding: 1px;
+    width: 135px;
+}
+
+.pnltxt_user_id {
+    border: solid 1px black;
+    position: absolute; 
+    top: 22px; 
+    left: 13px;
+}
+
+.pnltxt_passwd {
+    border: solid 1px black;
+    position: absolute; 
+    top: 68px; 
+    left: 13px;
+}
+
+.pnlForgetPass {
+    background-image: url(toolbar/forget-password.png); 
+    background-repeat: no-repeat; 
+    width: 67px; 
+    height: 27px; 
+    position: absolute; 
+    top: 65px; 
+    left: 212px;
+    cursor: pointer;
+}
+*/
+
+.pnlMyInfo {
+    background-image: url(toolbar/myinfo_button.png); 
+    background-repeat: no-repeat; 
+    width: 95px; 
+    height: 51px; 
+    position: absolute; 
+    top: 7px; 
+    left: 180px;
+    cursor: pointer;
+}
+
+/*
+.pnlRegister {
+    background-image: url(toolbar/registration_button.png); 
+    background-repeat: no-repeat; 
+    width: 132px; 
+    height: 24px; 
+    position: absolute; 
+    top: 102px; 
+    left: 140px;
+    cursor: pointer;
+}
+
+.pnlBtnLogin {
+    position: absolute; 
+    top: 65px; 
+    left: 163px;
+}
+*/
+
+#info_panel {
+    background-image: url(toolbar/logout_back.png); 
+    background-repeat: no-repeat; 
+    width: 292px; 
+    height: 44px; 
+    position: absolute; 
+    top: -10px; 
+    left: 695px; 
+    z-index:2;
+}
+
+.pnlInfoUser {
+    position: absolute;
+    color: #0054A6; 
+    font-size: 11pt; 
+    top: 18px; 
+    left: 10px;
+}
+
+.pnlInfoUserInfo {
+    background-image: url(toolbar/button_myinfo.png); 
+    background-repeat: no-repeat; 
+    width: 57px; 
+    height: 31px; 
+    position: absolute; 
+    top: 11px; 
+    left: 175px;
+    cursor: pointer;
+}
+
+.pnlInfoLogout {
+    background-image: url(toolbar/button_logout.png); 
+    background-repeat: no-repeat; 
+    width: 46px; 
+    height: 23px; 
+    position: absolute; 
+    top: 11px; 
+    left: 235px;
+    cursor: pointer;
+}
+
+/* 2012-09-17 */
+#login_panel {
+    background-image: url(toolbar/panel_new/panel.png); 
+    background-repeat: no-repeat; 
+    width: 292px; 
+    height: 138px; 
+    position: absolute; 
+    top: -100px; 
+    left: 695px; 
+    z-index:2;
+}
+
+.pnlRegister {
+    background-image: url(toolbar/panel_new/btn_register.png); 
+    background-repeat: no-repeat; 
+    width: 149px; 
+    height: 24px; 
+    position: absolute; 
+    top: 102px; 
+    left: 122px;
+    cursor: pointer;
+}
+
+.pnlLoginHere {
+    background-image: url(toolbar/panel_new/login-here.png); 
+    background-repeat: no-repeat; 
+    width: 102px; 
+    height: 24px; 
+    position: absolute; 
+    top: 102px; 
+    left: 12px;
+}
+
+#frm_login .pnltxt_user_id {
+    border: solid 1px #ffbe00;
+    position: absolute; 
+	width: 165px; height: 25px;
+    top: 12px; 
+    left: 12px;
+	
+	background-color: #fff;	
+	border-radius: 0px 0px 0px 0px;
+    box-shadow: none;
+    color: #000;
+	 margin-top: inherit;
+    padding: inherit;
+}
+
+#frm_login .pnltxt_passwd {
+    border: solid 1px #ffbe00;
+    position: absolute; 
+	width: 165px; height: 25px;
+    top: 46px; 
+    left: 12px;
+
+	background-color: #fff;
+	border-radius: 0px 0px 0px 0px;
+    box-shadow: none;
+    color: #000;
+	 margin-top: inherit;
+    padding: inherit;
+}
+
+.pnltxt_user_id {
+    border: solid 1px #ffbe00;
+    position: absolute; 
+	width: 165px; 
+	height: 25px;
+    top: 12px; 
+    left: 12px;
+}
+
+.pnltxt_passwd {
+    border: solid 1px #ffbe00;
+    position: absolute; 
+	width: 165px; 
+	height: 25px;
+    top: 46px; 
+    left: 12px;
+}
+
+.pnlBtnLogin {
+    position: absolute; 
+    top: 77px; 
+    left: 122px;
+}
+
+.pnlForgetPass {
+    position: absolute; 
+    top: 77px; 
+    left: 12px;
+}
+
+.pnlForgetPass a:link, .pnlForgetPass a:visited {
+    color: #868686;
+    font-family: Tahoma;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.pnlForgetPass a:hover, .pnlForgetPass a:active {
+    color: #868686;
+    font-family: Tahoma;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+.pnlSocial {
+	left: 185px; 
+	position: absolute;
+	top: 7px;
+	width: 95px;
+	font-size: 12px;
+}
+
+.pnlSocial .title {
+	text-align: center; 
+	color: #888;
+}
+
+.pnlSocial .lists {
+	margin: 3px auto;
+}
+
+.pnlSocial .lists .item {
+	margin-left: 8px; 
+	float: left; 
+	cursor: pointer;
+}

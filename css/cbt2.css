@@ -1,0 +1,739 @@
+.c_box_big_outer {
+	text-align: left; 
+	vertical-align: top;
+	margin: 5px;
+}
+
+.c_box_big_header {
+	background-image: url(../images/cbt2/box/big_header.png); 
+	background-repeat: no-repeat; 
+	width: 664px; 
+	height: 50px; 
+	position: relative;
+}
+
+.c_box_big_header_no_title {
+	background-image: url(../images/cbt2/box/big_header.png); 
+	background-repeat: no-repeat; 
+	width: 664px; 
+	height: 30px; 
+	position: relative;
+}
+
+.c_box_big_content_outer {
+	display: table; 
+	border-collapse:collapse; 
+	width: 664px;
+}
+
+.c_box_big_content_inner {
+	display: table-row;
+}
+
+.c_box_big_left {
+	background-image: url(../images/cbt2/box/big_left.png); 
+	background-repeat: repeat-y;
+	width: 12px;
+	height: 100%;
+	display:table-cell;
+}
+
+.c_box_big_right {
+	background-image: url(../images/cbt2/box/big_right.png); 
+	background-repeat: repeat-y; 
+	width: 12px; 
+	height: 100%;
+	display:table-cell;
+}
+
+.c_box_big_bottom {
+	background-image: url(../images/cbt2/box/big_footer.png); 
+	background-repeat: no-repeat; 
+	width: 664px; 
+	height: 20px;
+}
+
+.c_box_big_content_wrapper {
+	width: 590px; 
+	display:table-cell; 
+	vertical-align: top; 
+	background-color: #f0f3f8;
+}
+
+.c_box_big_content {
+	width: 100%; 
+	height: 255px; 
+	overflow: auto; 
+	line-height: 20pt;
+	position: relative;
+}
+ 
+.submenu_outer {
+	background-image: url(../images/cbt2/submenu/submenu_back.png); 
+	background-repeat: no-repeat;
+	width: 258px;
+	height: 276px;
+}
+
+.submenu_inner {
+	padding: 30px 0 0 7px;
+	position: relative;
+}
+
+.submenu_item {
+	margin-top: 3px;
+}
+
+.submenu_item_client_patch {
+	background-image: url(../images/cbt2/submenu/btn_client.png); 
+	background-repeat: no-repeat;
+	width: 240px;
+	height: 29px;
+	cursor: pointer;
+}
+
+.submenu_item_client_patch_over {
+	background-image: url(../images/cbt2/submenu/btn_client_over.jpg); 
+	background-repeat: no-repeat;
+}
+
+.submenu_item_ss {
+	background-image: url(../images/cbt2/submenu/btn_ss.png); 
+	background-repeat: no-repeat;
+	width: 240px;
+	height: 29px;
+	cursor: pointer;
+}
+
+.submenu_item_ss_over {
+	background-image: url(../images/cbt2/submenu/btn_ss_over.jpg); 
+	background-repeat: no-repeat;
+}
+
+.submenu_item_video {
+	background-image: url(../images/cbt2/submenu/btn_video.png); 
+	background-repeat: no-repeat;
+	width: 240px;
+	height: 29px;
+	cursor: pointer;
+}
+
+.submenu_item_video_over {
+	background-image: url(../images/cbt2/submenu/btn_video_over.jpg); 
+	background-repeat: no-repeat;
+}
+
+.submenu_item_wp {
+	background-image: url(../images/cbt2/submenu/btn_wp.png); 
+	background-repeat: no-repeat;
+	width: 240px;
+	height: 29px;
+	cursor: pointer;
+}
+
+.submenu_item_wp_over {
+	background-image: url(../images/cbt2/submenu/btn_wp_over.jpg); 
+	background-repeat: no-repeat;
+}
+
+.submenu_item_gi_story {
+	background-image: url(../images/cbt2/submenu/btn_gi_story.png); 
+	background-repeat: no-repeat;
+	width: 240px;
+	height: 29px;
+	cursor: pointer;
+}
+
+.submenu_item_gi_story_over {
+	background-image: url(../images/cbt2/submenu/btn_gi_story_over.png); 
+	background-repeat: no-repeat;
+}
+
+.submenu_item_gi_dli {
+	background-image: url(../images/cbt2/submenu/btn_gi_dli.png); 
+	background-repeat: no-repeat;
+	width: 240px;
+	height: 29px;
+	cursor: pointer;
+}
+
+.submenu_item_gi_dli_over {
+	background-image: url(../images/cbt2/submenu/btn_gi_dli_over.png); 
+	background-repeat: no-repeat;
+}
+
+.submenu_item_gi_howto {
+	background-image: url(../images/cbt2/submenu/btn_gi_howto.png); 
+	background-repeat: no-repeat;
+	width: 240px;
+	height: 29px;
+	cursor: pointer;
+}
+
+.submenu_item_gi_howto_over {
+	background-image: url(../images/cbt2/submenu/btn_gi_howto_over.png); 
+	background-repeat: no-repeat;
+}
+
+.submenu_item_gi_gamemode {
+	background-image: url(../images/cbt2/submenu/btn_gi_gamemode.png); 
+	background-repeat: no-repeat;
+	width: 240px;
+	height: 29px;
+	cursor: pointer;
+}
+
+.submenu_item_gi_gamemode_over {
+	background-image: url(../images/cbt2/submenu/btn_gi_gamemode_over.png); 
+	background-repeat: no-repeat;
+}
+
+.c_title {
+	position: absolute; 
+	top: 20px; 
+	left: 12px;
+}
+
+.c_full_client_title {
+	background-image: url(../images/cbt2/title/fullclient.png); 
+	background-repeat: no-repeat; 
+	width: 148px; 
+	height: 21px; 
+}
+
+.c_patch_title {
+	background-image: url(../images/cbt2/title/patch.png); 
+	background-repeat: no-repeat; 
+	width: 148px; 
+	height: 21px; 
+}
+
+.c_mirrors_title {
+	background-image: url(../images/cbt2/title/miror.png); 
+	background-repeat: no-repeat; 
+	width: 218px; 
+	height: 21px; 
+}
+
+.c_partial_title {
+	background-image: url(../images/cbt2/title/partial.png); 
+	background-repeat: no-repeat; 
+	width: 192px; 
+	height: 21px; 
+}
+
+.c_requirement_title {
+	background-image: url(../images/cbt2/title/requirenment.png); 
+	background-repeat: no-repeat; 
+	width: 174px; 
+	height: 21px; 
+}
+
+.c_gi_story_title {
+	background-image: url(../images/cbt2/title/gi_title_story.png); 
+	background-repeat: no-repeat; 
+	width: 174px; 
+	height: 21px; 
+}
+
+.c_gi_dli_title {
+	background-image: url(../images/cbt2/title/gi_title_dli.png); 
+	background-repeat: no-repeat; 
+	width: 265px; 
+	height: 21px; 
+}
+
+.c_gi_howto_title {
+	background-image: url(../images/cbt2/title/gi_title_howto.png); 
+	background-repeat: no-repeat; 
+	width: 166px; 
+	height: 21px; 
+}
+
+.c_gi_gamemode_title {
+	background-image: url(../images/cbt2/title/gi_title_gamemode.png); 
+	background-repeat: no-repeat; 
+	width: 165px; 
+	height: 21px; 
+}
+
+.c_requirement {
+	background-image: url(../images/cbt2/image/requirement.png); 
+	background-repeat: no-repeat;
+	width: 538px;
+	height: 311px; 
+	margin: 0 auto 0 auto;
+}
+
+.dl_indomog {
+	background-image: url(../images/cbt2/button/btn_indomog.png); 
+	background-repeat: no-repeat;
+	width: 413px;
+	height: 106px; 
+	margin: 10px auto 20px auto;
+	cursor: pointer;
+}
+
+.dl_indomog_over {
+	background-image: url(../images/cbt2/button/btn_indomog_over.jpg); 
+	background-repeat: no-repeat;
+	width: 368px;
+	height: 102px; 
+}
+
+.dl_apnetindo {
+	background-image: url(../images/cbt2/button/apnetindo.png); 
+	background-repeat: no-repeat;
+	width: 413px;
+	height: 106px; 
+	margin: 5px auto 30px auto;
+	cursor: pointer;
+}
+
+.dl_gameqq {
+	background-image: url(../images/cbt2/button/gameqq_mirror.png); 
+	background-repeat: no-repeat;
+	width: 413px;
+	height: 106px; 
+	margin: 5px auto 30px auto;
+	cursor: pointer;
+}
+
+.dl_full {
+	background-image: url(../images/cbt2/button/button_downfull.png); 
+	background-repeat: no-repeat;
+	width: 473px;
+	height: 69px; 
+	margin: 5px auto 30px auto;
+	cursor: pointer;
+}
+
+.dl_patch_01 {
+	background-image: url(../images/cbt2/button/btn_patch_01.png); 
+	background-repeat: no-repeat;
+	width: 473px;
+	height: 69px; 
+	margin: 5px auto 30px auto;
+	cursor: pointer;
+}
+
+.dl_patch_02 {
+	background-image: url(../images/cbt2/button/btn_patch_02.png); 
+	background-repeat: no-repeat;
+	width: 473px;
+	height: 69px; 
+	margin: 5px auto 30px auto;
+	cursor: pointer;
+}
+
+.dl_patch_03 {
+	background-image: url(../images/cbt2/button/btn_patch_03.png); 
+	background-repeat: no-repeat;
+	width: 473px;
+	height: 69px; 
+	margin: 5px auto 30px auto;
+	cursor: pointer;
+}
+
+.dl_part {
+	width: 213px;
+	height: 49px; 
+	margin: 5px auto 0px auto;
+	cursor: pointer;
+	background-repeat: no-repeat;
+}
+
+.dl_part_1 { background-image: url(../images/cbt2/button/1.png); }
+.dl_part_2 { background-image: url(../images/cbt2/button/2.png); }
+.dl_part_3 { background-image: url(../images/cbt2/button/3.png); }
+.dl_part_4 { background-image: url(../images/cbt2/button/4.png); }
+.dl_part_5 { background-image: url(../images/cbt2/button/5.png); }
+.dl_part_6 { background-image: url(../images/cbt2/button/6.png); }
+.dl_part_7 { background-image: url(../images/cbt2/button/7.png); }
+.dl_part_8 { background-image: url(../images/cbt2/button/8.png); }
+.dl_part_9 { background-image: url(../images/cbt2/button/9.png); }
+.dl_part_10 { background-image: url(../images/cbt2/button/10.png); }
+.dl_part_11 { background-image: url(../images/cbt2/button/11.png); }
+
+.img_pink_bot{
+	background-image: url(../images/cbt2/image/pink.png); 
+	background-repeat: no-repeat;
+	width: 213px;
+	height: 224px; 
+	position: absolute; 
+	top: 10px; 
+	left: 0px;
+}
+
+.img_red_bot{
+	background-image: url(../images/cbt2/image/red.png); 
+	background-repeat: no-repeat;
+	width: 214px;
+	height: 157px; 
+	position: absolute; 
+	top: 475px; 
+	left: 440px;
+}
+
+.img_gi_story{
+	background-image: url(../images/cbt2/image/gi_story.png); 
+	background-repeat: no-repeat;
+	width: 639px;
+	height: 911px; 
+}
+
+.img_gi_dli{
+	background-image: url(../images/cbt2/image/gi_dli.png); 
+	background-repeat: no-repeat;
+	width: 639px;
+	height: 1713px; 
+}
+
+.img_gi_howto{
+	background-image: url(../images/cbt2/image/gi_howto.png); 
+	background-repeat: no-repeat;
+	width: 639px;
+	height: 866px; 
+}
+
+.img_gi_gamemode{
+	background-image: url(../images/cbt2/image/gi_gamemode.png); 
+	background-repeat: no-repeat;
+	width: 639px;
+	height: 720px; 
+}
+
+.txt_version {
+	font-family: arial;
+	font-size: 10pt;
+	color: #870f00;
+	text-align: center;
+	font-weight: bold;
+}
+
+.txt_version_notes {
+	font-family: arial;
+	font-size: 8pt;
+	color: #870f00;
+	text-align: center;
+	font-weight: bold;
+}
+
+.btn_newbie_guide {
+	background-image: url(../images/cbt2/button/btn_newbieguide.png); 
+	background-repeat: no-repeat;
+	width: 252px;
+	height: 51px; 
+	margin: 5px;
+	cursor: pointer;
+}
+
+.btn_cash {
+	background-image: url(../images/cbt2/button/btn_cash.png); 
+	background-repeat: no-repeat;
+	width: 252px;
+	height: 51px; 
+	margin: 5px;
+	cursor: pointer;
+}
+
+.btn_download_game {
+	background-image: url(../images/obt/button/button_downloadgame.png); 
+	background-repeat: no-repeat;
+	width: 252px;
+	height: 51px; 
+	margin: 5px;
+	cursor: pointer;
+}
+
+.bnr_banner_obt {
+	background-image: url(../images/cbt2/image/bannerobt.jpg); 
+	background-repeat: no-repeat;
+	width: 252px;
+	height: 374px; 
+	margin: 5px;
+	cursor: pointer;
+}
+
+.btn_itemmall_new {
+	background-image: url(../images/obt/button/button_itemmall.png); 
+	background-repeat: no-repeat;
+	width: 252px;
+	height: 51px; 
+	margin: 5px;
+	cursor: pointer;
+}
+
+.btn_voucher_new {
+	background-image: url(../images/obt/button/button_pesanvoucher.png); 
+	background-repeat: no-repeat;
+	width: 252px;
+	height: 51px; 
+	margin: 5px;
+	cursor: pointer;
+}
+
+.c_gi_character_title {
+	background-image: url(../images/cbt2/title/gi_title_character.png); 
+	background-repeat: no-repeat; 
+	width: 145px; 
+	height: 21px; 
+}
+
+.submenu_item_gi_character {
+	background-image: url(../images/cbt2/submenu/btn_gi_character.png); 
+	background-repeat: no-repeat;
+	width: 240px;
+	height: 29px;
+	cursor: pointer;
+}
+
+.submenu_item_gi_character_over {
+	background-image: url(../images/cbt2/submenu/btn_gi_character_over.png); 
+	background-repeat: no-repeat;
+}
+
+.img_gi_character{
+	background-image: url(../images/cbt2/image/gi_character.png); 
+	background-repeat: no-repeat;
+	width: 639px;
+	height: 1955px; 
+}
+
+.c_gi_items_title {
+	background-image: url(../images/cbt2/title/gi_title_items.png); 
+	background-repeat: no-repeat; 
+	width: 75px; 
+	height: 21px; 
+}
+
+.submenu_item_gi_items {
+	background-image: url(../images/cbt2/submenu/btn_gi_items.png); 
+	background-repeat: no-repeat;
+	width: 240px;
+	height: 29px;
+	cursor: pointer;
+}
+
+.submenu_item_gi_items_over {
+	background-image: url(../images/cbt2/submenu/btn_gi_items_over.png); 
+	background-repeat: no-repeat;
+}
+
+.img_gi_items{
+	background-image: url(../images/cbt2/image/gi_items.png); 
+	background-repeat: no-repeat;
+	width: 639px;
+	height: 805px; 
+}
+
+.submenu_item_gi_newbie {
+	background-image: url(../images/cbt2/submenu/btn_gi_newbie.png); 
+	background-repeat: no-repeat;
+	width: 240px;
+	height: 29px;
+	cursor: pointer;
+}
+
+.submenu_item_gi_newbie_over {
+	background-image: url(../images/cbt2/submenu/btn_gi_newbie_over.png); 
+	background-repeat: no-repeat;
+}
+
+.c_gi_newbie_01_title {
+	background-image: url(../images/cbt2/title/gi_title_newbie_01.png); 
+	background-repeat: no-repeat; 
+	width: 197px; 
+	height: 21px; 
+}
+
+.img_gi_newbie_01{
+	background-image: url(../images/cbt2/image/gi_newbie_01.png); 
+	background-repeat: no-repeat;
+	width: 640px;
+	height: 815px; 
+}
+
+.c_gi_newbie_02_title {
+	background-image: url(../images/cbt2/title/gi_title_newbie_02.png); 
+	background-repeat: no-repeat; 
+	width: 189px; 
+	height: 21px; 
+}
+
+.img_gi_newbie_02{
+	background-image: url(../images/cbt2/image/gi_newbie_02.png); 
+	background-repeat: no-repeat;
+	width: 633px;
+	height: 2096px; 
+}
+
+.c_gi_newbie_03_title {
+	background-image: url(../images/cbt2/title/gi_title_newbie_03.png); 
+	background-repeat: no-repeat; 
+	width: 376px; 
+	height: 27px; 
+}
+
+.img_gi_newbie_03{
+	background-image: url(../images/cbt2/image/gi_newbie_03.png); 
+	background-repeat: no-repeat;
+	width: 640px;
+	height: 1660px; 
+}
+
+.c_gi_newbie_04_title {
+	background-image: url(../images/cbt2/title/gi_title_newbie_04.png); 
+	background-repeat: no-repeat; 
+	width: 137px; 
+	height: 21px; 
+}
+
+.img_gi_newbie_04{
+	background-image: url(../images/cbt2/image/gi_newbie_04.png); 
+	background-repeat: no-repeat;
+	width: 636px;
+	height: 1611px; 
+}
+
+.img_coming_soon{
+	background-image: url(../images/cbt2/image/soon.png); 
+	background-repeat: no-repeat; 
+	width: 571px; 
+	height: 481px; 
+	margin: 30px auto 30px auto;
+}
+
+.c_gi_newbie_05_title {
+	background-image: url(../images/cbt2/title/gi_title_newbie_05.png); 
+	background-repeat: no-repeat; 
+	width: 112px; 
+	height: 21px; 
+}
+
+.img_gi_newbie_05{
+	background-image: url(../images/cbt2/image/gi_newbie_05.png); 
+	background-repeat: no-repeat;
+	width: 638px;
+	height: 1019px; 
+}
+
+.submenu_sub_gi_newbie_01 {
+	background-image: url(../images/cbt2/submenu/newbie/btn_01.png); 
+	background-repeat: no-repeat;
+	width: 125px;
+	height: 36px;
+	cursor: pointer;
+	margin: 0 5px 0 0;
+}
+
+.submenu_sub_gi_newbie_01_over {
+	background-image: url(../images/cbt2/submenu/newbie/btn_01_over.png); 
+	background-repeat: no-repeat;
+}
+
+.submenu_sub_gi_newbie_02 {
+	background-image: url(../images/cbt2/submenu/newbie/btn_02.png); 
+	background-repeat: no-repeat;
+	width: 125px;
+	height: 36px;
+	cursor: pointer;
+}
+
+.submenu_sub_gi_newbie_02_over {
+	background-image: url(../images/cbt2/submenu/newbie/btn_02_over.png); 
+	background-repeat: no-repeat;
+}
+
+.submenu_sub_gi_newbie_03 {
+	background-image: url(../images/cbt2/submenu/newbie/btn_03.png); 
+	background-repeat: no-repeat;
+	width: 125px;
+	height: 36px;
+	cursor: pointer;
+}
+
+.submenu_sub_gi_newbie_03_over {
+	background-image: url(../images/cbt2/submenu/newbie/btn_03_over.png); 
+	background-repeat: no-repeat;
+}
+
+.submenu_sub_gi_newbie_04 {
+	background-image: url(../images/cbt2/submenu/newbie/btn_04.png); 
+	background-repeat: no-repeat;
+	width: 125px;
+	height: 36px;
+	cursor: pointer;
+}
+
+.submenu_sub_gi_newbie_04_over {
+	background-image: url(../images/cbt2/submenu/newbie/btn_04_over.png); 
+	background-repeat: no-repeat;
+}
+
+.submenu_sub_gi_newbie_05 {
+	background-image: url(../images/cbt2/submenu/newbie/btn_05.png); 
+	background-repeat: no-repeat;
+	width: 125px;
+	height: 36px;
+	cursor: pointer;
+}
+
+.submenu_sub_gi_newbie_05_over {
+	background-image: url(../images/cbt2/submenu/newbie/btn_05_over.png); 
+	background-repeat: no-repeat;
+}
+
+.c_newbie_title {
+	margin: 10px 0 30px 0;
+}
+
+.c_dl_ss_title {
+	background-image: url(../images/cbt2/title/screen_shot.png); 
+	background-repeat: no-repeat; 
+	width: 161px; 
+	height: 21px; 
+}
+
+.c_dl_wp_title {
+	background-image: url(../images/cbt2/title/wallpaper.png); 
+	background-repeat: no-repeat; 
+	width: 147px; 
+	height: 21px; 
+}
+
+.c_dl_video_title {
+	background-image: url(../images/cbt2/title/video.png); 
+	background-repeat: no-repeat; 
+	width: 71px; 
+	height: 21px; 
+}
+
+.c_dl_wp_thumbs {
+	background-repeat: no-repeat; 
+	width: 202px; 
+	height: 170px;
+	vertical-align: bottom;
+	font-family: Arial;
+	font-size: 11pt;
+}
+
+.c_dl_wp_thumbs_margin {
+	
+}
+
+.c_dl_ss_thumbs {
+	background-repeat: no-repeat; 
+	width: 202px; 
+	height: 152px;
+	vertical-align: bottom;
+	font-family: Arial;
+	font-size: 11pt;
+	cursor: pointer;
+}
+
+.wp_dl_label {
+	cursor: pointer;
+}
+
+.
