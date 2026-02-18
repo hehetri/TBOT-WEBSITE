@@ -3,6 +3,47 @@ session_start();
 require_once __DIR__ . '/config.php';
 
 $accountInfo = null;
+$topLevelRankText = 'NOME + LEVEL';
+$topGuildRankText = 'GUILD NAME + POINTS';
+
+if ($conn instanceof mysqli) {
+    try {
+        $topLevelRes = $conn->query("
+            SELECT c.name, c.level
+            FROM bout_characters c
+            LEFT JOIN bout_users u ON u.username = c.name
+            WHERE (u.Position IS NULL OR u.Position < 150)
+              AND c.name NOT LIKE '[GM]%'
+            ORDER BY c.level DESC, c.exp DESC
+            LIMIT 1
+        ");
+        $topLevel = $topLevelRes ? $topLevelRes->fetch_assoc() : null;
+        if ($topLevel) {
+            $topLevelRankText = trim((string)$topLevel['name']) . ' + ' . (int)$topLevel['level'];
+        }
+    } catch (Throwable $e) {
+        // Keep placeholder text when ranking query is unavailable.
+    }
+
+    try {
+        $topGuildRes = $conn->query("
+            SELECT g.Guildname, g.total_points
+            FROM guilds g
+            LEFT JOIN bout_users u ON u.username = g.leader
+            WHERE (u.Position IS NULL OR u.Position < 150)
+              AND g.leader NOT LIKE '[GM]%'
+            ORDER BY g.total_points DESC
+            LIMIT 1
+        ");
+        $topGuild = $topGuildRes ? $topGuildRes->fetch_assoc() : null;
+        if ($topGuild) {
+            $topGuildRankText = trim((string)$topGuild['Guildname']) . ' + ' . (int)$topGuild['total_points'];
+        }
+    } catch (Throwable $e) {
+        // Keep placeholder text when ranking query is unavailable.
+    }
+}
+
 if (isset($_SESSION['user_id']) && $conn instanceof mysqli) {
     $userTable = resolve_user_table($conn);
     $uid = (int)$_SESSION['user_id'];
@@ -504,11 +545,13 @@ jQuery(window).load(function() {
 		<div class="o_main_sep_between"></div><!-- 5 -->
 		<div class="o_main_container_column_3" style="position:relative;"><!-- 240 -->
 			<div class="o_rank1" style="position:relative; ">
-				<div style="background-image: url(images/obt/images/rank_coming.png); width: 151px; height: 138px; top: 50px; left: 32px; position: absolute;" onclick="jsOpenWin(&quot;/eventidregister&quot;)">
+				<div class="o_rank_placeholder" onclick="jsOpenWin(&quot;/eventidregister&quot;)">
+					<div class="o_rank_placeholder_name"><?= htmlspecialchars($topLevelRankText, ENT_QUOTES, "UTF-8") ?></div>
 				</div>
 			</div>
 			<div class="o_rank2" style="position:relative; ">
-				<div style="background-image: url(images/obt/images/rankguild_coming.png); width: 202px; height: 132px; top: 50px; left: 25px; position: absolute;" onclick="jsOpenWin(&quot;/eventidregister&quot;)">
+				<div class="o_rank_placeholder" onclick="jsOpenWin(&quot;/eventidregister&quot;)">
+					<div class="o_rank_placeholder_name"><?= htmlspecialchars($topGuildRankText, ENT_QUOTES, "UTF-8") ?></div>
 				</div>
 			</div>
 			<div class="o_box_small_outer">
