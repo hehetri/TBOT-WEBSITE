@@ -8,7 +8,7 @@ if (isset($_SESSION['user_id']) && $conn instanceof mysqli) {
     $uid = (int)$_SESSION['user_id'];
 
     $queries = [
-        "SELECT u.username, u.email, u.coins, c.name AS character_name, c.level, c.gigas AS currency_gigas FROM {$userTable} u LEFT JOIN bout_characters c ON c.name = u.username WHERE u.id = ? ORDER BY c.level DESC LIMIT 1",
+        "SELECT u.username, u.email, u.coins, c.name AS character_name, c.level, c.gigas AS currency_gigas FROM {$userTable} u LEFT JOIN bout_characters c ON c.username = u.username WHERE u.id = ? ORDER BY c.level DESC LIMIT 1",
         "SELECT u.username, u.email, u.coins, NULL AS character_name, NULL AS level, 0 AS currency_gigas FROM {$userTable} u WHERE u.id = ? LIMIT 1"
     ];
 
@@ -92,11 +92,68 @@ function moToggler(bid,cls,cannotChange) {
 </script>
 </head> 
 <body class="tundra" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"> 
+<style>
+@keyframes alertFadeIn {
+	from { opacity: 0; transform: translateY(-8px) scale(0.98); }
+	to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.o-alert-wrap {
+	position: fixed;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 99999;
+	pointer-events: none;
+}
+.o-alert-box {
+	position: relative;
+	min-width: 300px;
+	max-width: 480px;
+	padding: 16px 42px 16px 16px;
+	color: #f7f7f7;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	border-radius: 12px;
+	background: rgba(20, 20, 22, 0.95);
+	box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	animation: alertFadeIn 260ms ease-out;
+	pointer-events: auto;
+}
+.o-alert-box.error { border-left: 4px solid #ff5f6d; }
+.o-alert-box.success { border-left: 4px solid #34d399; }
+.o-alert-close {
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	width: 24px;
+	height: 24px;
+	line-height: 22px;
+	text-align: center;
+	border: 0;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.08);
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+}
+</style>
 <?php if (isset($_GET['login_error'])): ?>
-<div style="position:fixed;top:10px;right:10px;z-index:9999;background:#7f1d1d;color:#fff;padding:10px 14px;font-family:Arial;border-radius:4px;">Invalid login credentials.</div>
+<div class="o-alert-wrap" id="login-alert-error">
+	<div class="o-alert-box error">
+		<button type="button" class="o-alert-close" onclick="document.getElementById('login-alert-error').style.display='none'" aria-label="Fechar">×</button>
+		Invalid login credentials.
+	</div>
+</div>
 <?php endif; ?>
 <?php if (isset($_GET['login_success'])): ?>
-<div style="position:fixed;top:10px;right:10px;z-index:9999;background:#166534;color:#fff;padding:10px 14px;font-family:Arial;border-radius:4px;">Login successful.</div>
+<div class="o-alert-wrap" id="login-alert-success">
+	<div class="o-alert-box success">
+		<button type="button" class="o-alert-close" onclick="document.getElementById('login-alert-success').style.display='none'" aria-label="Fechar">×</button>
+		Login successful.
+	</div>
+</div>
 <?php endif; ?>
 <div style="background-image: url(images/cbt/header_back.jpg); background-repeat: no-repeat; background-position: center top; width: 100%; position:relative;display: table;">
 	
@@ -205,25 +262,20 @@ jQuery(window).load(function() {
 		<div class="o_main_sep_left"></div><!-- 35 -->
 		<div class="o_main_container_column_1"><!-- 258 -->
 						<div class="o_login" id="account-panel">
-<?php if (isset($_SESSION['user_id']) && $accountInfo): ?>
-	<div style="position:absolute;top:18px;left:10px;width:238px;color:#fff;font-family:Arial;font-size:11px;line-height:1.6;">
-		<div style="font-size:15px;font-weight:bold;color:#ffd35a;margin-bottom:4px;">MY ACCOUNT</div>
-		<div><b>Character Name:</b> <?= htmlspecialchars((string)($accountInfo['character_name'] ?? '-')) ?></div>
-		<div><b>Level:</b> <?= htmlspecialchars((string)($accountInfo['level'] ?? '0')) ?></div>
-		<div><b>Cash:</b> <?= htmlspecialchars((string)($accountInfo['coins'] ?? '0')) ?></div>
-		<div><b>Gigas:</b> <?= htmlspecialchars((string)($accountInfo['currency_gigas'] ?? '0')) ?></div>
+	<?php if (isset($_SESSION['user_id']) && $accountInfo): ?>
+		<div style="position:absolute;top:18px;left:10px;width:238px;color:#fff;font-family:Arial;font-size:11px;line-height:1.6;">
+				<div><b>Character Name:</b> <?= htmlspecialchars((string)($accountInfo['character_name'] ?? '-')) ?></div>
+			<div><b>Level:</b> <span style="color:#ffd35a;font-weight:bold;"><?= htmlspecialchars((string)($accountInfo['level'] ?? '0')) ?></span></div>
+			<div><b>Cash:</b> <span style="color:#ffd35a;font-weight:bold;"><?= htmlspecialchars((string)($accountInfo['coins'] ?? '0')) ?></span></div>
+			<div><b>Gigas:</b> <span style="color:#ffd35a;font-weight:bold;"><?= htmlspecialchars((string)($accountInfo['currency_gigas'] ?? '0')) ?></span></div>
 
 		<div style="margin-top:8px;">
 			<button type="button" onclick="openCenterPanel('password')" style="height:22px;cursor:pointer;">Change Password</button>
 		</div>
 
-		<form method="post" action="auth/update_account.php" style="margin-top:6px;">
-			<input type="hidden" name="action" value="email">
-			<input type="email" name="new_email" placeholder="New email" style="width:190px;height:20px;border:1px solid #666;background:#fff;padding-left:5px;">
-			<button type="submit" style="height:22px;cursor:pointer;">Change Email</button>
-		</form>
-
-		<div style="margin-top:8px;"><a href="auth/logout.php" style="color:#ffd35a;text-decoration:none;font-weight:bold;">Logout</a></div>
+		<div style="margin-top:8px;">
+				<a href="auth/logout.php" style="display:inline-block;background:#b42822;color:#fff;text-decoration:none;font-weight:bold;padding:5px 10px;border-radius:2px;">LOGOUT</a>
+			</div>
 	</div>
 <?php else: ?>
 	<form id="frm_login_tbot" name="frm_login_tbot" method="post" action="auth/login.php" autocomplete="off">
