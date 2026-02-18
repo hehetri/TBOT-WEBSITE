@@ -1,7 +1,10 @@
 <?php
 require_once __DIR__ . '/../config.php';
 
-function queryAll(mysqli $conn, string $sql): array {
+function queryAll(mysqli $conn = null, string $sql): array {
+    if (!$conn) {
+        return [];
+    }
     try {
         $res = $conn->query($sql);
         return $res ? $res->fetch_all(MYSQLI_ASSOC) : [];
@@ -14,7 +17,7 @@ $rankLevel = queryAll($conn, "
     SELECT c.name, c.level, c.exp
     FROM bout_characters c
     LEFT JOIN bout_users u ON u.username = c.name
-    WHERE (u.position IS NULL OR u.position < 150)
+    WHERE (u.Position IS NULL OR u.Position < 150)
       AND c.name NOT LIKE '[GM]%'
     ORDER BY c.level DESC, c.exp DESC
     LIMIT 50
@@ -24,7 +27,7 @@ $rankExp = queryAll($conn, "
     SELECT c.name, c.level, c.exp
     FROM bout_characters c
     LEFT JOIN bout_users u ON u.username = c.name
-    WHERE (u.position IS NULL OR u.position < 150)
+    WHERE (u.Position IS NULL OR u.Position < 150)
       AND c.name NOT LIKE '[GM]%'
     ORDER BY c.exp DESC
     LIMIT 50
@@ -36,7 +39,7 @@ $rankStats = queryAll($conn, "
            c.defense
     FROM bout_characters c
     LEFT JOIN bout_users u ON u.username = c.name
-    WHERE (u.position IS NULL OR u.position < 150)
+    WHERE (u.Position IS NULL OR u.Position < 150)
       AND c.name NOT LIKE '[GM]%'
     ORDER BY attack_power DESC
     LIMIT 50
@@ -46,7 +49,7 @@ $rankGuilds = queryAll($conn, "
     SELECT g.Guildname, g.leader, g.total_points, g.leader_points
     FROM guilds g
     LEFT JOIN bout_users u ON u.username = g.leader
-    WHERE (u.position IS NULL OR u.position < 150)
+    WHERE (u.Position IS NULL OR u.Position < 150)
       AND g.leader NOT LIKE '[GM]%'
     ORDER BY g.total_points DESC
     LIMIT 30
@@ -56,7 +59,7 @@ $rankGuildMembers = queryAll($conn, "
     SELECT gm.guild, gm.player, gm.points
     FROM guildmembers gm
     LEFT JOIN bout_users u ON u.username = gm.player
-    WHERE (u.position IS NULL OR u.position < 150)
+    WHERE (u.Position IS NULL OR u.Position < 150)
       AND gm.player NOT LIKE '[GM]%'
     ORDER BY gm.points DESC
     LIMIT 50
@@ -64,7 +67,7 @@ $rankGuildMembers = queryAll($conn, "
 
 function renderRows(array $rows, array $cols): void {
     if (!$rows) {
-        echo '<tr><td colspan="' . count($cols) . '">Sem dados.</td></tr>';
+        echo '<tr><td colspan="' . count($cols) . '">No data.</td></tr>';
         return;
     }
     foreach ($rows as $r) {
@@ -76,48 +79,52 @@ function renderRows(array $rows, array $cols): void {
     }
 }
 ?>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <title>Ranking - TBOT</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body{background:#121212;color:#f3f3f3;font-family:Arial,sans-serif;margin:0;padding:20px}
-    a{color:#f68122}
-    h1,h2{margin:10px 0}
-    .grid{display:grid;grid-template-columns:1fr;gap:16px}
-    @media (min-width:1100px){.grid{grid-template-columns:1fr 1fr}}
-    .card{background:#1c1c1c;padding:12px;border-radius:8px;overflow:auto}
-    table{width:100%;border-collapse:collapse;font-size:13px}
-    th,td{border-bottom:1px solid #2f2f2f;padding:6px;text-align:left;white-space:nowrap}
-    th{background:#222;position:sticky;top:0}
-  </style>
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Rank - T-Bot Online</title>
+<link href="../images/favicon.ico" rel="shortcut icon">
+<link href="../css/main.css" media="screen" rel="stylesheet" type="text/css">
+<link href="../css/toolbar.css" media="screen" rel="stylesheet" type="text/css">
+<link href="../css/cbt2.css" media="screen" rel="stylesheet" type="text/css">
+<style>
+.rank-container{width:960px;margin:0 auto 20px auto;background:#f3f3f3;border:2px solid #b6b6b6;border-radius:8px;padding:12px;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.rank-title{font-family:Arial;font-size:22px;font-weight:bold;color:#8a0e0e;margin:4px 0 10px 0}
+.rank-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rank-box{background:#fff;border:1px solid #d0d0d0;border-radius:6px;padding:8px;overflow:auto}
+.rank-box.full{grid-column:1/-1}
+.rank-box h2{margin:0 0 6px 0;font-size:16px;color:#333;font-family:Arial}
+.rank-table{width:100%;border-collapse:collapse;font-family:Arial;font-size:12px}
+.rank-table th,.rank-table td{border-bottom:1px solid #e5e5e5;padding:5px;text-align:left;white-space:nowrap}
+.rank-table th{background:#efefef;color:#7a0000}
+</style>
 </head>
-<body>
-  <p><a href="../index.php">&larr; Voltar para Home</a> | <a href="../register.php">Registro</a></p>
-  <h1>Ranking TBOT</h1>
-  <div class="grid">
-    <section class="card">
-      <h2>Top Level</h2>
-      <table><thead><tr><th>Nome</th><th>Level</th><th>Exp</th></tr></thead><tbody><?php renderRows($rankLevel,['name','level','exp']); ?></tbody></table>
-    </section>
-    <section class="card">
-      <h2>Top Experience</h2>
-      <table><thead><tr><th>Nome</th><th>Level</th><th>Exp</th></tr></thead><tbody><?php renderRows($rankExp,['name','level','exp']); ?></tbody></table>
-    </section>
-    <section class="card">
-      <h2>Top Attack Power</h2>
-      <table><thead><tr><th>Nome</th><th>Level</th><th>HP</th><th>Ataque</th><th>Defesa</th></tr></thead><tbody><?php renderRows($rankStats,['name','level','hp','attack_power','defense']); ?></tbody></table>
-    </section>
-    <section class="card">
-      <h2>Guild Rankings</h2>
-      <table><thead><tr><th>Guild</th><th>Líder</th><th>Total</th><th>Pontos Líder</th></tr></thead><tbody><?php renderRows($rankGuilds,['Guildname','leader','total_points','leader_points']); ?></tbody></table>
-    </section>
-    <section class="card" style="grid-column:1/-1">
-      <h2>Top Guild Players</h2>
-      <table><thead><tr><th>Guild</th><th>Player</th><th>Pontos</th></tr></thead><tbody><?php renderRows($rankGuildMembers,['guild','player','points']); ?></tbody></table>
-    </section>
+<body class="tundra" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<div style="background-image: url(../images/cbt/header_back.jpg); background-repeat: no-repeat; background-position: center top; width: 100%; min-height:100vh; position:relative;display: table;">
+  <div style="width:960px;margin:20px auto 0 auto; font-family:Arial; font-size:12px;"><a href="../index.php">&larr; Back to Home</a></div>
+  <div class="rank-container" id="rank-legacy-panel">
+    <div class="rank-title">TBOT Rankings</div>
+    <div class="rank-grid">
+      <section class="rank-box">
+        <h2>Top Level</h2>
+        <table class="rank-table"><thead><tr><th>Name</th><th>Level</th><th>Exp</th></tr></thead><tbody><?php renderRows($rankLevel,['name','level','exp']); ?></tbody></table>
+      </section>
+      <section class="rank-box">
+        <h2>Top Experience</h2>
+        <table class="rank-table"><thead><tr><th>Name</th><th>Level</th><th>Exp</th></tr></thead><tbody><?php renderRows($rankExp,['name','level','exp']); ?></tbody></table>
+      </section>
+      <section class="rank-box">
+        <h2>Top Attack Power</h2>
+        <table class="rank-table"><thead><tr><th>Name</th><th>Level</th><th>HP</th><th>Attack</th><th>Defense</th></tr></thead><tbody><?php renderRows($rankStats,['name','level','hp','attack_power','defense']); ?></tbody></table>
+      </section>
+      <section class="rank-box">
+        <h2>Guild Rankings</h2>
+        <table class="rank-table"><thead><tr><th>Guild</th><th>Leader</th><th>Total</th><th>Leader Points</th></tr></thead><tbody><?php renderRows($rankGuilds,['Guildname','leader','total_points','leader_points']); ?></tbody></table>
+      </section>
+      <section class="rank-box full">
+        <h2>Top Guild Players</h2>
+        <table class="rank-table"><thead><tr><th>Guild</th><th>Player</th><th>Points</th></tr></thead><tbody><?php renderRows($rankGuildMembers,['guild','player','points']); ?></tbody></table>
+      </section>
+    </div>
   </div>
-</body>
-</html>
+</div>
+</body></html>

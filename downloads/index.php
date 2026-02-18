@@ -200,9 +200,9 @@ dojo.addOnLoad(function() {
 				<!-- content here -->
 				<div style="text-align:center;font-family: Arial; font-size: 11pt; font-weight: bold; margin: 30px 0 10px 0;">
 				</div>
-				<div class="dl_full" onclick="jsRedirectTo(&quot;/downloads/start/f/68&quot;)"></div>
+				<div class="dl_full" onclick="jsOpenWin(&quot;https://mega.nz/file/LZ0HWQhK#-W1pqHKa0-geBTJuq3Ee2_IHCCQwKUY_q7D5LddwK1k&quot;)"></div>
 				<div class="txt_version">
-					Date: 11.04.2011
+					Date: Updated
 				</div>
 				<div style="margin-top: 10px;">
 					<table style="margin-left: auto; margin-right:auto;">
@@ -238,11 +238,11 @@ dojo.addOnLoad(function() {
 				<!-- content here -->
 				<div style="text-align:center;font-family: Arial; font-size: 11pt; font-weight: bold; margin: 30px 0 10px 0;">
 				</div>
-				<div class="dl_patch_03" onclick="jsRedirectTo(&quot;/downloads/start/f/103&quot;)"></div>
+				<div class="dl_patch_03" onclick="jsOpenWin(&quot;https://mega.nz/file/2R1xiSYJ#6XKTSy-nmKbrRdn08MA1G64774MBKFH56hx6aKfY3-4&quot;)"></div>
 				<div class="txt_version">
-					Date: 25.08.2011
+					Date: Updated
 				</div>
-				<div class="txt_version_notes">Bagi Anda yang menggunakan client Pre-Open Beta atau dari CD silahkan patch menggunakan file ini</div>
+				<div class="txt_version_notes">Launcher terbaru untuk menjalankan game client.</div>
 			</div>
 			<div class="c_box_big_right"></div>
 		</div>
@@ -263,22 +263,23 @@ dojo.addOnLoad(function() {
 				<!-- content here -->
 				<div style="position: relative;">
 					<div class="txt_version">
-						Date: 11.04.2011
+						Date: Updated
 					</div>
 					<div style="text-align:center;margin: 5px auto 30px auto;">
-						<div class="dl_part dl_part_1" onclick="jsRedirectTo(&quot;/downloads/start/f/69&quot;)"></div>
-						<div class="dl_part dl_part_2" onclick="jsRedirectTo(&quot;/downloads/start/f/70&quot;)"></div>
-						<div class="dl_part dl_part_3" onclick="jsRedirectTo(&quot;/downloads/start/f/71&quot;)"></div>
-						<div class="dl_part dl_part_4" onclick="jsRedirectTo(&quot;/downloads/start/f/72&quot;)"></div>
-						<div class="dl_part dl_part_5" onclick="jsRedirectTo(&quot;/downloads/start/f/73&quot;)"></div>
-						<div class="dl_part dl_part_6" onclick="jsRedirectTo(&quot;/downloads/start/f/74&quot;)"></div>
-						<div class="dl_part dl_part_7" onclick="jsRedirectTo(&quot;/downloads/start/f/75&quot;)"></div>
-						<div class="dl_part dl_part_8" onclick="jsRedirectTo(&quot;/downloads/start/f/76&quot;)"></div>
-						<div class="dl_part dl_part_9" onclick="jsRedirectTo(&quot;/downloads/start/f/77&quot;)"></div>
-						<div class="dl_part dl_part_10" onclick="jsRedirectTo(&quot;/downloads/start/f/78&quot;)"></div>
-						<div class="dl_part dl_part_11" onclick="jsRedirectTo(&quot;/downloads/start/f/79&quot;)"></div>
+						<div class="dl_part dl_part_1" onclick="return false;" style="opacity:0.45;cursor:not-allowed;"></div>
+						<div class="dl_part dl_part_2" onclick="return false;" style="opacity:0.45;cursor:not-allowed;"></div>
+						<div class="dl_part dl_part_3" onclick="return false;" style="opacity:0.45;cursor:not-allowed;"></div>
+						<div class="dl_part dl_part_4" onclick="return false;" style="opacity:0.45;cursor:not-allowed;"></div>
+						<div class="dl_part dl_part_5" onclick="return false;" style="opacity:0.45;cursor:not-allowed;"></div>
+						<div class="dl_part dl_part_6" onclick="return false;" style="opacity:0.45;cursor:not-allowed;"></div>
+						<div class="dl_part dl_part_7" onclick="return false;" style="opacity:0.45;cursor:not-allowed;"></div>
+						<div class="dl_part dl_part_8" onclick="return false;" style="opacity:0.45;cursor:not-allowed;"></div>
+						<div class="dl_part dl_part_9" onclick="return false;" style="opacity:0.45;cursor:not-allowed;"></div>
+						<div class="dl_part dl_part_10" onclick="return false;" style="opacity:0.45;cursor:not-allowed;"></div>
+						<div class="dl_part dl_part_11" onclick="return false;" style="opacity:0.45;cursor:not-allowed;"></div>
 					</div>
-					<div class="img_pink_bot"></div>
+					<div class="txt_version" style="text-align:center;color:#b00;font-weight:bold;">Partial Client download has been disabled.</div>
+						<div class="img_pink_bot"></div>
 					<div class="img_red_bot"></div>
 				</div>
 			</div>
@@ -299,11 +300,12 @@ dojo.addOnLoad(function() {
 			<div class="c_box_big_left"></div>
 			<div class="c_box_big_content_wrapper">
 				<!-- content here -->
-				<div id="btn_dl_indomog" class="dl_indomog" onclick="jsOpenWin(&quot;http://www.indomog.com/indomognew/?inc=2&amp;act=listdcgame&quot;)"></div>
+				<div id="btn_dl_indomog" class="dl_indomog" onclick="return false;" style="opacity:0.45;cursor:not-allowed;"></div>
 				<!-- onMouseOver='jsOverToggler("btn_dl_indomog", "dl_indomog_over")' onMouseOut='jsOverToggler("btn_dl_indomog", "dl_indomog_over")' -->
-				<div id="btn_dl_apnetindo" class="dl_apnetindo" onclick="jsOpenWin(&quot;ftp://apnetindo.serveftp.com/orangegame/tbot/client/&quot;)"></div>
-				<div id="btn_dl_gameqq" class="dl_gameqq" onclick="jsOpenWin(&quot;http://www.gameqq.net/download?task=viewcategory&amp;catid=64&quot;)"></div>
-				<div id="btn_dl_laciku" class="dl_laciku" onclick="jsOpenWin(&quot;http://www.laciku.com/main/storage.php?section=GEM&amp;menu=pds#15145&quot;)"></div>
+				<div id="btn_dl_apnetindo" class="dl_apnetindo" onclick="return false;" style="opacity:0.45;cursor:not-allowed;"></div>
+				<div id="btn_dl_gameqq" class="dl_gameqq" onclick="return false;" style="opacity:0.45;cursor:not-allowed;"></div>
+				<div id="btn_dl_laciku" class="dl_laciku" onclick="return false;" style="opacity:0.45;cursor:not-allowed;"></div>
+				<div class="txt_version" style="text-align:center;color:#b00;font-weight:bold;">Mirror partners have been disabled.</div>
 			</div>
 			<div class="c_box_big_right"></div>
 		</div>

@@ -58,3 +58,14 @@ php -S 0.0.0.0:8000 -t .
 - Removed legacy fields `passx` and `passw-clear` from login forms.
 - Login now submits normal POST with only `user_id` and `passw`.
 - MySQL connection charset set to `latin1` for legacy OrangeGame compatibility.
+
+
+## Download area updates
+- Full Game Client now points to: `https://mega.nz/file/LZ0HWQhK#-W1pqHKa0-geBTJuq3Ee2_IHCCQwKUY_q7D5LddwK1k`.
+- Launcher download now points to: `https://mega.nz/file/2R1xiSYJ#6XKTSy-nmKbrRdn08MA1G64774MBKFH56hx6aKfY3-4`.
+- Partial Client section disabled.
+- Mirror partners section disabled.
+
+## Rank area updates
+- Restored an old-style visual fallback for ranks.
+- Rankings are now rendered inside one dedicated wrapper div (`#rank-legacy-panel`) instead of free-floating layout.
