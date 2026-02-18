@@ -10,26 +10,19 @@ $conn = null;
 $db_error = null;
 
 function resolve_user_table(mysqli $conn): string {
-    $candidates = ['bout_users', 'boot_users', 'users'];
-
-    foreach ($candidates as $table) {
-        $stmt = $conn->prepare('SHOW TABLES LIKE ?');
-        $stmt->bind_param('s', $table);
-        $stmt->execute();
-        $exists = (bool)$stmt->get_result()->fetch_row();
-        $stmt->close();
-
-        if ($exists) {
-            return $table;
-        }
-    }
-
+    // Per project requirement, the user table is fixed.
     return 'bout_users';
 }
 
 try {
     $conn = new mysqli($host, $user, $pass, $db);
     $conn->set_charset('utf8mb4');
+
+    // Optional sanity check with a normal SELECT (portable in MariaDB/MySQL).
+    $result = $conn->query("SELECT 1 FROM `bout_users` LIMIT 1");
+    if ($result) {
+        $result->free();
+    }
 } catch (Throwable $e) {
     $db_error = $e->getMessage();
 }
