@@ -1,32 +1,40 @@
-# TBOT 2011 Reconstruction (text-only safe PR)
+# TBOT 2011 Reconstruction (PHP edition)
 
-This revision addresses review feedback about binary-heavy placeholder commits.
+## Conversion summary
+- Entire site was migrated from `index.html` to `index.php` preserving the same folder-based URLs.
+- Internal references to `index.html` were updated to `index.php`.
+- Main page login now posts to local backend: `auth/login.php`.
+- Main page registration buttons now point to `register.php`.
 
-## What was changed
-- Removed binary placeholder strategy entirely.
-- Kept historical HTML/CSS/JS structure intact.
-- Rewrote internal absolute routes to depth-correct relative links (for static hosts).
-- Removed any remaining Wayback wrappers/references in HTML.
-- Added required static deployment directories:
-  - `images/`
-  - `js/`
-  - `assets/`
-- Added placeholder HTML pages **only** for missing internal pages referenced by navigation routes:
-  - `news/`
-  - `downloads/ss/`
-  - `gameinfo/character/`
-  - `gameinfo/howtoplay/`
-  - `gameinfo/install/`
-  - `gameinfo/newbie/sub/1/`
-  - `gameinfo/newbie/sub/4/`
-  - `itemmall/part/`
-  - `itemmall/skill/`
-  - `itemmall/spec/`
+## Database configuration
+File: `config.php`
 
-Placeholder content:
+```php
+$host = "127.0.0.1";
+$user = "bout";
+$pass = "202040pp";
+$db   = "bout_evolution";
+```
+
+## Implemented backend pages
+- `auth/login.php`
+  - Validates `user_id` + `passw` from forms.
+  - Authenticates against table `users`.
+  - Supports `password_verify` (Argon hash) and plain fallback comparison.
+  - Updates `last_ip` after successful login.
+- `register.php`
+  - Implements user registration with validation.
+  - Inserts into `users (username, password, email, last_ip)`.
+  - Hashes password with `PASSWORD_ARGON2I`.
+- `ranks/index.php`
+  - Uses live SQL queries for level/exp/stats/guild rankings.
+  - Filters GM/Admin (`position >= 150` and `[GM]%` names).
+
+## Missing archived pages
+Placeholder pages were kept in PHP format with notice:
 > This page was not archived in 2011.
 
-## Deployment
-Publish the repository root as a static site.
-Compatible with GitHub Pages, Netlify, Vercel static, Apache, and Nginx.
-
+## Run locally
+```bash
+php -S 0.0.0.0:8000 -t .
+```
