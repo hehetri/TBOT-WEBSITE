@@ -31,17 +31,6 @@ if ($action === 'password') {
     $stmt->close();
 }
 
-if ($action === 'email') {
-    $newEmail = trim($_POST['new_email'] ?? '');
-    if (!filter_var($newEmail, FILTER_VALIDATE_EMAIL)) {
-        header('Location: ../index.php?login_error=1' . $centerSuffix);
-        exit;
-    }
-    $stmt = $conn->prepare("UPDATE {$userTable} SET email = ? WHERE id = ?");
-    $stmt->bind_param('si', $newEmail, $userId);
-    $stmt->execute();
-    $stmt->close();
-}
 
 header('Location: ../index.php?login_success=1' . $centerSuffix);
 exit;

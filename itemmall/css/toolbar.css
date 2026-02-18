@@ -480,3 +480,9 @@
 	float: left; 
 	cursor: pointer;
 }
+
+/* Toolbar disabled globally per redesign */
+#oToolbarContainer,
+#login_panel {
+    display: none !important;
+}

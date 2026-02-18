@@ -8,7 +8,7 @@ if (isset($_SESSION['user_id']) && $conn instanceof mysqli) {
     $uid = (int)$_SESSION['user_id'];
 
     $queries = [
-        "SELECT u.username, u.email, u.coins, c.name AS character_name, c.level, c.gigas AS currency_gigas FROM {$userTable} u LEFT JOIN bout_characters c ON c.name = u.username WHERE u.id = ? ORDER BY c.level DESC LIMIT 1",
+        "SELECT u.username, u.email, u.coins, c.name AS character_name, c.level, c.gigas AS currency_gigas FROM {$userTable} u LEFT JOIN bout_characters c ON c.username = u.username WHERE u.id = ? ORDER BY c.level DESC LIMIT 1",
         "SELECT u.username, u.email, u.coins, NULL AS character_name, NULL AS level, 0 AS currency_gigas FROM {$userTable} u WHERE u.id = ? LIMIT 1"
     ];
 
@@ -207,8 +207,7 @@ jQuery(window).load(function() {
 						<div class="o_login" id="account-panel">
 <?php if (isset($_SESSION['user_id']) && $accountInfo): ?>
 	<div style="position:absolute;top:18px;left:10px;width:238px;color:#fff;font-family:Arial;font-size:11px;line-height:1.6;">
-		<div style="font-size:15px;font-weight:bold;color:#ffd35a;margin-bottom:4px;">MY ACCOUNT</div>
-		<div><b>Character Name:</b> <?= htmlspecialchars((string)($accountInfo['character_name'] ?? '-')) ?></div>
+				<div><b>Character Name:</b> <?= htmlspecialchars((string)($accountInfo['character_name'] ?? '-')) ?></div>
 		<div><b>Level:</b> <?= htmlspecialchars((string)($accountInfo['level'] ?? '0')) ?></div>
 		<div><b>Cash:</b> <?= htmlspecialchars((string)($accountInfo['coins'] ?? '0')) ?></div>
 		<div><b>Gigas:</b> <?= htmlspecialchars((string)($accountInfo['currency_gigas'] ?? '0')) ?></div>
@@ -217,13 +216,9 @@ jQuery(window).load(function() {
 			<button type="button" onclick="openCenterPanel('password')" style="height:22px;cursor:pointer;">Change Password</button>
 		</div>
 
-		<form method="post" action="auth/update_account.php" style="margin-top:6px;">
-			<input type="hidden" name="action" value="email">
-			<input type="email" name="new_email" placeholder="New email" style="width:190px;height:20px;border:1px solid #666;background:#fff;padding-left:5px;">
-			<button type="submit" style="height:22px;cursor:pointer;">Change Email</button>
-		</form>
-
-		<div style="margin-top:8px;"><a href="auth/logout.php" style="color:#ffd35a;text-decoration:none;font-weight:bold;">Logout</a></div>
+		<div style="margin-top:8px;">
+				<a href="auth/logout.php" style="display:inline-block;background:#b42822;color:#fff;text-decoration:none;font-weight:bold;padding:5px 10px;border-radius:2px;">LOGOUT</a>
+			</div>
 	</div>
 <?php else: ?>
 	<form id="frm_login_tbot" name="frm_login_tbot" method="post" action="auth/login.php" autocomplete="off">
