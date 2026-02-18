@@ -70,7 +70,6 @@ dojo.require("dojo.fx");
 //]]>
 
 </script> 
-<script type="text/javascript" src="lib/md5/md5.js"></script>
 <script type="text/javascript">
  var _gaq = _gaq || [];
  _gaq.push(['_setAccount', 'UA-20407076-2']);
@@ -144,32 +143,15 @@ function aniStopScroll(st) {
 		if(curHidden) doani(true);
 	}
 }
-dojo.addOnLoad(function() {
-	dojo.style(dojo.byId('passw-clear'), 'display', 'block');
-	dojo.style(dojo.byId('passw'), 'display', 'none');
-	dojo.connect(dojo.byId('passw-clear'), 'onfocus', function() {
-		dojo.style(dojo.byId('passw-clear'), 'display', 'none');
-		dojo.style(dojo.byId('passw'), 'display', 'block');
-        dojo.byId('passw').focus();
-	});
-	dojo.connect(dojo.byId('passw'), 'onblur', function() {
-		if(document.getElementById('passw').value=='') {
-			dojo.style(dojo.byId('passw-clear'), 'display', 'block');
-			dojo.style(dojo.byId('passw'), 'display', 'none');
-		}
-	});
-});
 /*]]>*/
 </script>
 <div id="login_panel" onmouseover="doani(true)" onmouseout="doani(false)" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)" tabindex="0">
     <div id="frmLoginInput">
-		<form id="frm_login" name="frm_login" method="post" action="auth/login.php" onsubmit="return(js2test(this.id))" autocomplete="off">
-			<input type="hidden" name="passx" id="passx" value="">
-			<input type="hidden" name="service" id="service" value="tbot">
+		<form id="frm_login" name="frm_login" method="post" action="auth/login.php" autocomplete="off">
+						<input type="hidden" name="service" id="service" value="tbot">
 			<input type="text" name="user_id" id="user_id" class="pnltxt_user_id" value="Orange ID" onfocus="aniStopScroll(true)" onblur="if(this.value==&quot;&quot;)this.value=&quot;Orange ID&quot;;aniStopScroll(false)" onclick="if(this.value=='Orange ID')this.value='';">
 			<input type="password" name="passw" id="passw" class="pnltxt_passwd" value="" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)">
-			<input type="text" name="passw-clear" id="passw-clear" class="pnltxt_passwd" value="Password" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)">
-			<input type="image" class="pnlBtnLogin" src="http://www.orangegame.co.id/css/toolbar/panel_new/btn_login.png" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)">
+						<input type="image" class="pnlBtnLogin" src="http://www.orangegame.co.id/css/toolbar/panel_new/btn_login.png" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)">
 		</form>
 	</div>
 	<div class="pnlLoginHere"></div>
@@ -247,9 +229,8 @@ jQuery(window).load(function() {
 		<div style="margin-top:8px;"><a href="auth/logout.php" style="color:#ffd35a;text-decoration:none;font-weight:bold;">Logout</a></div>
 	</div>
 <?php else: ?>
-	<form id="frm_login_tbot" name="frm_login_tbot" method="post" action="auth/login.php" onsubmit="return(js2test(this.id))" autocomplete="off">
-	<input type="hidden" name="passx" id="passx" value="">
-	<input type="hidden" name="service" id="service" value="tbot">
+	<form id="frm_login_tbot" name="frm_login_tbot" method="post" action="auth/login.php" autocomplete="off">
+		<input type="hidden" name="service" id="service" value="tbot">
 		<div style="position: absolute; top: 43px; left: 11px;">
 			<input type="text" name="user_id" id="user_id" class="o_txt_user_id" value="">
 		</div>

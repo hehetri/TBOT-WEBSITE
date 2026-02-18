@@ -16,7 +16,7 @@ function resolve_user_table(mysqli $conn): string {
 
 try {
     $conn = new mysqli($host, $user, $pass, $db);
-    $conn->set_charset('utf8mb4');
+    $conn->set_charset('latin1');
 
     // Optional sanity check with a normal SELECT (portable in MariaDB/MySQL).
     $result = $conn->query("SELECT 1 FROM `bout_users` LIMIT 1");

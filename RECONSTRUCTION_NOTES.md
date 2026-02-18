@@ -50,3 +50,11 @@ php -S 0.0.0.0:8000 -t .
 - `bout_users.password` is treated as plain text in this deployment (no hashing).
 - Login validates plain text username/password directly against the database.
 - Account panel uses `coins` from `bout_users` as the Cash display value.
+
+
+## Login form hardening (legacy PHP)
+- Removed frontend dependency on `js2test()` from `index.php` login forms.
+- Removed `md5.js` include from `index.php`.
+- Removed legacy fields `passx` and `passw-clear` from login forms.
+- Login now submits normal POST with only `user_id` and `passw`.
+- MySQL connection charset set to `latin1` for legacy OrangeGame compatibility.
