@@ -41,7 +41,7 @@ s.parentNode.insertBefore(ga, s);
 </script>
 		<script lang="JavaScript">
 		function gotoTbot() {
-			jsOpenWin('http://tbot.orangegame.co.id');
+			jsOpenWin('../..');
 		}
 		function moToggler(bid,cls,cannotChange) {
 			if(cannotChange!=true) dojo.toggleClass(bid, cls);
@@ -147,14 +147,14 @@ dojo.addOnLoad(function() {
 		<div style="padding: 0 0 0 0;">
 			<div style="width: 100%; height: 220px; padding: 1px 0 0 0; position:relative; margin-bottom:10px;">
 				<div style="width: 943px; height: 61px; position:absolute; top: 161px; left: 31px;">
-					<div id="b_home" class="btn_home" onclick="jsRedirectTo('/')" onmouseover="moToggler(&quot;b_home&quot;, &quot;btn_home_over&quot;)" onmouseout="moToggler(&quot;b_home&quot;, &quot;btn_home_over&quot;)"></div>
+					<div id="b_home" class="btn_home" onclick="jsRedirectTo('../..')" onmouseover="moToggler(&quot;b_home&quot;, &quot;btn_home_over&quot;)" onmouseout="moToggler(&quot;b_home&quot;, &quot;btn_home_over&quot;)"></div>
 					<div id="b_news" class="btn_news" onclick="jsOpenWin('http://forum.orangegame.co.id/viewforum.php?f=10')" onmouseover="moToggler(&quot;b_news&quot;, &quot;btn_news_over&quot;)" onmouseout="moToggler(&quot;b_news&quot;, &quot;btn_news_over&quot;)"></div>
 					<div id="b_gameinfo" class="btn_gameinfo btn_gameinfo_over" onmouseover="moToggler(&quot;b_gameinfo&quot;, &quot;btn_gameinfo_over&quot;, true)" onmouseout="moToggler(&quot;b_gameinfo&quot;, &quot;btn_gameinfo_over&quot;, true)"></div>
 					<div id="b_forum" class="btn_forum" onclick="jsOpenWin('http://forum.orangegame.co.id')" onmouseover="moToggler(&quot;b_forum&quot;, &quot;btn_forum_over&quot;)" onmouseout="moToggler(&quot;b_forum&quot;, &quot;btn_forum_over&quot;)"></div>
-					<div id="b_download" class="btn_download" onclick="jsRedirectTo('/downloads')" onmouseover="moToggler(&quot;b_download&quot;, &quot;btn_download_over&quot;)" onmouseout="moToggler(&quot;b_download&quot;, &quot;btn_download_over&quot;)"></div>
-					<div id="b_support" class="btn_support" onclick="jsRedirectTo('/contact')" onmouseover="moToggler(&quot;b_support&quot;, &quot;btn_support_over&quot;)" onmouseout="moToggler(&quot;b_support&quot;, &quot;btn_support_over&quot;)"></div>
-					<div id="b_rank" class="btn_rank" onclick="jsRedirectTo('/ranks')" onmouseover="moToggler(&quot;b_rank&quot;, &quot;btn_rank_over&quot;)" onmouseout="moToggler(&quot;b_rank&quot;, &quot;btn_rank_over&quot;)"></div>
-					<div id="b_itemmall" class="btn_itemmall" onclick="jsRedirectTo('/itemmall')" onmouseover="moToggler(&quot;b_itemmall&quot;, &quot;btn_itemmall_over&quot;)" onmouseout="moToggler(&quot;b_itemmall&quot;, &quot;btn_itemmall_over&quot;)"></div>
+					<div id="b_download" class="btn_download" onclick="jsRedirectTo('../../downloads')" onmouseover="moToggler(&quot;b_download&quot;, &quot;btn_download_over&quot;)" onmouseout="moToggler(&quot;b_download&quot;, &quot;btn_download_over&quot;)"></div>
+					<div id="b_support" class="btn_support" onclick="jsRedirectTo('../../contact')" onmouseover="moToggler(&quot;b_support&quot;, &quot;btn_support_over&quot;)" onmouseout="moToggler(&quot;b_support&quot;, &quot;btn_support_over&quot;)"></div>
+					<div id="b_rank" class="btn_rank" onclick="jsRedirectTo('../../ranks')" onmouseover="moToggler(&quot;b_rank&quot;, &quot;btn_rank_over&quot;)" onmouseout="moToggler(&quot;b_rank&quot;, &quot;btn_rank_over&quot;)"></div>
+					<div id="b_itemmall" class="btn_itemmall" onclick="jsRedirectTo('../../itemmall')" onmouseover="moToggler(&quot;b_itemmall&quot;, &quot;btn_itemmall_over&quot;)" onmouseout="moToggler(&quot;b_itemmall&quot;, &quot;btn_itemmall_over&quot;)"></div>
 				</div>
 			</div>
 						<div style="width: 100%; display: table; border-collapse:collapse; ">
@@ -162,25 +162,25 @@ dojo.addOnLoad(function() {
 					<div style="width: 258px; float:left; position:relative; display: table-cell; margin: 0 0 0 42px;">
 						<div class="submenu_outer">
 	<div class="submenu_inner">
-		<div id="submenu_item_gi_story" class="submenu_item submenu_item_gi_story " onclick="jsRedirectTo('/gameinfo')" onmouseover="jsOverToggler(&quot;submenu_item_gi_story&quot;, &quot;submenu_item_gi_story_over&quot;)" onmouseout="jsOverToggler(&quot;submenu_item_gi_story&quot;, &quot;submenu_item_gi_story_over&quot;)"></div>
-		<div id="submenu_item_gi_dli" class="submenu_item submenu_item_gi_dli " onclick="jsRedirectTo('/gameinfo/install')" onmouseover="jsOverToggler(&quot;submenu_item_gi_dli&quot;, &quot;submenu_item_gi_dli_over&quot;)" onmouseout="jsOverToggler(&quot;submenu_item_gi_dli&quot;, &quot;submenu_item_gi_dli_over&quot;)"></div>
-		<div id="submenu_item_gi_newbie" class="submenu_item submenu_item_gi_newbie " onclick="jsRedirectTo('/gameinfo/newbie')" onmouseover="jsOverToggler(&quot;submenu_item_gi_newbie&quot;, &quot;submenu_item_gi_newbie_over&quot;)" onmouseout="jsOverToggler(&quot;submenu_item_gi_newbie&quot;, &quot;submenu_item_gi_newbie_over&quot;)"></div>
-		<div id="submenu_item_gi_howto" class="submenu_item submenu_item_gi_howto " onclick="jsRedirectTo('/gameinfo/howtoplay')" onmouseover="jsOverToggler(&quot;submenu_item_gi_howto&quot;, &quot;submenu_item_gi_howto_over&quot;)" onmouseout="jsOverToggler(&quot;submenu_item_gi_howto&quot;, &quot;submenu_item_gi_howto_over&quot;)"></div>
+		<div id="submenu_item_gi_story" class="submenu_item submenu_item_gi_story " onclick="jsRedirectTo('..')" onmouseover="jsOverToggler(&quot;submenu_item_gi_story&quot;, &quot;submenu_item_gi_story_over&quot;)" onmouseout="jsOverToggler(&quot;submenu_item_gi_story&quot;, &quot;submenu_item_gi_story_over&quot;)"></div>
+		<div id="submenu_item_gi_dli" class="submenu_item submenu_item_gi_dli " onclick="jsRedirectTo('../install')" onmouseover="jsOverToggler(&quot;submenu_item_gi_dli&quot;, &quot;submenu_item_gi_dli_over&quot;)" onmouseout="jsOverToggler(&quot;submenu_item_gi_dli&quot;, &quot;submenu_item_gi_dli_over&quot;)"></div>
+		<div id="submenu_item_gi_newbie" class="submenu_item submenu_item_gi_newbie " onclick="jsRedirectTo('../newbie')" onmouseover="jsOverToggler(&quot;submenu_item_gi_newbie&quot;, &quot;submenu_item_gi_newbie_over&quot;)" onmouseout="jsOverToggler(&quot;submenu_item_gi_newbie&quot;, &quot;submenu_item_gi_newbie_over&quot;)"></div>
+		<div id="submenu_item_gi_howto" class="submenu_item submenu_item_gi_howto " onclick="jsRedirectTo('../howtoplay')" onmouseover="jsOverToggler(&quot;submenu_item_gi_howto&quot;, &quot;submenu_item_gi_howto_over&quot;)" onmouseout="jsOverToggler(&quot;submenu_item_gi_howto&quot;, &quot;submenu_item_gi_howto_over&quot;)"></div>
 		<div id="submenu_item_gi_gamemode" class="submenu_item submenu_item_gi_gamemode  submenu_item_gi_gamemode_over" onmouseover="jsOverToggler(&quot;submenu_item_gi_gamemode&quot;, &quot;submenu_item_gi_gamemode_over&quot;, true)" onmouseout="jsOverToggler(&quot;submenu_item_gi_gamemode&quot;, &quot;submenu_item_gi_gamemode_over&quot;, true)"></div>
-		<div id="submenu_item_gi_character" class="submenu_item submenu_item_gi_character " onclick="jsRedirectTo('/gameinfo/character')" onmouseover="jsOverToggler(&quot;submenu_item_gi_character&quot;, &quot;submenu_item_gi_character_over&quot;)" onmouseout="jsOverToggler(&quot;submenu_item_gi_character&quot;, &quot;submenu_item_gi_character_over&quot;)"></div>
-		<div id="submenu_item_gi_items" class="submenu_item submenu_item_gi_items " onclick="jsRedirectTo('/gameinfo/items')" onmouseover="jsOverToggler(&quot;submenu_item_gi_items&quot;, &quot;submenu_item_gi_items_over&quot;)" onmouseout="jsOverToggler(&quot;submenu_item_gi_items&quot;, &quot;submenu_item_gi_items_over&quot;)"></div>
+		<div id="submenu_item_gi_character" class="submenu_item submenu_item_gi_character " onclick="jsRedirectTo('../character')" onmouseover="jsOverToggler(&quot;submenu_item_gi_character&quot;, &quot;submenu_item_gi_character_over&quot;)" onmouseout="jsOverToggler(&quot;submenu_item_gi_character&quot;, &quot;submenu_item_gi_character_over&quot;)"></div>
+		<div id="submenu_item_gi_items" class="submenu_item submenu_item_gi_items " onclick="jsRedirectTo('../items')" onmouseover="jsOverToggler(&quot;submenu_item_gi_items&quot;, &quot;submenu_item_gi_items_over&quot;)" onmouseout="jsOverToggler(&quot;submenu_item_gi_items&quot;, &quot;submenu_item_gi_items_over&quot;)"></div>
 	</div>
 </div>
 						<div>
-	<div class="btn_newbie_guide" onclick="jsRedirectTo('/gameinfo/newbie')">
+	<div class="btn_newbie_guide" onclick="jsRedirectTo('../newbie')">
 	</div>
 	<div class="btn_cash" onclick="jsRedirectTo('http://orangegame.co.id/cash')">
 	</div>
-	<div class="btn_download_game" onclick="jsRedirectTo('/downloads')">
+	<div class="btn_download_game" onclick="jsRedirectTo('../../downloads')">
 	</div>
 	<div class="btn_voucher_new" onclick="jsOpenWin('http://www.unopay.co.id/')">
 	</div>
-	<div class="btn_itemmall_new" onclick="jsRedirectTo('/itemmall')">
+	<div class="btn_itemmall_new" onclick="jsRedirectTo('../../itemmall')">
 	</div>
 </div>
 <div>
