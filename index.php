@@ -4,15 +4,14 @@ require_once __DIR__ . '/config.php';
 
 $accountInfo = null;
 if (isset($_SESSION['user_id']) && $conn instanceof mysqli) {
-    $userTable = resolve_user_table($conn);
-    $characterTable = resolve_character_table($conn);
-    $cashColumn = resolve_user_cash_column($conn, $userTable);
-    $gigasColumn = table_has_column($conn, $characterTable, 'gigas') ? 'gigas' : 'currency_gigas';
     $uid = (int)$_SESSION['user_id'];
 
     $queries = [
-        "SELECT u.username, u.email, u.{$cashColumn} AS cash, c.name AS character_name, c.level, c.{$gigasColumn} AS currency_gigas FROM {$userTable} u LEFT JOIN {$characterTable} c ON c.user_id = u.id WHERE u.id = ? ORDER BY c.level DESC LIMIT 1",
-        "SELECT u.username, u.email, u.{$cashColumn} AS cash, NULL AS character_name, NULL AS level, 0 AS currency_gigas FROM {$userTable} u WHERE u.id = ? LIMIT 1"
+        "SELECT u.username, u.email, u.coins AS cash, c.name AS character_name, c.level, c.gigas AS currency_gigas FROM bout_users u LEFT JOIN bout_characters c ON c.user_id = u.id WHERE u.id = ? ORDER BY c.level DESC LIMIT 1",
+        "SELECT u.username, u.email, u.coins AS cash, c.name AS character_name, c.level, c.gigas AS currency_gigas FROM bout_users u LEFT JOIN bout_characters c ON c.name = u.username WHERE u.id = ? ORDER BY c.level DESC LIMIT 1",
+        "SELECT u.username, u.email, u.cash AS cash, c.name AS character_name, c.level, c.currency_gigas AS currency_gigas FROM users u LEFT JOIN characters c ON c.user_id = u.id WHERE u.id = ? ORDER BY c.level DESC LIMIT 1",
+        "SELECT u.username, u.email, u.coins AS cash, NULL AS character_name, NULL AS level, 0 AS currency_gigas FROM bout_users u WHERE u.id = ? LIMIT 1",
+        "SELECT u.username, u.email, u.cash AS cash, NULL AS character_name, NULL AS level, 0 AS currency_gigas FROM users u WHERE u.id = ? LIMIT 1"
     ];
 
     foreach ($queries as $sql) {

@@ -82,9 +82,11 @@ php -S 0.0.0.0:8000 -t .
 ## Login/account panel corrections
 - Removed the email-change button from the left account panel.
 - Styled the logout action as a clear primary red button in the account panel.
-- Account panel fields now use DB-aware table/column resolution:
-  - user table: `bout_users` fallback to `users`
-  - character table: `bout_characters` fallback to `characters`
-  - cash column: `coins` fallback to `cash`
-  - gigas column: `gigas` fallback to `currency_gigas`
-- Character data query now joins characters by `user_id` to correctly display Character Name, Level, and Gigas.
+- Account panel fallback now uses sequential query strategies (try/catch) for compatibility between `bout_*` and base `users/characters` schemas.
+- Character data prioritizes `bout_users + bout_characters` and then falls back to `users + characters` when needed.
+
+
+## Fallback correction
+- Reverted the previous dynamic schema-inspection fallback from the last update.
+- Implemented SQL-shape fallback by execution order (query attempts) to avoid incorrect schema detection.
+- Login now tries `bout_users` plain-text auth first and falls back to `users` + password hash verify.
