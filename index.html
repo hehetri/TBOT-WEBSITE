@@ -1,0 +1,514 @@
+<!DOCTYPE html><html><head> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"> 
+<title>T-Bot Online</title> 
+<link href="images/favicon.ico" rel="shortcut icon">
+<link href="css/main.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css/obt.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css/toolbar.css" media="screen" rel="stylesheet" type="text/css">
+<link href="lib/jquery/jqueryui/development-bundle/demos/demos.css" media="screen" rel="stylesheet" type="text/css">
+<link href="lib/jquery/jqueryui/development-bundle/themes/base/jquery.ui.all.css" media="screen" rel="stylesheet" type="text/css">
+<link href="lib/jquery/nivo-slider/nivo-slider.css" media="screen" rel="stylesheet" type="text/css">
+<link href="lib/slider/nivo-slider.css" media="screen" rel="stylesheet" type="text/css">
+<link href="lib/slider/nivodefault.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css/dialog.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css/itemmall.css" media="screen" rel="stylesheet" type="text/css"><script type="text/javascript" src="lib/swfobject/swfobject.js"></script>
+<script type="text/javascript" src="lib/jquery/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="lib/jquery/nivo-slider/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript" src="lib/jquery/jqueryui/development-bundle/ui/jquery.ui.core.js"></script>
+<script type="text/javascript" src="lib/jquery/jqueryui/development-bundle/ui/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="lib/jquery/jqueryui/development-bundle/ui/jquery.ui.position.js"></script>
+<script type="text/javascript" src="lib/jquery/jqueryui/development-bundle/ui/jquery.ui.dialog.js"></script>
+<script type="text/javascript" src="lib/OG/OG.js"></script> 
+<style type="text/css">
+<!--
+    @import "lib/dojo/dojo-release-1.5.0/dijit/themes/tundra/tundra.css";
+-->
+</style>
+<script type="text/javascript">
+//<![CDATA[
+    var djConfig = {"parseOnLoad":"true"};
+//]]>
+</script>
+<script type="text/javascript" src="lib/dojo/dojo-release-1.5.0/dojo/dojo.js"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+dojo.require("dojo.fx");
+    dojo.require("dojo.NodeList-fx");
+//]]>
+
+</script> 
+<script type="text/javascript" src="lib/md5/md5.js"></script>
+<script type="text/javascript">
+ var _gaq = _gaq || [];
+ _gaq.push(['_setAccount', 'UA-20407076-2']);
+ _gaq.push(['_trackPageview']);
+
+ (function() {
+   var ga = document.createElement('script'); ga.type =
+'text/javascript'; ga.async = true;
+   ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+'http://www') + '.google-analytics.com/ga.js';
+   var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(ga, s);
+ })();
+</script><script lang="JavaScript">
+function gotoTbot() {
+	jsOpenWin('http://tbot.orangegame.co.id');
+}
+function moToggler(bid,cls,cannotChange) {
+	if(cannotChange!=true) dojo.toggleClass(bid, cls);
+}
+</script>
+</head> 
+<body class="tundra" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"> 
+<div style="background-image: url(images/cbt/header_back.jpg); background-repeat: no-repeat; background-position: center top; width: 100%; position:relative;display: table;">
+	
+	<div id="oToolbarContainer" style="width: 1005px;">
+		<div id="oToolbarMainContainer">
+			<div id="oToolbarBtnOrange" onclick="jsOpenWin(&quot;http://www.orangegame.co.id&quot;)"></div>
+			<div id="oToolbarBtnForum" onclick="jsOpenWin(&quot;http://forum.orangegame.co.id&quot;)"></div>
+			<div id="oToolbarBtnTbot" onclick="jsOpenWin(&quot;http://tbot.orangegame.co.id&quot;)"></div>
+			<div id="oToolbarBtnMdo" onclick="jsOpenWin(&quot;http://mahadewa.orangegame.co.id&quot;)"></div>
+			<div id="oToolbarBtnDK" onclick="jsOpenWin(&quot;http://dk.orangegame.co.id&quot;)"></div>
+			<div id="oToolbarBtnCE" onclick="jsOpenWin(&quot;http://crystal.orangegame.co.id&quot;)"></div>
+			<div id="oToolbarBtnDS" onclick="jsOpenWin(&quot;http://ds.orangegame.co.id&quot;)"></div>
+			<div id="oToolbarBtnRS" onclick="jsOpenWin(&quot;http://rich.orangegame.co.id&quot;)"></div>
+			<div id="oToolbarBtnWOT" onclick="jsOpenWin(&quot;http://wot.orangegame.co.id&quot;)"></div>
+			<div id="oToolbarBtnPoker" onclick="jsOpenWin(&quot;http://poker.orangegame.co.id&quot;)"></div>
+			<div id="oToolbarBtnYouTube" onclick="jsOpenWin(&quot;http://www.youtube.com/user/OGInteractive&quot;)"></div>
+			<div id="oToolbarBtnFB" onclick="jsOpenWin(&quot;http://www.facebook.com/orangegame.id&quot;)"></div>
+			<div id="oToolbarBtnTwitter" onclick="jsOpenWin(&quot;https://twitter.com/OrangeGameID&quot;)"></div>
+			<div id="oToolbarBtnEMail" onclick="jsRedirectTo(&quot;mailto:community@orangegame.co.id&quot;)"></div>
+			
+<script>
+/*<![CDATA[*/
+var stopScrollUp=false;
+var curHidden=true;
+function doani(out) {
+	if(out) {
+		var anim1 = dojo.fx.slideTo({ node: "login_panel" ,left:"695px",top:"0",unit:"px" });
+		dojo.fx.chain([anim1]).play();
+		curHidden=false;
+	} else {
+		if(! stopScrollUp) {
+			var anim1 = dojo.fx.slideTo({ node: "login_panel" ,left:"695px",top:"-100",unit:"px" });
+			dojo.fx.chain([anim1]).play();
+			curHidden=true;
+		}
+	}
+}
+function aniStopScroll(st) {
+	stopScrollUp=st;
+	if(! st) {
+		if(! curHidden) doani(false);
+	} else {
+		if(curHidden) doani(true);
+	}
+}
+dojo.addOnLoad(function() {
+	dojo.style(dojo.byId('passw-clear'), 'display', 'block');
+	dojo.style(dojo.byId('passw'), 'display', 'none');
+	dojo.connect(dojo.byId('passw-clear'), 'onfocus', function() {
+		dojo.style(dojo.byId('passw-clear'), 'display', 'none');
+		dojo.style(dojo.byId('passw'), 'display', 'block');
+        dojo.byId('passw').focus();
+	});
+	dojo.connect(dojo.byId('passw'), 'onblur', function() {
+		if(document.getElementById('passw').value=='') {
+			dojo.style(dojo.byId('passw-clear'), 'display', 'block');
+			dojo.style(dojo.byId('passw'), 'display', 'none');
+		}
+	});
+});
+/*]]>*/
+</script>
+<div id="login_panel" onmouseover="doani(true)" onmouseout="doani(false)" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)" tabindex="0">
+    <div id="frmLoginInput">
+		<form id="frm_login" name="frm_login" method="post" action="http://www.orangegame.co.id/user/login" onsubmit="return(js2test(this.id))" autocomplete="off">
+			<input type="hidden" name="passx" id="passx" value="">
+			<input type="hidden" name="service" id="service" value="tbot">
+			<input type="text" name="user_id" id="user_id" class="pnltxt_user_id" value="Orange ID" onfocus="aniStopScroll(true)" onblur="if(this.value==&quot;&quot;)this.value=&quot;Orange ID&quot;;aniStopScroll(false)" onclick="if(this.value=='Orange ID')this.value='';">
+			<input type="password" name="passw" id="passw" class="pnltxt_passwd" value="" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)">
+			<input type="text" name="passw-clear" id="passw-clear" class="pnltxt_passwd" value="Password" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)">
+			<input type="image" class="pnlBtnLogin" src="http://www.orangegame.co.id/css/toolbar/panel_new/btn_login.png" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)">
+		</form>
+	</div>
+	<div class="pnlLoginHere"></div>
+    <div class="pnlForgetPass" tabindex="0" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)">
+		<a href="index.html" onclick="jsRedirectTo(&quot;http://www.orangegame.co.id/forgetpass&quot;)">Lupa Password?</a>
+	</div>
+    <div class="pnlRegister" onclick="jsRedirectTo(&quot;http://www.orangegame.co.id/registration&quot;)" tabindex="0" onfocus="aniStopScroll(true)" onblur="aniStopScroll(false)"></div>
+	
+	<div class="pnlSocial">
+		<div class="title">
+			Social Login
+		</div>
+		<div class="lists">
+			<div class="item" onclick="ligSocial('facebook','http://tbot.orangegame.co.id/')"><img src="css/toolbar/social/fb.png" alt="Facebook" title="Facebook" border="0"></div>
+			<div class="item" onclick="ligSocial('twitter','http://tbot.orangegame.co.id/')"><img src="css/toolbar/social/twitter.png" alt="Twitter" title="Twitter" border="0"></div>
+			<div class="item" onclick="ligSocial('google','http://tbot.orangegame.co.id/')"><img src="css/toolbar/social/google.png" alt="Google Account" title="Google Account" border="0"></div>
+			<div class="item" onclick="ligSocial('yahoo','http://tbot.orangegame.co.id/')"><img src="css/toolbar/social/yahoo.png" alt="Yahoo Account" title="Yahoo Account" border="0"></div>
+			<div class="clearer"></div>
+		</div>
+	</div>
+
+</div>
+		</div>
+	</div>
+	<div id="pageWrapper" style="background-image: url(images/cbt/header_back.jpg); background-repeat: no-repeat; background-position: center top;">
+		<div style="padding: 0px;">
+			<div style="width: 100%; height: 220px; padding: 1px 0 0 0; position:relative; margin-bottom:5px;">
+				<div style="width: 943px; height: 61px; position:absolute; top: 161px; left: 31px;">
+					<div id="b_home" class="btn_home" onclick="jsRedirectTo('/')" onmouseover="moToggler(&quot;b_home&quot;, &quot;btn_home_over&quot;)" onmouseout="moToggler(&quot;b_home&quot;, &quot;btn_home_over&quot;)"></div>
+					<div id="b_news" class="btn_news" onclick="jsOpenWin('http://forum.orangegame.co.id/viewforum.php?f=10')" onmouseover="moToggler(&quot;b_news&quot;, &quot;btn_news_over&quot;)" onmouseout="moToggler(&quot;b_news&quot;, &quot;btn_news_over&quot;)"></div>
+					<div id="b_gameinfo" class="btn_gameinfo" onclick="jsRedirectTo('/gameinfo')" onmouseover="moToggler(&quot;b_gameinfo&quot;, &quot;btn_gameinfo_over&quot;)" onmouseout="moToggler(&quot;b_gameinfo&quot;, &quot;btn_gameinfo_over&quot;)"></div>
+					<div id="b_forum" class="btn_forum" onclick="jsOpenWin('http://forum.orangegame.co.id')" onmouseover="moToggler(&quot;b_forum&quot;, &quot;btn_forum_over&quot;)" onmouseout="moToggler(&quot;b_forum&quot;, &quot;btn_forum_over&quot;)"></div>
+					<div id="b_download" class="btn_download" onclick="jsRedirectTo('/downloads')" onmouseover="moToggler(&quot;b_download&quot;, &quot;btn_download_over&quot;)" onmouseout="moToggler(&quot;b_download&quot;, &quot;btn_download_over&quot;)"></div>
+					<div id="b_support" class="btn_support" onclick="jsRedirectTo('/contact')" onmouseover="moToggler(&quot;b_support&quot;, &quot;btn_support_over&quot;)" onmouseout="moToggler(&quot;b_support&quot;, &quot;btn_support_over&quot;)"></div>
+					<div id="b_rank" class="btn_rank" onclick="jsRedirectTo('/ranks')" onmouseover="moToggler(&quot;b_rank&quot;, &quot;btn_rank_over&quot;)" onmouseout="moToggler(&quot;b_rank&quot;, &quot;btn_rank_over&quot;)"></div>
+					<div id="b_itemmall" class="btn_itemmall" onclick="jsRedirectTo('/itemmall')" onmouseover="moToggler(&quot;b_itemmall&quot;, &quot;btn_itemmall_over&quot;)" onmouseout="moToggler(&quot;b_itemmall&quot;, &quot;btn_itemmall_over&quot;)"></div>
+				</div>
+			</div>
+						<script lang="JavaScript">
+//<![CDATA[
+$.noConflict();
+jQuery(window).load(function() {
+    jQuery('#banner_main').nivoSlider({effect:'slideInLeft',animSpeed:500,pauseTime:5000,controlNavThumbs:false});
+});
+	
+//]]>
+</script>
+
+
+<div class="o_main_container">
+	<div class="o_main_container_row">
+		<div class="o_main_sep_left"></div><!-- 35 -->
+		<div class="o_main_container_column_1"><!-- 258 -->
+						<div class="o_login">
+				<form id="frm_login_tbot" name="frm_login_tbot" method="post" action="http://www.orangegame.co.id/user/login" onsubmit="return(js2test(this.id))" autocomplete="off">
+				<input type="hidden" name="passx" id="passx" value="">
+				<input type="hidden" name="service" id="service" value="tbot">
+					<div style="position: absolute; top: 43px; left: 11px;">
+						<input type="text" name="user_id" id="user_id" class="o_txt_user_id" value="">
+					</div>
+					<div style="position: absolute; top: 73px; left: 11px;">
+						<input type="password" name="passw" id="passw" class="o_txt_passwd" value="">
+					</div>
+					<input type="image" class="o_btn_login" src="/images/obt/button/btn_login.png">
+					<div id="o_forget_pass" onclick="jsRedirectTo(&quot;http://www.orangegame.co.id/forgetpass&quot;)" tabindex="0">Lupa Password?</div>
+					<div id="o_btn_register" onclick="jsRedirectTo(&quot;http://www.orangegame.co.id/registration&quot;)" tabindex="0"></div>
+					<div id="o_btn_my_info" onclick="jsRedirectTo(&quot;http://www.orangegame.co.id/user&quot;)" tabindex="0"></div>
+				</form>
+			</div>
+						<div>
+				<div class="o_btn_cash" onclick="jsOpenWin('http://orangegame.co.id/cash')">
+				</div>
+				<div class="o_btn_newbie_guide" onclick="jsRedirectTo('/gameinfo/newbie')">
+				</div>
+				<div class="o_btn_download_game" onclick="jsRedirectTo('/downloads')">
+				</div>
+				<div class="o_btn_voucher" onclick="jsOpenWin('http://www.unopay.co.id/')">
+				</div>
+				<div class="o_btn_itemmall" onclick="jsRedirectTo('/itemmall')">
+				</div>
+			</div>
+			<div>
+				<div class="o_bnr_banner_obt" onclick="jsOpenWin('http://forum.orangegame.co.id/viewtopic.php?f=25&amp;t=21')">
+				</div>
+			</div>
+
+		</div>
+		<div class="o_main_sep_between"></div><!-- 5 -->
+		<div class="o_main_container_column_2"><!-- 425 -->
+			<div class="slider-wrapper theme-default">
+				<div id="banner_main" class="nivoSlider" style="width: 425px; height: 221px;">
+															<a href="http://forum.orangegame.co.id/viewtopic.php?t=381" target="_blank">
+						<img src="images/banner/web/banner_20.jpg" alt="Update 70">
+					</a>
+																				<img src="images/banner/web/banner_18.jpg" alt="T-Bot Online Revolution">
+																				<img src="images/banner/web/banner_13.jpg" alt="Fight The GM">
+																				<a href="http://forum.orangegame.co.id/viewtopic.php?t=21" target="_blank">
+						<img src="images/banner/web/banner_12.jpg" alt="Premium Warnet">
+					</a>
+														</div>
+			</div>
+			<div class="o_box_l_outer">
+				<div class="o_box_l_header">
+					<div class="o_title o_itemmall_title">
+					</div>
+					<div class="im_index_item_more" style="float:right; margin-top: 29px; margin-right: 12px; font-size: 9pt; color: #8C0E0E;" onclick="jsRedirectTo(&quot;/itemmall&quot;)"></div>
+				</div>
+				<div class="o_box_l_content_outer">
+					<div class="o_box_l_content_inner">
+						<div class="o_box_l_left"></div>
+						<div class="o_box_l_content_wrapper">
+							<!-- content here -->
+							<!--div class='o_img_front_itemmall' style='margin-left:auto;margin-right:auto;'></div-->
+							<table border="0" cellspacing="0px" cellpadding="0px" style="margin-left: auto; margin-right: auto;">
+							<tbody><tr>
+							<td>
+	<table class="im_index_item_panel im_index_item_panel_border_1" border="0" cellspacing="0px" cellpadding="0px">
+	<tbody><tr>
+		<td width="80px" style="vertical-align: top;">
+			<div class="im_item_panel_image" style="background-image: url(images/itemmall/WING_Goldwing.jpg);">
+				<div class="im_img_ef"></div>
+						<div class="im_img_newitem"></div>
+					</div>
+		</td>
+		<td width="110px" style="vertical-align: top;">
+			<div class="im_item_panel_item_name">Goldwing</div>
+					1 Hari : <span class="im_item_panel_use_time">565</span><br>
+					7 Hari : <span class="im_item_panel_use_time">1695</span><br>
+					30 Hari : <span class="im_item_panel_use_time">3390</span><br>
+					<br>
+			Type: Wing		</td>
+	</tr>
+	</tbody></table>
+</td><td>
+	<table class="im_index_item_panel im_index_item_panel_border_2" border="0" cellspacing="0px" cellpadding="0px">
+	<tbody><tr>
+		<td width="80px" style="vertical-align: top;">
+			<div class="im_item_panel_image" style="background-image: url(images/itemmall/HEAD_TigerKing.jpg);">
+				<div class="im_img_ef"></div>
+					</div>
+		</td>
+		<td width="110px" style="vertical-align: top;">
+			<div class="im_item_panel_item_name">Tigerking</div>
+					1 Hari : <span class="im_item_panel_use_time">350</span><br>
+					7 Hari : <span class="im_item_panel_use_time">1050</span><br>
+					30 Hari : <span class="im_item_panel_use_time">2100</span><br>
+					<br>
+			Type: Head		</td>
+	</tr>
+	</tbody></table>
+</td></tr><tr><td>
+	<table class="im_index_item_panel im_index_item_panel_border_3" border="0" cellspacing="0px" cellpadding="0px">
+	<tbody><tr>
+		<td width="80px" style="vertical-align: top;">
+			<div class="im_item_panel_image" style="background-image: url(images/itemmall/HEAD_DragonKing.jpg);">
+				<div class="im_img_ef"></div>
+					</div>
+		</td>
+		<td width="110px" style="vertical-align: top;">
+			<div class="im_item_panel_item_name">DragonKing</div>
+					1 Hari : <span class="im_item_panel_use_time">389</span><br>
+					7 Hari : <span class="im_item_panel_use_time">1167</span><br>
+					30 Hari : <span class="im_item_panel_use_time">2334</span><br>
+					<br>
+			Type: Head		</td>
+	</tr>
+	</tbody></table>
+</td><td>
+	<table class="im_index_item_panel im_index_item_panel_border_4" border="0" cellspacing="0px" cellpadding="0px">
+	<tbody><tr>
+		<td width="80px" style="vertical-align: top;">
+			<div class="im_item_panel_image" style="background-image: url(images/itemmall/HEAD_PandaZ.jpg);">
+				<div class="im_img_ef"></div>
+					</div>
+		</td>
+		<td width="110px" style="vertical-align: top;">
+			<div class="im_item_panel_item_name">PandaZ</div>
+					1 Hari : <span class="im_item_panel_use_time">350</span><br>
+					7 Hari : <span class="im_item_panel_use_time">1050</span><br>
+					30 Hari : <span class="im_item_panel_use_time">2100</span><br>
+					<br>
+			Type: Head		</td>
+	</tr>
+	</tbody></table>
+</td>							</tr>
+							</tbody></table>
+
+						</div>
+						<div class="o_box_l_right"></div>
+					</div>
+				</div>
+				<div class="o_box_l_bottom">
+				</div>
+			</div>
+
+			<div style="display: table;border-collapse:collapse; margin-top: 5px;">
+				<div style="display: table-row;">
+					<div class="o_box_s_outer" style="display: table-cell;">
+						<div class="o_box_s_header">
+							<div class="o_title o_notice_title">
+							</div>
+						</div>
+						<div class="o_box_s_content_outer">
+							<div class="o_box_s_content_inner">
+								<div class="o_box_s_left"></div>
+								<div class="o_box_s_content_wrapper">
+									<!-- content here -->
+																	<div style="height: 100px; overflow: auto; line-height: 18px; ">
+										<ul>
+																					<li><a href="index.html" onclick="jsOpenWin(&quot;http://forum.orangegame.co.id/viewtopic.php?t=3760&quot;)">16.08 - [Event] Unipin Me...</a></li>
+																					<li><a href="index.html" onclick="jsOpenWin(&quot;http://forum.orangegame.co.id/viewtopic.php?t=3693&quot;)">16.07 - [Event] Unipin Hi...</a></li>
+																					<li><a href="index.html" onclick="jsOpenWin(&quot;http://forum.orangegame.co.id/viewtopic.php?t=3686&quot;)">12.07 - [Event] MOGPlay F...</a></li>
+																					<li><a href="index.html" onclick="jsOpenWin(&quot;http://forum.orangegame.co.id/viewtopic.php?t=3652&quot;)">24.06 - [Event] Unipin Bi...</a></li>
+																					<li><a href="index.html" onclick="jsOpenWin(&quot;http://forum.orangegame.co.id/viewtopic.php?t=3620&quot;)">11.06 - [Event] MOGPlay F...</a></li>
+																				</ul>
+									</div>
+																</div>
+								<div class="o_box_s_right"></div>
+							</div>
+						</div>
+						<div class="o_box_s_bottom">
+						</div>
+					</div>
+					<div style="width: 5px;"></div>					
+					<div class="o_box_s_outer" style="display: table-cell;">
+						<div class="o_box_s_header">
+							<div class="o_title o_update_title">
+							</div>
+						</div>
+						<div class="o_box_s_content_outer">
+							<div class="o_box_s_content_inner">
+								<div class="o_box_s_left"></div>
+								<div class="o_box_s_content_wrapper">
+									<!-- content here -->
+																	<div style="height: 100px; overflow: auto; line-height: 18px; ">
+										<ul>
+																					<li width="85px" valign="top"><a href="index.html" onclick="jsOpenWin(&quot;http://forum.orangegame.co.id/viewtopic.php?t=2880&quot;)">05.11 - [Notice] Maintena...</a></li>
+																					<li width="85px" valign="top"><a href="index.html" onclick="jsOpenWin(&quot;http://forum.orangegame.co.id/viewtopic.php?t=2296&quot;)">30.07 - [Notice] TOP UP d...</a></li>
+																					<li width="85px" valign="top"><a href="index.html" onclick="jsOpenWin(&quot;http://forum.orangegame.co.id/viewtopic.php?t=2162&quot;)">25.06 - [NOTICE] Maintena...</a></li>
+																					<li width="85px" valign="top"><a href="index.html" onclick="jsOpenWin(&quot;http://forum.orangegame.co.id/viewtopic.php?t=2075&quot;)">11.06 - [NOTICE] Pengumum...</a></li>
+																					<li width="85px" valign="top"><a href="index.html" onclick="jsOpenWin(&quot;http://forum.orangegame.co.id/viewtopic.php?t=1980&quot;)">01.06 - [Event] O-Cash Su...</a></li>
+																				</ul>
+									</div>
+																</div>
+								<div class="o_box_s_right"></div>
+							</div>
+						</div>
+						<div class="o_box_s_bottom">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="o_box_l_outer">
+				<!-- movie start -->
+				<div class="o_box_l_header_no_title"></div>
+				<div class="o_box_l_content_outer">
+					<div class="o_box_l_content_inner">
+						<div class="o_box_l_left"></div>
+						<div class="o_box_l_content_wrapper">
+							<!-- content here -->
+							<script type="text/javascript">
+								// DOCUMENTATION: http://code.google.com/p/swfobject/wiki/documentation
+								var flashvars = {};
+								flashvars.xmlFile = "/xml/data_small.xml"; // SET XML FILE HERE
+								var params = {};
+								params.scale = "noscale";
+								params.salign = "tl";
+								params.bgcolor = "#000000";
+								params.seamlesstabbing = "false";
+								params.swliveconnect = "true";
+								params.allowfullscreen = "true";
+								params.allowscriptaccess = "always";
+								params.allownetworking = "all";
+								params.base = "";
+								params.wmode = "opaque";
+								var attributes = {};
+								attributes.id = "oxylusflash";
+								attributes.align = "top";
+								swfobject.embedSWF("/objects/preview.swf", "alternativeContent", "415", "222", "9.0.0", false, flashvars, params, attributes);
+							</script>
+							<div id="alternativeContent" style="z-index: -1; margin-left: auto; margin-right:auto;">
+								<a href="http://www.adobe.com/go/getflashplayer">
+									<img border="0" src="images/teaser/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player">
+								</a>
+							</div>									
+						</div>
+						<div class="o_box_l_right"></div>
+					</div>
+				</div>
+				<div class="o_box_l_bottom">
+				</div>
+				<!-- movie end -->
+			</div>
+
+		</div>
+		<div class="o_main_sep_between"></div><!-- 5 -->
+		<div class="o_main_container_column_3" style="position:relative;"><!-- 240 -->
+			<div class="o_rank1" style="position:relative; ">
+				<div style="background-image: url(images/obt/images/rank_coming.png); width: 151px; height: 138px; top: 50px; left: 32px; position: absolute;" onclick="jsOpenWin(&quot;/eventidregister&quot;)">
+				</div>
+			</div>
+			<div class="o_rank2" style="position:relative; ">
+				<div style="background-image: url(images/obt/images/rankguild_coming.png); width: 202px; height: 132px; top: 50px; left: 25px; position: absolute;" onclick="jsOpenWin(&quot;/eventidregister&quot;)">
+				</div>
+			</div>
+			<div class="o_box_small_outer">
+				<div style="width: 240px; height:190px; margin: 0 auto 0 auto;">
+					<script src="en_US/all.js#xfbml=1"></script>
+					<fb:like-box href="http://www.facebook.com/home.php#!/pages/T-Bot-Online-Indonesia/116263148440202" width="240" height="190" show_faces="true" stream="false" header="false"></fb:like-box>
+				</div>
+			</div>
+			<div class="o_box_small_outer">
+				<script src="j/2/widget.js"></script>
+				<script>
+				new TWTR.Widget({
+				  version: 2,
+				  type: 'search',
+				  search: 'tbotonline',
+				  interval: 6000,
+				  title: 'T-Bot Talks',
+				  subject: 'Our Beeps',
+				  width: 240,
+				  height: 178,
+				  theme: {
+					shell: {
+					  background: '#c40c12',
+					  color: '#ffffff'
+					},
+					tweets: {
+					  background: '#ffffff',
+					  color: '#444444',
+					  links: '#1985b5'
+					}
+				  },
+				  features: {
+					scrollbar: false,
+					loop: true,
+					live: true,
+					hashtags: true,
+					timestamp: true,
+					avatars: true,
+					toptweets: true,
+					behavior: 'default'
+				  }
+				}).render().start();
+				</script>
+			</div>
+		</div>
+		<div class="o_main_sep_right"></div><!-- 43 -->
+	</div>
+</div>
+<!--div id="dialogPreOBT" dojoType="dojox.widget.Dialog" dimensions="[761,413]">
+	<div style='background-image: url(/images/obt/dialogs/banner_front.jpg); width: 761px; height: 413px;'>
+		<div style='background-image: url(/images/obt/dialogs/btn_play.png); width: 197px; height: 65px; cursor: pointer; top: 320px; left: 360px; position: absolute;' onclick='jsOpenWin("/eventidregister")'></div>
+		<div style='background-image: url(/images/obt/dialogs/btn_reg.png); width: 177px; height: 65px; cursor: pointer; top: 320px; left: 570px; position: absolute;' onclick='jsOpenWin("http://www.orangegame.co.id/registration")'></div>
+	</div>
+</div-->		</div>
+	</div>
+</div>
+<div style="position: relative;width:100%;height:65px;left: 0;bottom: 0;background-image: url(images/cbt2/image/footer_spacer.gif); background-repeat: repeat-x;">
+	<div style="width: 990px; padding-top: 10px; margin-left: auto; margin-right: auto;">
+		<div style="display: table; border-collapse:collapse; width: 100%;">
+			<div style="width: 450px;height: 100%; display: table-cell;">
+				<div style="float: left;">
+					<div style="background-image: url(images/orange_logo.png); background-repeat: no-repeat; width: 160px; height: 26px;vertical-align: middle; margin-bottom: 5px;"></div>
+					<div style="font-family: Arial; font-size: 9pt; color: #000000;">T-Bot Online Indonesia © 2010 Orange Game Fun Factory. All Rights Reserved. </div>
+				</div>
+			</div>
+			<div style="height: 100%; display: table-cell;">
+				<div style="float: right; text-align: right; vertical-align: middle;">
+					<a href="http://forum.orangegame.co.id/viewforum.php?f=15" target="_blank">FaQ</a> - <a href="gameinfo/index.html">Game Info</a> - <a href="contact/index.html">Support</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+ 
+
+</body></html>

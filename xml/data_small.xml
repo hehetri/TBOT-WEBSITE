@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- please read the help file for more details -->
+<data>
+
+	<settings>
+	
+		<!--<Start> component width & height -->
+		<cWidth>415</cWidth><!-- Native size : 800 -->
+		<cHeight>222</cHeight><!-- Native size : 450 -->
+		<!-- <End> -->
+		
+		<hHeight tweenType = "easeoutquad" tweenTime = "0.3">26</hHeight><!-- Default: 26 -->
+		<controllerH tweenType = "easeoutquad" tweenTime = "0.3">26</controllerH><!-- Default: 26 -->
+		
+		<playPause hitAreaW = "18" hitAreaH = "26" top = "0" left = "5"></playPause>
+		
+		<progressBar
+			top = "7"
+			left = "5"
+			hitAreaH = "12"
+			partTimeAlpha = "0.5"
+			totalTimeAlpha = "0.3"
+			partTop = "0"
+			partLeft = "2"
+			totalTop = "0"
+			totalLeft = "1"
+			sepTop = "1"
+			sepLeft = "0"
+			timeTop = "1"
+			timeLeft = "7"
+			initChars = "00:00"
+			>
+		</progressBar>
+			
+		<!-- Value between 0(ZERO) and 1(ONE) -->
+		<volume
+			mouseWheelStep = "0.05"
+			bgHeight = "26"
+			iconHitAreaW = "11"
+			iconHitAreaH = "26"
+			volBarHitAreaW = "51"
+			volBarHitAreaH = "10"
+			volBarW = "51"
+			iconTop = "0"
+			iconLeft = "1"
+			volBarTop = "8"
+			volBarLeft = "5"
+			top = "0"
+			right = "4"
+			left = "10"
+			>0.75
+		</volume>
+		
+		<fullScreen hideMenuDelay = "2000" hitAreaW = "20" hitAreaH = "26" top = "0" left = "5"></fullScreen>
+		<toolTip bgH = "19" lblAlpha = "0.3" trackAlpha = "0.5" top = "1" left = "0" txtTop = "4" txtLeft = "5">PLAY: </toolTip>
+		<thumbnail autoClose = "false" bgH = "90" thumbW = "76" thumbH = "76" top = "5" left = "5" edgeTolerance = "81"></thumbnail>
+		<playBtn width = "72" height = "72" signW = "28" signH = "36" nAlpha = "0.6" oAlpha = "0.8" signNalpha = "0.8" signOalpha = "0.8"></playBtn>
+		<title lblAlpha = "0.3" titleAlpha = "0.5" titleLeft = "0" titleTop = "8" lblLeft = "8" lblTop = "8">NOW PLAYING: </title>
+		<playlist usePlaylist = "true" nAlpha = "0.3" oAlpha = "0.5" txtTop = "8" txtLeft = "10" top = "0" left = "0" signTop = "11" signLeft = "3" hitAreaH = "26">PLAYLIST</playlist>
+		<playlistClosed>CLOSE PLAYLIST</playlistClosed>
+		
+		<videoPlay autoPlay = "false" autoLoad = "true" goNext = "true" repeat = "true" shuffle = "false" autoHide = "true" videoBgColor = "0x000000" videoBgAlpha = "0.8"></videoPlay>
+
+	</settings>
+	
+	<content>
+		<!-- Please do not modify the name attribute -->
+		<youTube imDisabled = "false" name = "YOUTUBE" loaderColor = "0xffffff">
+		
+			<settings>
+				<!-- Values in milliseconds -->
+				<ytListener>60</ytListener><!-- Default: 60 -->
+				<playerURL>http://www.youtube.com/apiplayer?version=3</playerURL>
+				
+				<securityDomain>http://www.youtube.com</securityDomain>
+				
+				<policyFiles>
+					<policyFile>http://gdata.youtube.com/crossdomain.xml</policyFile>
+					<policyFile>http://video-stats.video.google.com/crossdomain.xml</policyFile>
+					<policyFile>http://www.youtube.com/crossdomain.xml</policyFile>
+					<policyFile>http://video-stats.video.google.com/crossdomain.xml</policyFile>
+					<policyFile>http://s2.youtube.com/crossdomain.xml</policyFile>
+					<policyFile>http://s.ytimg.com/crossdomain.xml</policyFile>
+					<policyFile>http://i.ytimg.com/crossdomain.xml</policyFile>
+				</policyFiles>
+		
+				<ytAPIprefix>http://gdata.youtube.com/feeds/api/videos/</ytAPIprefix>
+				<ytAPIvs>2</ytAPIvs>
+				<ytAPIformat>5</ytAPIformat>
+				
+				<vidNotFound top = "0" left = "0" textLeft = "5" textTop = "5" txtAlpha = "0.5"><![CDATA[<p>The requested video has been removed</p>]]></vidNotFound>
+				<notAllow><![CDATA[<p>The requested video does not allow playback in the embedded players</p>]]></notAllow>
+				
+			</settings>
+			
+			<!-- fit options: fitToFill, fitToSize, fitToSizeForced, stretch & normal. -->
+			<!-- videoQuality options: small, medium, large, hd720, default -->
+			<!--
+				# Quality level small: Player resolution less than 640px by 360px.
+				# Quality level medium: Minimum player resolution of 640px by 360px.
+				# Quality level large: Minimum player resolution of 854px by 480px.
+				# Quality level hd720: Minimum player resolution of 1280px by 720px.
+			-->
+			
+			<videos>
+				
+				<video startWithMe = "false">
+					<title></title>
+					
+					<youtubeID videoQuality = "default">AyGa59jdDT0</youtubeID>
+					
+					<thumbnail loaderColor = "0xA2101E"
+					fit="fitToSize"
+					frameNalpha = "0.2"
+					frameOalpha = "1"
+					frameSalpha = "0.5"
+					frameNcolor = "0xffffff"
+					frameOcolor = "0x6699ff"
+					frameScolor = "0xffffff"
+					frameThickness = "2"></thumbnail>
+				</video>
+
+				<video startWithMe = "false">
+					<title></title>
+					
+					<youtubeID videoQuality = "default">1JSNzbD1x9E</youtubeID>
+					
+					<thumbnail loaderColor = "0xA2101E"
+					fit="fitToSize"
+					frameNalpha = "0.2"
+					frameOalpha = "1"
+					frameSalpha = "0.5"
+					frameNcolor = "0xffffff"
+					frameOcolor = "0x6699ff"
+					frameScolor = "0xffffff"
+					frameThickness = "2"></thumbnail>
+				</video>
+
+				<video startWithMe = "false">
+					<title></title>
+					
+					<youtubeID videoQuality = "default">qsiZvGEVjIE</youtubeID>
+					
+					<thumbnail loaderColor = "0xA2101E"
+					fit="fitToSize"
+					frameNalpha = "0.2"
+					frameOalpha = "1"
+					frameSalpha = "0.5"
+					frameNcolor = "0xffffff"
+					frameOcolor = "0x6699ff"
+					frameScolor = "0xffffff"
+					frameThickness = "2"></thumbnail>
+				</video>
+
+				<video startWithMe = "false">
+					<title></title>
+					
+					<youtubeID videoQuality = "default">rDpmbnKKyw4</youtubeID>
+					
+					<thumbnail loaderColor = "0xA2101E"
+					fit="fitToSize"
+					frameNalpha = "0.2"
+					frameOalpha = "1"
+					frameSalpha = "0.5"
+					frameNcolor = "0xffffff"
+					frameOcolor = "0x6699ff"
+					frameScolor = "0xffffff"
+					frameThickness = "2"></thumbnail>
+				</video>
+
+				<video startWithMe = "false">
+					<title></title>
+					
+					<youtubeID videoQuality = "default">UxL6L6Ro9Z0</youtubeID>
+					
+					<thumbnail loaderColor = "0xA2101E"
+					fit="fitToSize"
+					frameNalpha = "0.2"
+					frameOalpha = "1"
+					frameSalpha = "0.5"
+					frameNcolor = "0xffffff"
+					frameOcolor = "0x6699ff"
+					frameScolor = "0xffffff"
+					frameThickness = "2"></thumbnail>
+				</video>
+
+				<video startWithMe = "false">
+					<title></title>
+					
+					<youtubeID videoQuality = "default">Oo-eakEH_mg</youtubeID>
+					
+					<thumbnail loaderColor = "0xA2101E"
+					fit="fitToSize"
+					frameNalpha = "0.2"
+					frameOalpha = "1"
+					frameSalpha = "0.5"
+					frameNcolor = "0xffffff"
+					frameOcolor = "0x6699ff"
+					frameScolor = "0xffffff"
+					frameThickness = "2"></thumbnail>
+				</video>
+
+				<video startWithMe = "false">
+					<title></title>
+					
+					<youtubeID videoQuality = "default">vztQv1X4tck</youtubeID>
+					
+					<thumbnail loaderColor = "0xA2101E"
+					fit="fitToSize"
+					frameNalpha = "0.2"
+					frameOalpha = "1"
+					frameSalpha = "0.5"
+					frameNcolor = "0xffffff"
+					frameOcolor = "0x6699ff"
+					frameScolor = "0xffffff"
+					frameThickness = "2"></thumbnail>
+				</video>
+
+				<video startWithMe = "false">
+					<title></title>
+					
+					<youtubeID videoQuality = "default">OehaSJ2OKwY</youtubeID>
+					
+					<thumbnail loaderColor = "0xA2101E"
+					fit="fitToSize"
+					frameNalpha = "0.2"
+					frameOalpha = "1"
+					frameSalpha = "0.5"
+					frameNcolor = "0xffffff"
+					frameOcolor = "0x6699ff"
+					frameScolor = "0xffffff"
+					frameThickness = "2"></thumbnail>
+				</video>
+
+				<video startWithMe = "false">
+					<title></title>
+					
+					<youtubeID videoQuality = "default">-8cuJPqLuwA</youtubeID>
+					
+					<thumbnail loaderColor = "0xA2101E"
+					fit="fitToSize"
+					frameNalpha = "0.2"
+					frameOalpha = "1"
+					frameSalpha = "0.5"
+					frameNcolor = "0xffffff"
+					frameOcolor = "0x6699ff"
+					frameScolor = "0xffffff"
+					frameThickness = "2"></thumbnail>
+				</video>
+				
+				<video startWithMe = "false">
+					<title></title>
+					
+					<youtubeID videoQuality = "default">-3-_6WeccpM</youtubeID>
+					
+					<thumbnail loaderColor = "0xA2101E"
+					fit="fitToSize"
+					frameNalpha = "0.2"
+					frameOalpha = "1"
+					frameSalpha = "0.5"
+					frameNcolor = "0xffffff"
+					frameOcolor = "0x6699ff"
+					frameScolor = "0xffffff"
+					frameThickness = "2"></thumbnail>
+				</video>
+
+				<video startWithMe = "false">
+					<title></title>
+					
+					<youtubeID videoQuality = "default">s3saP5_d6RA</youtubeID>
+					
+					<thumbnail loaderColor = "0xA2101E"
+					fit="fitToSize"
+					frameNalpha = "0.2"
+					frameOalpha = "1"
+					frameSalpha = "0.5"
+					frameNcolor = "0xffffff"
+					frameOcolor = "0x6699ff"
+					frameScolor = "0xffffff"
+					frameThickness = "2"></thumbnail>
+				</video>
+
+				<video startWithMe = "false">
+					<title></title>
+					
+					<youtubeID videoQuality = "default">eVaTIqBUqBQ</youtubeID>
+					
+					<thumbnail loaderColor = "0xA2101E"
+					fit="fitToSize"
+					frameNalpha = "0.2"
+					frameOalpha = "1"
+					frameSalpha = "0.5"
+					frameNcolor = "0xffffff"
+					frameOcolor = "0x6699ff"
+					frameScolor = "0xffffff"
+					frameThickness = "2"></thumbnail>
+				</video>
+
+				<video startWithMe = "false">
+					<title></title>
+					
+					<youtubeID videoQuality = "default">2eW-1yi5shw</youtubeID>
+					
+					<thumbnail loaderColor = "0xA2101E"
+					fit="fitToSize"
+					frameNalpha = "0.2"
+					frameOalpha = "1"
+					frameSalpha = "0.5"
+					frameNcolor = "0xffffff"
+					frameOcolor = "0x6699ff"
+					frameScolor = "0xffffff"
+					frameThickness = "2"></thumbnail>
+				</video>
+				
+			</videos>
+			
+		</youTube>
+		
+		<!-- Please do not modify the name attribute -->
+		<localVideo imDisabled = "false" name = "LOCAL VIDEO" loaderColor = "0xffffff">
+			
+			<settings>
+				<bufferTime>1</bufferTime><!-- value in seconds -->
+				<smoothing>true</smoothing>
+				<vidNotFound top = "0" left = "0" textLeft = "5" textTop = "5" txtAlpha = "0.5"><![CDATA[<p>The requested video has been removed</p>]]></vidNotFound>
+				<!-- value in milliseconds -->
+				<errorExecDelay>2000</errorExecDelay>
+			</settings>
+			
+			<videos>
+				<!-- Video extenstion: .FLV, .MOV or .MP4/ any H.264 video format -->
+				<video startWithMe = "true">
+					<title>T-Bot_PlanetWar</title>
+					
+					<vidURL fit = "fitToSizeForced">/videos/T-Bot_PlanetWar.flv</vidURL>
+					
+					<thumbnail loaderColor = "0xB2B2B2"
+					fit="fitToFill"
+					frameNalpha = "0.2"
+					frameOalpha = "1"
+					frameSalpha = "0.5"
+					frameNcolor = "0xffffff"
+					frameOcolor = "0x6699ff"
+					frameScolor = "0xffffff"
+					frameThickness = "2">/videos/tbot_t.jpg</thumbnail>
+				</video>
+				
+				<video startWithMe = "false">
+					<title>T-Bot_Planet_PvP</title>
+					
+					<vidURL fit = "fitToSizeForced">/videos/T-Bot_Planet_PvP.flv</vidURL>
+					
+					<thumbnail loaderColor = "0xB2B2B2"
+					fit="fitToFill"
+					frameNalpha = "0.2"
+					frameOalpha = "1"
+					frameSalpha = "0.5"
+					frameNcolor = "0xffffff"
+					frameOcolor = "0x6699ff"
+					frameScolor = "0xffffff"
+					frameThickness = "2">/videos/tbot_t.jpg</thumbnail>
+				</video>
+				
+				<video startWithMe = "false">
+					<title>T-Bot_PvP.flv</title>
+					
+					<vidURL fit = "fitToSizeForced">/videos/T-Bot_PvP.flv</vidURL>
+					
+					<thumbnail loaderColor = "0xB2B2B2"
+					fit="fitToFill"
+					frameNalpha = "0.2"
+					frameOalpha = "1"
+					frameSalpha = "0.5"
+					frameNcolor = "0xffffff"
+					frameOcolor = "0x6699ff"
+					frameScolor = "0xffffff"
+					frameThickness = "2">/videos/tbot_t.jpg</thumbnail>
+				</video>
+				
+			</videos>
+			
+		</localVideo>
+	
+	</content>
+	
+</data>
